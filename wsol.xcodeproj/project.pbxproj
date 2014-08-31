@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37519B1CEF800E46114 /* Foundation.framework */; };
+		09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37719B1CEF800E46114 /* CoreGraphics.framework */; };
+		09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37919B1CEF800E46114 /* UIKit.framework */; };
+		09A3C38019B1CEF800E46114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C37E19B1CEF800E46114 /* InfoPlist.strings */; };
+		09A3C38219B1CEF800E46114 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C38119B1CEF800E46114 /* main.m */; };
+		09A3C38619B1CEF800E46114 /* WLXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */; };
+		09A3C38819B1CEF800E46114 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C38719B1CEF800E46114 /* Images.xcassets */; };
+		09A3C38F19B1CEF800E46114 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C38E19B1CEF800E46114 /* XCTest.framework */; };
+		09A3C39019B1CEF800E46114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37519B1CEF800E46114 /* Foundation.framework */; };
+		09A3C39119B1CEF800E46114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37919B1CEF800E46114 /* UIKit.framework */; };
+		09A3C39919B1CEF800E46114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C39719B1CEF800E46114 /* InfoPlist.strings */; };
+		09A3C39B19B1CEF800E46114 /* wsolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C39A19B1CEF800E46114 /* wsolTests.m */; };
+		09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A519B1CF3900E46114 /* WeaponVC.m */; };
+		09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A619B1CF3900E46114 /* WeaponVC.xib */; };
+		09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A819B1CF3900E46114 /* WeaponTVC.m */; };
+		09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09A3C39219B1CEF800E46114 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09A3C36A19B1CEF800E46114 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09A3C37119B1CEF800E46114;
+			remoteInfo = wsol;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09A3C37219B1CEF800E46114 /* 无双ol资料.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "无双ol资料.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A3C37519B1CEF800E46114 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09A3C37719B1CEF800E46114 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		09A3C37919B1CEF800E46114 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09A3C37D19B1CEF800E46114 /* wsol-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wsol-Info.plist"; sourceTree = "<group>"; };
+		09A3C37F19B1CEF800E46114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09A3C38119B1CEF800E46114 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09A3C38319B1CEF800E46114 /* wsol-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wsol-Prefix.pch"; sourceTree = "<group>"; };
+		09A3C38419B1CEF800E46114 /* WLXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLXAppDelegate.h; sourceTree = "<group>"; };
+		09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLXAppDelegate.m; sourceTree = "<group>"; };
+		09A3C38719B1CEF800E46114 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		09A3C38D19B1CEF800E46114 /* wsolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wsolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A3C38E19B1CEF800E46114 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		09A3C39619B1CEF800E46114 /* wsolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wsolTests-Info.plist"; sourceTree = "<group>"; };
+		09A3C39819B1CEF800E46114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		09A3C39A19B1CEF800E46114 /* wsolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wsolTests.m; sourceTree = "<group>"; };
+		09A3C3A419B1CF3900E46114 /* WeaponVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponVC.h; sourceTree = "<group>"; };
+		09A3C3A519B1CF3900E46114 /* WeaponVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponVC.m; sourceTree = "<group>"; };
+		09A3C3A619B1CF3900E46114 /* WeaponVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponVC.xib; sourceTree = "<group>"; };
+		09A3C3A719B1CF3900E46114 /* WeaponTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponTVC.h; sourceTree = "<group>"; };
+		09A3C3A819B1CF3900E46114 /* WeaponTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponTVC.m; sourceTree = "<group>"; };
+		09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponTVC.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09A3C36F19B1CEF800E46114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */,
+				09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */,
+				09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09A3C38A19B1CEF800E46114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C38F19B1CEF800E46114 /* XCTest.framework in Frameworks */,
+				09A3C39119B1CEF800E46114 /* UIKit.framework in Frameworks */,
+				09A3C39019B1CEF800E46114 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09A3C36919B1CEF800E46114 = {
+			isa = PBXGroup;
+			children = (
+				09A3C37B19B1CEF800E46114 /* wsol */,
+				09A3C39419B1CEF800E46114 /* wsolTests */,
+				09A3C37419B1CEF800E46114 /* Frameworks */,
+				09A3C37319B1CEF800E46114 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09A3C37319B1CEF800E46114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C37219B1CEF800E46114 /* 无双ol资料.app */,
+				09A3C38D19B1CEF800E46114 /* wsolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09A3C37419B1CEF800E46114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C37519B1CEF800E46114 /* Foundation.framework */,
+				09A3C37719B1CEF800E46114 /* CoreGraphics.framework */,
+				09A3C37919B1CEF800E46114 /* UIKit.framework */,
+				09A3C38E19B1CEF800E46114 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09A3C37B19B1CEF800E46114 /* wsol */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C3A419B1CF3900E46114 /* WeaponVC.h */,
+				09A3C3A519B1CF3900E46114 /* WeaponVC.m */,
+				09A3C3A619B1CF3900E46114 /* WeaponVC.xib */,
+				09A3C3A719B1CF3900E46114 /* WeaponTVC.h */,
+				09A3C3A819B1CF3900E46114 /* WeaponTVC.m */,
+				09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */,
+				09A3C38419B1CEF800E46114 /* WLXAppDelegate.h */,
+				09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */,
+				09A3C38719B1CEF800E46114 /* Images.xcassets */,
+				09A3C37C19B1CEF800E46114 /* Supporting Files */,
+			);
+			path = wsol;
+			sourceTree = "<group>";
+		};
+		09A3C37C19B1CEF800E46114 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C37D19B1CEF800E46114 /* wsol-Info.plist */,
+				09A3C37E19B1CEF800E46114 /* InfoPlist.strings */,
+				09A3C38119B1CEF800E46114 /* main.m */,
+				09A3C38319B1CEF800E46114 /* wsol-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09A3C39419B1CEF800E46114 /* wsolTests */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C39A19B1CEF800E46114 /* wsolTests.m */,
+				09A3C39519B1CEF800E46114 /* Supporting Files */,
+			);
+			path = wsolTests;
+			sourceTree = "<group>";
+		};
+		09A3C39519B1CEF800E46114 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09A3C39619B1CEF800E46114 /* wsolTests-Info.plist */,
+				09A3C39719B1CEF800E46114 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09A3C37119B1CEF800E46114 /* wsol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09A3C39E19B1CEF800E46114 /* Build configuration list for PBXNativeTarget "wsol" */;
+			buildPhases = (
+				09A3C36E19B1CEF800E46114 /* Sources */,
+				09A3C36F19B1CEF800E46114 /* Frameworks */,
+				09A3C37019B1CEF800E46114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wsol;
+			productName = wsol;
+			productReference = 09A3C37219B1CEF800E46114 /* 无双ol资料.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09A3C38C19B1CEF800E46114 /* wsolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09A3C3A119B1CEF800E46114 /* Build configuration list for PBXNativeTarget "wsolTests" */;
+			buildPhases = (
+				09A3C38919B1CEF800E46114 /* Sources */,
+				09A3C38A19B1CEF800E46114 /* Frameworks */,
+				09A3C38B19B1CEF800E46114 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09A3C39319B1CEF800E46114 /* PBXTargetDependency */,
+			);
+			name = wsolTests;
+			productName = wsolTests;
+			productReference = 09A3C38D19B1CEF800E46114 /* wsolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09A3C36A19B1CEF800E46114 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WLX;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = wlx;
+				TargetAttributes = {
+					09A3C38C19B1CEF800E46114 = {
+						TestTargetID = 09A3C37119B1CEF800E46114;
+					};
+				};
+			};
+			buildConfigurationList = 09A3C36D19B1CEF800E46114 /* Build configuration list for PBXProject "wsol" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09A3C36919B1CEF800E46114;
+			productRefGroup = 09A3C37319B1CEF800E46114 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09A3C37119B1CEF800E46114 /* wsol */,
+				09A3C38C19B1CEF800E46114 /* wsolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09A3C37019B1CEF800E46114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C38019B1CEF800E46114 /* InfoPlist.strings in Resources */,
+				09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */,
+				09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */,
+				09A3C38819B1CEF800E46114 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09A3C38B19B1CEF800E46114 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C39919B1CEF800E46114 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09A3C36E19B1CEF800E46114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C38619B1CEF800E46114 /* WLXAppDelegate.m in Sources */,
+				09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */,
+				09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */,
+				09A3C38219B1CEF800E46114 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09A3C38919B1CEF800E46114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09A3C39B19B1CEF800E46114 /* wsolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09A3C39319B1CEF800E46114 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09A3C37119B1CEF800E46114 /* wsol */;
+			targetProxy = 09A3C39219B1CEF800E46114 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09A3C37E19B1CEF800E46114 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09A3C37F19B1CEF800E46114 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		09A3C39719B1CEF800E46114 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09A3C39819B1CEF800E46114 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09A3C39C19B1CEF800E46114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09A3C39D19B1CEF800E46114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09A3C39F19B1CEF800E46114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
+				INFOPLIST_FILE = "wsol/wsol-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "无双ol资料";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09A3C3A019B1CEF800E46114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
+				INFOPLIST_FILE = "wsol/wsol-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "无双ol资料";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		09A3C3A219B1CEF800E46114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wsol.app/wsol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "wsolTests/wsolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		09A3C3A319B1CEF800E46114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wsol.app/wsol";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
+				INFOPLIST_FILE = "wsolTests/wsolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09A3C36D19B1CEF800E46114 /* Build configuration list for PBXProject "wsol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09A3C39C19B1CEF800E46114 /* Debug */,
+				09A3C39D19B1CEF800E46114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09A3C39E19B1CEF800E46114 /* Build configuration list for PBXNativeTarget "wsol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09A3C39F19B1CEF800E46114 /* Debug */,
+				09A3C3A019B1CEF800E46114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09A3C3A119B1CEF800E46114 /* Build configuration list for PBXNativeTarget "wsolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09A3C3A219B1CEF800E46114 /* Debug */,
+				09A3C3A319B1CEF800E46114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09A3C36A19B1CEF800E46114 /* Project object */;
+}

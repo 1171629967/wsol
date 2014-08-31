@@ -8,6 +8,7 @@
 
 #import "WeaponVC.h"
 #import "WeaponTVC.h"
+#import "MobClick.h"
 
 @interface WeaponVC ()
 
@@ -19,20 +20,34 @@
 {
     [super viewDidLoad];
     
+    //初始化搜索控件
+    searchBar = [[UISearchBar alloc] init];
+    searchBar.delegate = self;
+    [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [searchBar sizeToFit];
+    self.tableView.tableHeaderView = searchBar;
+
+    
+    //初始化searchDisplayController
+    searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    searchDisplayController.delegate = self;
+    [searchDisplayController setSearchResultsDataSource:self];
+    [searchDisplayController setSearchResultsDelegate:self];
+    
+    //改变navigationBar标题
     CGRect rect = CGRectMake(0, 0, 200, 44);
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = UITextAlignmentCenter;
     label.text = @"金牌武器上升值";
-    
-    
     label.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView = label;
     
     
-    
+
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weapon_appreciate_listview_back.png"]];
+    searchDisplayController.searchResultsTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weapon_appreciate_listview_back.png"]];
     
     //获取R1武器名称，金牌上升数值，存放到数组中
     NSString *name = weaponNameR1;
@@ -48,7 +63,7 @@
     self.weaponDataR1T = [t componentsSeparatedByString:@","];
     self.weaponDataR1W = [w componentsSeparatedByString:@","];
     
-   
+    self.suggesWeaponNamesR1 = [name componentsSeparatedByString:@","];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,21 +71,36 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table view data source
 
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+#pragma mark - Table view delegate
+//点击列表单元格
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.weaponNamesR1 count];
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
 }
 
+//返回列表需要展示多少个单元格
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if(tableView == searchDisplayController.searchResultsTableView)
+    {
+        return [self.suggesWeaponNamesR1 count];
+    }
+    else
+    {
+        return [self.weaponNamesR1 count];
+    }
+}
 
+//返回单元格高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
 }
 
+//单元格内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cellId = @"cellId";
@@ -86,8 +116,16 @@
     }
     
     cell.backgroundColor = [UIColor clearColor];
-    cell.weaponName.text = [self.weaponNamesR1 objectAtIndex:[indexPath row]];
     
+    //区分是否是搜素结果列表
+    if(tableView == searchDisplayController.searchResultsTableView)
+    {
+        cell.weaponName.text = [self.suggesWeaponNamesR1 objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        cell.weaponName.text = [self.weaponNamesR1 objectAtIndex:[indexPath row]];
+    }
     
     int g = [[NSString stringWithFormat:@"%@",[self.weaponDataR1G objectAtIndex:[indexPath row]]] intValue];
     int p = [[NSString stringWithFormat:@"%@",[self.weaponDataR1P objectAtIndex:[indexPath row]]] intValue];
@@ -104,6 +142,10 @@
     
     return cell;
 }
+
+
+
+
 
 
 /*
@@ -144,21 +186,61 @@
 }
 */
 
-/*
-#pragma mark - Table view delegate
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+
+
+
+
+
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+    // Return YES to cause the search result table view to be reloaded.
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar                                                      selectedScopeButtonIndex]]];
+    return YES;
 }
-*/
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption{
+    // Return YES to cause the search result table view to be reloaded.
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text]                                 scope:[[self.searchDisplayController.searchBar scopeButtonTitles]                                       objectAtIndex:searchOption]];
+    return YES;
+}
+
+- (void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller{
+	/*
+     Bob: Because the searchResultsTableView will be released and allocated automatically, so each time we start to begin search, we set its delegate here.
+     */
+	[searchDisplayController.searchResultsTableView setDelegate:self];
+    
+}
+
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+{
+    [searchBar resignFirstResponder];
+}
+
+
+/** 谓词匹配搜索内容 */
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    NSPredicate *resultPredicate = [NSPredicate                                    predicateWithFormat:@"SELF contains[cd] %@",                                     searchText];
+    self.suggesWeaponNamesR1 = [self.weaponNamesR1 filteredArrayUsingPredicate:resultPredicate];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"金牌武器上升值页面"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"金牌武器上升值页面"];
+}
+
+
+
 
 @end

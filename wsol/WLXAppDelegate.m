@@ -8,11 +8,16 @@
 
 #import "WLXAppDelegate.h"
 #import "WeaponVC.h"
+#import "MobClick.h"
 
 @implementation WLXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //[MobClick setLogEnabled:YES];
+    [MobClick startWithAppkey:@"5402df29fd98c59f3a0120a6" reportPolicy:BATCH   channelId:@""];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

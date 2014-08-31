@@ -23,6 +23,8 @@
 		09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A619B1CF3900E46114 /* WeaponVC.xib */; };
 		09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A819B1CF3900E46114 /* WeaponTVC.m */; };
 		09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */; };
+		09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */; };
+		09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD84019B379B700A30E35 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		09A3C3A719B1CF3900E46114 /* WeaponTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponTVC.h; sourceTree = "<group>"; };
 		09A3C3A819B1CF3900E46114 /* WeaponTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponTVC.m; sourceTree = "<group>"; };
 		09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponTVC.xib; sourceTree = "<group>"; };
+		09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		09FAD83D19B379B700A30E35 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		09FAD83E19B379B700A30E35 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		09FAD84019B379B700A30E35 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */,
 				09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */,
 				09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */,
 				09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */,
+				09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,7 @@
 		09A3C36919B1CEF800E46114 = {
 			isa = PBXGroup;
 			children = (
+				09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */,
 				09A3C37B19B1CEF800E46114 /* wsol */,
 				09A3C39419B1CEF800E46114 /* wsolTests */,
 				09A3C37419B1CEF800E46114 /* Frameworks */,
@@ -106,6 +115,7 @@
 		09A3C37419B1CEF800E46114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09FAD84019B379B700A30E35 /* libz.dylib */,
 				09A3C37519B1CEF800E46114 /* Foundation.framework */,
 				09A3C37719B1CEF800E46114 /* CoreGraphics.framework */,
 				09A3C37919B1CEF800E46114 /* UIKit.framework */,
@@ -158,6 +168,16 @@
 				09A3C39719B1CEF800E46114 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */ = {
+			isa = PBXGroup;
+			children = (
+				09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */,
+				09FAD83D19B379B700A30E35 /* MobClick.h */,
+				09FAD83E19B379B700A30E35 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMAnalytics_Sdk_3.1.2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +402,10 @@
 				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
 				INFOPLIST_FILE = "wsol/wsol-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.2",
+				);
 				PRODUCT_NAME = "无双ol资料";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,6 +420,10 @@
 				GCC_PREFIX_HEADER = "wsol/wsol-Prefix.pch";
 				INFOPLIST_FILE = "wsol/wsol-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.2",
+				);
 				PRODUCT_NAME = "无双ol资料";
 				WRAPPER_EXTENSION = app;
 			};

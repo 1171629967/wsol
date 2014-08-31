@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WeaponVC : UITableViewController
+@interface WeaponVC : UITableViewController <UISearchBarDelegate,UISearchDisplayDelegate>
 {
     int weaponsTypeCount;
+    UISearchBar *searchBar;
+    UISearchDisplayController *searchDisplayController;
 }
 
 @property (strong, nonatomic) NSArray *weaponNamesR1;
@@ -19,6 +21,8 @@
 @property (strong, nonatomic) NSArray *weaponDataR1F;
 @property (strong, nonatomic) NSArray *weaponDataR1T;
 @property (strong, nonatomic) NSArray *weaponDataR1W;
+
+@property (strong, nonatomic) NSArray *suggesWeaponNamesR1;
 
 
 

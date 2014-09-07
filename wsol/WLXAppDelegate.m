@@ -7,8 +7,9 @@
 //
 
 #import "WLXAppDelegate.h"
-#import "WeaponVC.h"
+
 #import "MobClick.h"
+
 
 @implementation WLXAppDelegate
 
@@ -19,12 +20,20 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    WeaponVC *weaponVC = [[WeaponVC alloc] init];
-    UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:weaponVC];
-    self.window.rootViewController = navigationVC;
+    self.menuVC = [[MenuVC alloc] init];
+    self.weaponVC = [[WeaponVC alloc] init];
+    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.weaponVC]];
+    
+    self.sideMenuViewController.shadowColor = [UIColor blackColor];
+    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+    self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+    self.sideMenuViewController.delegate = self;
+    self.window.rootViewController = self.sideMenuViewController;
+    
+    
+    
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor grayColor]];
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
@@ -32,6 +41,7 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -59,5 +69,37 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+#pragma mark - TWTSideMenuViewControllerDelegate
+
+- (UIStatusBarStyle)sideMenuViewController:(TWTSideMenuViewController *)sideMenuViewController statusBarStyleForViewController:(UIViewController *)viewController
+{
+    if (viewController == self.menuVC) {
+        return UIStatusBarStyleLightContent;
+    } else {
+        return UIStatusBarStyleDefault;
+    }
+}
+
+- (void)sideMenuViewControllerWillOpenMenu:(TWTSideMenuViewController *)sender {
+    NSLog(@"willOpenMenu");
+}
+
+- (void)sideMenuViewControllerDidOpenMenu:(TWTSideMenuViewController *)sender {
+    NSLog(@"didOpenMenu");
+}
+
+- (void)sideMenuViewControllerWillCloseMenu:(TWTSideMenuViewController *)sender {
+    NSLog(@"willCloseMenu");
+}
+
+- (void)sideMenuViewControllerDidCloseMenu:(TWTSideMenuViewController *)sender {
+	NSLog(@"didCloseMenu");
+}
+
+
+
 
 @end

@@ -9,6 +9,7 @@
 #import "WeaponVC.h"
 #import "WeaponTVC.h"
 #import "MobClick.h"
+#import "TWTSideMenuViewController.h"
 
 @interface WeaponVC ()
 
@@ -19,6 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
+    openItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = openItem;
     
     //初始化搜索控件
     searchBar = [[UISearchBar alloc] init];
@@ -72,6 +78,10 @@
 }
 
 
+- (void)openButtonPressed
+{
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 
 
 #pragma mark - Table view delegate

@@ -23,6 +23,14 @@
 		09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A619B1CF3900E46114 /* WeaponVC.xib */; };
 		09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A819B1CF3900E46114 /* WeaponTVC.m */; };
 		09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */; };
+		09FA19C519BC74CF00DF60D5 /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19C419BC74CF00DF60D5 /* TWTSideMenuViewController.m */; };
+		09FA19C919BC750400DF60D5 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19C719BC750400DF60D5 /* MenuVC.m */; };
+		09FA19CA19BC750400DF60D5 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19C819BC750400DF60D5 /* MenuVC.xib */; };
+		09FA19CE19BC7FB000DF60D5 /* RenwuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */; };
+		09FA19CF19BC7FB000DF60D5 /* RenwuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */; };
+		09FA19D219BC802300DF60D5 /* renwu.html in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19D119BC802300DF60D5 /* renwu.html */; };
+		09FA19D619BC94F200DF60D5 /* AboutApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19D419BC94F200DF60D5 /* AboutApp.m */; };
+		09FA19D719BC94F200DF60D5 /* AboutApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19D519BC94F200DF60D5 /* AboutApp.xib */; };
 		09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */; };
 		09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD84019B379B700A30E35 /* libz.dylib */; };
 /* End PBXBuildFile section */
@@ -60,6 +68,18 @@
 		09A3C3A719B1CF3900E46114 /* WeaponTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponTVC.h; sourceTree = "<group>"; };
 		09A3C3A819B1CF3900E46114 /* WeaponTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponTVC.m; sourceTree = "<group>"; };
 		09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponTVC.xib; sourceTree = "<group>"; };
+		09FA19C319BC74CF00DF60D5 /* TWTSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTSideMenuViewController.h; sourceTree = "<group>"; };
+		09FA19C419BC74CF00DF60D5 /* TWTSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTSideMenuViewController.m; sourceTree = "<group>"; };
+		09FA19C619BC750400DF60D5 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
+		09FA19C719BC750400DF60D5 /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
+		09FA19C819BC750400DF60D5 /* MenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuVC.xib; sourceTree = "<group>"; };
+		09FA19CB19BC7FB000DF60D5 /* RenwuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenwuVC.h; sourceTree = "<group>"; };
+		09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenwuVC.m; sourceTree = "<group>"; };
+		09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RenwuVC.xib; sourceTree = "<group>"; };
+		09FA19D119BC802300DF60D5 /* renwu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwu.html; sourceTree = "<group>"; };
+		09FA19D319BC94F200DF60D5 /* AboutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutApp.h; sourceTree = "<group>"; };
+		09FA19D419BC94F200DF60D5 /* AboutApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutApp.m; sourceTree = "<group>"; };
+		09FA19D519BC94F200DF60D5 /* AboutApp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutApp.xib; sourceTree = "<group>"; };
 		09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		09FAD83D19B379B700A30E35 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		09FAD83E19B379B700A30E35 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -95,6 +115,8 @@
 		09A3C36919B1CEF800E46114 = {
 			isa = PBXGroup;
 			children = (
+				09FA19D019BC801800DF60D5 /* web */,
+				09FA19C219BC74CF00DF60D5 /* TWTSideMenuViewController */,
 				09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */,
 				09A3C37B19B1CEF800E46114 /* wsol */,
 				09A3C39419B1CEF800E46114 /* wsolTests */,
@@ -133,8 +155,17 @@
 				09A3C3A719B1CF3900E46114 /* WeaponTVC.h */,
 				09A3C3A819B1CF3900E46114 /* WeaponTVC.m */,
 				09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */,
+				09FA19CB19BC7FB000DF60D5 /* RenwuVC.h */,
+				09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */,
+				09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */,
+				09FA19D319BC94F200DF60D5 /* AboutApp.h */,
+				09FA19D419BC94F200DF60D5 /* AboutApp.m */,
+				09FA19D519BC94F200DF60D5 /* AboutApp.xib */,
 				09A3C38419B1CEF800E46114 /* WLXAppDelegate.h */,
 				09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */,
+				09FA19C619BC750400DF60D5 /* MenuVC.h */,
+				09FA19C719BC750400DF60D5 /* MenuVC.m */,
+				09FA19C819BC750400DF60D5 /* MenuVC.xib */,
 				09A3C38719B1CEF800E46114 /* Images.xcassets */,
 				09A3C37C19B1CEF800E46114 /* Supporting Files */,
 			);
@@ -168,6 +199,23 @@
 				09A3C39719B1CEF800E46114 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09FA19C219BC74CF00DF60D5 /* TWTSideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09FA19C319BC74CF00DF60D5 /* TWTSideMenuViewController.h */,
+				09FA19C419BC74CF00DF60D5 /* TWTSideMenuViewController.m */,
+			);
+			path = TWTSideMenuViewController;
+			sourceTree = "<group>";
+		};
+		09FA19D019BC801800DF60D5 /* web */ = {
+			isa = PBXGroup;
+			children = (
+				09FA19D119BC802300DF60D5 /* renwu.html */,
+			);
+			name = web;
 			sourceTree = "<group>";
 		};
 		09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */ = {
@@ -257,9 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A3C38019B1CEF800E46114 /* InfoPlist.strings in Resources */,
+				09FA19D719BC94F200DF60D5 /* AboutApp.xib in Resources */,
 				09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */,
 				09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */,
 				09A3C38819B1CEF800E46114 /* Images.xcassets in Resources */,
+				09FA19D219BC802300DF60D5 /* renwu.html in Resources */,
+				09FA19CF19BC7FB000DF60D5 /* RenwuVC.xib in Resources */,
+				09FA19CA19BC750400DF60D5 /* MenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A3C38619B1CEF800E46114 /* WLXAppDelegate.m in Sources */,
+				09FA19D619BC94F200DF60D5 /* AboutApp.m in Sources */,
+				09FA19C519BC74CF00DF60D5 /* TWTSideMenuViewController.m in Sources */,
 				09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */,
+				09FA19CE19BC7FB000DF60D5 /* RenwuVC.m in Sources */,
+				09FA19C919BC750400DF60D5 /* MenuVC.m in Sources */,
 				09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */,
 				09A3C38219B1CEF800E46114 /* main.m in Sources */,
 			);

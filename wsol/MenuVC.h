@@ -12,9 +12,10 @@
 {
     NSString *currentVC;
 }
-- (IBAction)action_1_1:(id)sender;
+- (IBAction)jinpaiwuqi:(id)sender;
 
-- (IBAction)action_2_1:(id)sender;
-- (IBAction)action_4_1:(id)sender;
+- (IBAction)renwubaochou:(id)sender;
+- (IBAction)aboutapp:(id)sender;
+- (IBAction)renwudengji:(id)sender;
 
 @end

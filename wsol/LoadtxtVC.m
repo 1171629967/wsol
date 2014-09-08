@@ -1,19 +1,19 @@
 //
-//  RenwuVC.m
+//  AboutApp.m
 //  wsol
 //
 //  Created by 王 李鑫 on 14-9-7.
 //  Copyright (c) 2014年 wlx. All rights reserved.
 //
 
-#import "RenwuVC.h"
+#import "LoadtxtVC.h"
 #import "TWTSideMenuViewController.h"
 
-@interface RenwuVC ()
+@interface LoadtxtVC ()
 
 @end
 
-@implementation RenwuVC
+@implementation LoadtxtVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor grayColor];
+    self.textview.backgroundColor = [UIColor grayColor];
     
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     openItem.tintColor = [UIColor whiteColor];
@@ -40,14 +39,16 @@
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = UITextAlignmentCenter;
-    label.text = @"任务报酬一览";
+    label.text = self.titleName;
     label.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView = label;
     
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"renwu" ofType:@"html"];
-    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    self.webview.delegate = self;
-    [self.webview loadHTMLString:htmlString baseURL:[NSURL URLWithString:filePath]];
+    
+    //    获取txt文件路径
+    NSString *txtPath = [[NSBundle mainBundle] pathForResource:self.txtName ofType:@"txt"];
+    //    将txt到string对象中，编码类型为NSUTF8StringEncoding
+    NSString *string = [[NSString  alloc] initWithContentsOfFile:txtPath encoding:NSUTF8StringEncoding error:nil];
+    self.textview.text = string;
 }
 
 

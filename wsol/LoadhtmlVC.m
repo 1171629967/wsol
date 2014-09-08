@@ -1,19 +1,19 @@
 //
-//  AboutApp.m
+//  RenwuVC.m
 //  wsol
 //
 //  Created by 王 李鑫 on 14-9-7.
 //  Copyright (c) 2014年 wlx. All rights reserved.
 //
 
-#import "AboutApp.h"
+#import "LoadhtmlVC.h"
 #import "TWTSideMenuViewController.h"
 
-@interface AboutApp ()
+@interface LoadhtmlVC ()
 
 @end
 
-@implementation AboutApp
+@implementation LoadhtmlVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.textview.backgroundColor = [UIColor grayColor];
+    
+    self.view.backgroundColor = [UIColor grayColor];
     
     UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
     openItem.tintColor = [UIColor whiteColor];
@@ -39,9 +40,14 @@
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = UITextAlignmentCenter;
-    label.text = @"关于APP";
+    label.text = self.titleName;
     label.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView = label;
+    
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:self.htmlName ofType:@"html"];
+    NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+//    self.webview.delegate = self;
+    [self.webview loadHTMLString:htmlString baseURL:[NSURL URLWithString:filePath]];
 }
 
 

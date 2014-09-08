@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0957109719BD3F4D0044B76B /* fujiang.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0957109619BD3F4D0044B76B /* fujiang.txt */; };
+		0957109919BD3F5C0044B76B /* aboutapp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0957109819BD3F5C0044B76B /* aboutapp.txt */; };
+		0957109D19BD418F0044B76B /* renwubaochou.html in Resources */ = {isa = PBXBuildFile; fileRef = 0957109C19BD418F0044B76B /* renwubaochou.html */; };
+		095710A119BD493F0044B76B /* renwudengji.html in Resources */ = {isa = PBXBuildFile; fileRef = 095710A019BD493F0044B76B /* renwudengji.html */; };
 		09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37519B1CEF800E46114 /* Foundation.framework */; };
 		09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37719B1CEF800E46114 /* CoreGraphics.framework */; };
 		09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37919B1CEF800E46114 /* UIKit.framework */; };
@@ -26,11 +30,10 @@
 		09FA19C519BC74CF00DF60D5 /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19C419BC74CF00DF60D5 /* TWTSideMenuViewController.m */; };
 		09FA19C919BC750400DF60D5 /* MenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19C719BC750400DF60D5 /* MenuVC.m */; };
 		09FA19CA19BC750400DF60D5 /* MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19C819BC750400DF60D5 /* MenuVC.xib */; };
-		09FA19CE19BC7FB000DF60D5 /* RenwuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */; };
-		09FA19CF19BC7FB000DF60D5 /* RenwuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */; };
-		09FA19D219BC802300DF60D5 /* renwu.html in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19D119BC802300DF60D5 /* renwu.html */; };
-		09FA19D619BC94F200DF60D5 /* AboutApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19D419BC94F200DF60D5 /* AboutApp.m */; };
-		09FA19D719BC94F200DF60D5 /* AboutApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19D519BC94F200DF60D5 /* AboutApp.xib */; };
+		09FA19CE19BC7FB000DF60D5 /* LoadhtmlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19CC19BC7FB000DF60D5 /* LoadhtmlVC.m */; };
+		09FA19CF19BC7FB000DF60D5 /* LoadhtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19CD19BC7FB000DF60D5 /* LoadhtmlVC.xib */; };
+		09FA19D619BC94F200DF60D5 /* LoadtxtVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19D419BC94F200DF60D5 /* LoadtxtVC.m */; };
+		09FA19D719BC94F200DF60D5 /* LoadtxtVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FA19D519BC94F200DF60D5 /* LoadtxtVC.xib */; };
 		09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */; };
 		09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD84019B379B700A30E35 /* libz.dylib */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0957109619BD3F4D0044B76B /* fujiang.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fujiang.txt; sourceTree = "<group>"; };
+		0957109819BD3F5C0044B76B /* aboutapp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aboutapp.txt; sourceTree = "<group>"; };
+		0957109C19BD418F0044B76B /* renwubaochou.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwubaochou.html; sourceTree = "<group>"; };
+		095710A019BD493F0044B76B /* renwudengji.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwudengji.html; sourceTree = "<group>"; };
 		09A3C37219B1CEF800E46114 /* 无双ol资料.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "无双ol资料.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A3C37519B1CEF800E46114 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09A3C37719B1CEF800E46114 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,13 +80,12 @@
 		09FA19C619BC750400DF60D5 /* MenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVC.h; sourceTree = "<group>"; };
 		09FA19C719BC750400DF60D5 /* MenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVC.m; sourceTree = "<group>"; };
 		09FA19C819BC750400DF60D5 /* MenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuVC.xib; sourceTree = "<group>"; };
-		09FA19CB19BC7FB000DF60D5 /* RenwuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenwuVC.h; sourceTree = "<group>"; };
-		09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenwuVC.m; sourceTree = "<group>"; };
-		09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RenwuVC.xib; sourceTree = "<group>"; };
-		09FA19D119BC802300DF60D5 /* renwu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwu.html; sourceTree = "<group>"; };
-		09FA19D319BC94F200DF60D5 /* AboutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutApp.h; sourceTree = "<group>"; };
-		09FA19D419BC94F200DF60D5 /* AboutApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutApp.m; sourceTree = "<group>"; };
-		09FA19D519BC94F200DF60D5 /* AboutApp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutApp.xib; sourceTree = "<group>"; };
+		09FA19CB19BC7FB000DF60D5 /* LoadhtmlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadhtmlVC.h; sourceTree = "<group>"; };
+		09FA19CC19BC7FB000DF60D5 /* LoadhtmlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadhtmlVC.m; sourceTree = "<group>"; };
+		09FA19CD19BC7FB000DF60D5 /* LoadhtmlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadhtmlVC.xib; sourceTree = "<group>"; };
+		09FA19D319BC94F200DF60D5 /* LoadtxtVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadtxtVC.h; sourceTree = "<group>"; };
+		09FA19D419BC94F200DF60D5 /* LoadtxtVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadtxtVC.m; sourceTree = "<group>"; };
+		09FA19D519BC94F200DF60D5 /* LoadtxtVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadtxtVC.xib; sourceTree = "<group>"; };
 		09FAD83C19B379B700A30E35 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		09FAD83D19B379B700A30E35 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		09FAD83E19B379B700A30E35 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -112,9 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0957109519BD3F2C0044B76B /* txt */ = {
+			isa = PBXGroup;
+			children = (
+				0957109819BD3F5C0044B76B /* aboutapp.txt */,
+				0957109619BD3F4D0044B76B /* fujiang.txt */,
+			);
+			name = txt;
+			sourceTree = "<group>";
+		};
 		09A3C36919B1CEF800E46114 = {
 			isa = PBXGroup;
 			children = (
+				0957109519BD3F2C0044B76B /* txt */,
 				09FA19D019BC801800DF60D5 /* web */,
 				09FA19C219BC74CF00DF60D5 /* TWTSideMenuViewController */,
 				09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */,
@@ -155,12 +171,12 @@
 				09A3C3A719B1CF3900E46114 /* WeaponTVC.h */,
 				09A3C3A819B1CF3900E46114 /* WeaponTVC.m */,
 				09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */,
-				09FA19CB19BC7FB000DF60D5 /* RenwuVC.h */,
-				09FA19CC19BC7FB000DF60D5 /* RenwuVC.m */,
-				09FA19CD19BC7FB000DF60D5 /* RenwuVC.xib */,
-				09FA19D319BC94F200DF60D5 /* AboutApp.h */,
-				09FA19D419BC94F200DF60D5 /* AboutApp.m */,
-				09FA19D519BC94F200DF60D5 /* AboutApp.xib */,
+				09FA19CB19BC7FB000DF60D5 /* LoadhtmlVC.h */,
+				09FA19CC19BC7FB000DF60D5 /* LoadhtmlVC.m */,
+				09FA19CD19BC7FB000DF60D5 /* LoadhtmlVC.xib */,
+				09FA19D319BC94F200DF60D5 /* LoadtxtVC.h */,
+				09FA19D419BC94F200DF60D5 /* LoadtxtVC.m */,
+				09FA19D519BC94F200DF60D5 /* LoadtxtVC.xib */,
 				09A3C38419B1CEF800E46114 /* WLXAppDelegate.h */,
 				09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */,
 				09FA19C619BC750400DF60D5 /* MenuVC.h */,
@@ -213,7 +229,8 @@
 		09FA19D019BC801800DF60D5 /* web */ = {
 			isa = PBXGroup;
 			children = (
-				09FA19D119BC802300DF60D5 /* renwu.html */,
+				095710A019BD493F0044B76B /* renwudengji.html */,
+				0957109C19BD418F0044B76B /* renwubaochou.html */,
 			);
 			name = web;
 			sourceTree = "<group>";
@@ -305,12 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A3C38019B1CEF800E46114 /* InfoPlist.strings in Resources */,
-				09FA19D719BC94F200DF60D5 /* AboutApp.xib in Resources */,
+				09FA19D719BC94F200DF60D5 /* LoadtxtVC.xib in Resources */,
+				0957109719BD3F4D0044B76B /* fujiang.txt in Resources */,
 				09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */,
 				09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */,
 				09A3C38819B1CEF800E46114 /* Images.xcassets in Resources */,
-				09FA19D219BC802300DF60D5 /* renwu.html in Resources */,
-				09FA19CF19BC7FB000DF60D5 /* RenwuVC.xib in Resources */,
+				095710A119BD493F0044B76B /* renwudengji.html in Resources */,
+				0957109919BD3F5C0044B76B /* aboutapp.txt in Resources */,
+				09FA19CF19BC7FB000DF60D5 /* LoadhtmlVC.xib in Resources */,
+				0957109D19BD418F0044B76B /* renwubaochou.html in Resources */,
 				09FA19CA19BC750400DF60D5 /* MenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A3C38619B1CEF800E46114 /* WLXAppDelegate.m in Sources */,
-				09FA19D619BC94F200DF60D5 /* AboutApp.m in Sources */,
+				09FA19D619BC94F200DF60D5 /* LoadtxtVC.m in Sources */,
 				09FA19C519BC74CF00DF60D5 /* TWTSideMenuViewController.m in Sources */,
 				09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */,
-				09FA19CE19BC7FB000DF60D5 /* RenwuVC.m in Sources */,
+				09FA19CE19BC7FB000DF60D5 /* LoadhtmlVC.m in Sources */,
 				09FA19C919BC750400DF60D5 /* MenuVC.m in Sources */,
 				09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */,
 				09A3C38219B1CEF800E46114 /* main.m in Sources */,

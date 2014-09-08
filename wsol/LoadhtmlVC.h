@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenwuVC : UIViewController<UIWebViewDelegate>
+@interface LoadhtmlVC : UIViewController
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
+@property (copy, nonatomic) NSString *htmlName;
+@property (copy, nonatomic) NSString *titleName;
+
 
 @end

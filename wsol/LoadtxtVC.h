@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AboutApp : UIViewController
+@interface LoadtxtVC : UIViewController
 @property (strong, nonatomic) IBOutlet UITextView *textview;
-
+@property (copy, nonatomic) NSString *txtName;
+@property (copy, nonatomic) NSString *titleName;
 @end

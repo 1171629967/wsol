@@ -20,17 +20,18 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    self.menuVC = [[MenuVC alloc] init];
+    self.window.backgroundColor = [UIColor clearColor];
+    self.menuTableVC = [[MenuTableVC alloc] init];
     self.weaponVC = [[WeaponVC alloc] init];
-    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.weaponVC]];
+    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuTableVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.weaponVC]];
     
-    self.sideMenuViewController.shadowColor = [UIColor blackColor];
-    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+    
+    //self.sideMenuViewController.shadowColor = [UIColor blackColor];
+    //self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
     self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
     self.sideMenuViewController.delegate = self;
     self.window.rootViewController = self.sideMenuViewController;
+    
     
     
     
@@ -76,7 +77,7 @@
 
 - (UIStatusBarStyle)sideMenuViewController:(TWTSideMenuViewController *)sideMenuViewController statusBarStyleForViewController:(UIViewController *)viewController
 {
-    if (viewController == self.menuVC) {
+    if (viewController == self.menuTableVC) {
         return UIStatusBarStyleLightContent;
     } else {
         return UIStatusBarStyleDefault;

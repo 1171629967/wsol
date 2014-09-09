@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TWTSideMenuViewController.h"
-#import "MenuVC.h"
+#import "MenuTableVC.h"
 #import "WeaponVC.h"
 
 @interface WLXAppDelegate : UIResponder <UIApplicationDelegate,TWTSideMenuViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) TWTSideMenuViewController *sideMenuViewController;
-@property (nonatomic, strong) MenuVC *menuVC;
+@property (nonatomic, strong) MenuTableVC *menuTableVC;
 @property (nonatomic, strong) WeaponVC *weaponVC;
 
 @end

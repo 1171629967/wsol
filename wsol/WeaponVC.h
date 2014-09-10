@@ -23,6 +23,11 @@
 @property (strong, nonatomic) NSArray *weaponDataR1W;
 
 @property (strong, nonatomic) NSArray *suggesWeaponNamesR1;
+@property (strong, nonatomic) NSMutableArray *suggesWeaponDataR1G;
+@property (strong, nonatomic) NSMutableArray *suggesWeaponDataR1P;
+@property (strong, nonatomic) NSMutableArray *suggesWeaponDataR1F;
+@property (strong, nonatomic) NSMutableArray *suggesWeaponDataR1T;
+@property (strong, nonatomic) NSMutableArray *suggesWeaponDataR1W;
 
 
 

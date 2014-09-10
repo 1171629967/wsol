@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>金牌武器上升值</string>
+	</array>
+	<array>
+		<string>任务报酬一览</string>
+		<string>内政等级表</string>
+	</array>
+	<array/>
+	<array>
+		<string>副将技能和属性</string>
+	</array>
+	<array>
+		<string>关于APP</string>
+	</array>
+</array>
+</plist>

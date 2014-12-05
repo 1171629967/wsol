@@ -23,6 +23,7 @@
 #import "TWTSideMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
+#import "WPLib/AppConnect.h"
 
 static NSTimeInterval const kDefaultAnimationDelayDuration = 0.2;
 static NSTimeInterval const kDefaultAnimationDuration = 0.4;
@@ -91,6 +92,8 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.35;
     [self.menuViewController didMoveToParentViewController:self];
 
     [self updateMenuViewWithTransform:[self closeTransformForMenuView]];
+    
+    
 }
 
 - (BOOL)shouldAutorotate
@@ -325,7 +328,10 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.35;
     [self addViewController:incomingViewController];
     [self.containerView addSubview:incomingViewController.view];
 
-    incomingViewController.view.frame = self.containerView.bounds;
+    
+        incomingViewController.view.frame = self.containerView.bounds;
+    
+    
     
     //Create default animation curve.
     UIViewAnimationOptions options = UIViewAnimationOptionCurveEaseInOut;

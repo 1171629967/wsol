@@ -10,29 +10,29 @@
 	<string>wsol</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0A7D72AD-767D-4EEC-B15D-E56A72566DBF</key>
+		<key>9F3C7DFDFA1FD49CA25AE577B2EDFA92B119D47F</key>
 		<string>https://github.com/1171629967/wsol.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>wsol.xcodeproj/project.xcworkspace</string>
+	<string>wsol.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0A7D72AD-767D-4EEC-B15D-E56A72566DBF</key>
+		<key>9F3C7DFDFA1FD49CA25AE577B2EDFA92B119D47F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/1171629967/wsol.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0A7D72AD-767D-4EEC-B15D-E56A72566DBF</string>
+	<string>9F3C7DFDFA1FD49CA25AE577B2EDFA92B119D47F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0A7D72AD-767D-4EEC-B15D-E56A72566DBF</string>
+			<string>9F3C7DFDFA1FD49CA25AE577B2EDFA92B119D47F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>wsol</string>
 		</dict>

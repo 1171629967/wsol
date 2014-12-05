@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09A3C37119B1CEF800E46114"
-               BuildableName = "&#x65e0;&#x53cc;ol&#x8d44;&#x6599;.app"
+               BuildableName = "&#x6211;&#x7684;&#x65e0;&#x53cc;&#x653b;&#x7565;.app"
                BlueprintName = "wsol"
                ReferencedContainer = "container:wsol.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09A3C37119B1CEF800E46114"
-            BuildableName = "&#x65e0;&#x53cc;ol&#x8d44;&#x6599;.app"
+            BuildableName = "&#x6211;&#x7684;&#x65e0;&#x53cc;&#x653b;&#x7565;.app"
             BlueprintName = "wsol"
             ReferencedContainer = "container:wsol.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09A3C37119B1CEF800E46114"
-            BuildableName = "&#x65e0;&#x53cc;ol&#x8d44;&#x6599;.app"
+            BuildableName = "&#x6211;&#x7684;&#x65e0;&#x53cc;&#x653b;&#x7565;.app"
             BlueprintName = "wsol"
             ReferencedContainer = "container:wsol.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09A3C37119B1CEF800E46114"
-            BuildableName = "&#x65e0;&#x53cc;ol&#x8d44;&#x6599;.app"
+            BuildableName = "&#x6211;&#x7684;&#x65e0;&#x53cc;&#x653b;&#x7565;.app"
             BlueprintName = "wsol"
             ReferencedContainer = "container:wsol.xcodeproj">
          </BuildableReference>

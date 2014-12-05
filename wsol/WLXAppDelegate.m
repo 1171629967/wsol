@@ -9,6 +9,7 @@
 #import "WLXAppDelegate.h"
 
 #import "MobClick.h"
+#import "WPLib/AppConnect.h"
 
 
 @implementation WLXAppDelegate
@@ -17,6 +18,7 @@
 {
     //[MobClick setLogEnabled:YES];
     [MobClick startWithAppkey:@"5402df29fd98c59f3a0120a6" reportPolicy:BATCH   channelId:@""];
+    [AppConnect getConnect:@"1b4b1516443bf4258cc5737b7b2282b1" pid:@"appstore"];
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -10,6 +10,7 @@
 #import "WeaponTVC.h"
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
+#import "WPLib/AppConnect.h"
 
 @interface WeaponVC ()
 
@@ -32,7 +33,8 @@
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [searchBar sizeToFit];
     self.tableView.tableHeaderView = searchBar;
-
+    
+    
     
     //初始化searchDisplayController
     searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
@@ -52,8 +54,9 @@
     
     
 
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weapon_appreciate_listview_back.png"]];
-    searchDisplayController.searchResultsTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"weapon_appreciate_listview_back.png"]];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+    searchDisplayController.searchResultsTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+    
     
     //获取R1武器名称，金牌上升数值，存放到数组中
     NSString *name = weaponNameR1;
@@ -75,6 +78,8 @@
     self.suggesWeaponDataR1F = [[NSMutableArray alloc] init];
     self.suggesWeaponDataR1T = [[NSMutableArray alloc] init];
     self.suggesWeaponDataR1W = [[NSMutableArray alloc] init];
+    
+    [AppConnect displayAd:self showX:0 showY:-50];
 }
 
 - (void)didReceiveMemoryWarning

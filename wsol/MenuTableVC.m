@@ -11,6 +11,8 @@
 #import "WeaponVC.h"
 #import "LoadhtmlVC.h"
 #import "LoadtxtVC.h"
+#import "WuxuVC.h"
+#import "MeizhouhuodongVC.h"
 
 @interface MenuTableVC ()
 
@@ -172,7 +174,7 @@
         UINavigationController *controller;
         
         if ([currentMenuString isEqualToString:@"金牌武器上升值"]) {
-          controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];
+          controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];            
         }
         else if([currentMenuString isEqualToString:@"任务报酬一览"]){
             LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
@@ -180,6 +182,8 @@
             htmlVC.titleName = @"任务报酬一览";
             controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
         }
+
+        
         else if([currentMenuString isEqualToString:@"内政等级表"]){
             LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
             htmlVC.htmlName = @"renwudengji";
@@ -192,11 +196,15 @@
             txtVC.titleName = @"副将技能和属性";
             controller = [[UINavigationController alloc] initWithRootViewController:txtVC];
         }
+        
         else if([currentMenuString isEqualToString:@"关于APP"]){
             LoadtxtVC *txtVC = [[LoadtxtVC alloc] init];
             txtVC.txtName = @"aboutapp";
             txtVC.titleName = @"关于APP";
             controller = [[UINavigationController alloc] initWithRootViewController:txtVC];
+        }
+        else if([currentMenuString isEqualToString:@"每周活动"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[MeizhouhuodongVC alloc] init]];
         }
         
         [self.sideMenuViewController setMainViewController:controller animated:YES closeMenu:YES];

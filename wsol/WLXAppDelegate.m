@@ -9,17 +9,22 @@
 #import "WLXAppDelegate.h"
 
 #import "MobClick.h"
-#import "WPLib/AppConnect.h"
+#import "ConfigHeader.h"
+
 
 
 @implementation WLXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //友盟统计初始化
     //[MobClick setLogEnabled:YES];
     [MobClick startWithAppkey:@"5402df29fd98c59f3a0120a6" reportPolicy:BATCH   channelId:@""];
-    [AppConnect getConnect:@"1b4b1516443bf4258cc5737b7b2282b1" pid:@"appstore"];
     
+    //有米广告初始化
+    [YouMiNewSpot initYouMiDeveloperParams:@"f33506c35f98564f" YM_SecretId:@"817f789c8e214ae5"];
+    //使用前先初始化一下插屏
+    [YouMiNewSpot initYouMiDeveLoperSpot:kSPOTSpotTypePortrait];//填上你对应的横竖屏模式
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
@@ -54,6 +59,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
@@ -65,6 +71,18 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    //有米广告
+    NSString *value = [YouMiNewSpot onlineYouMiValueForKey:@"isOpenAD"];
+    if ([value isEqualToString:@"YES"]) {
+        [YouMiNewSpot showYouMiSpotAction:^(BOOL flag){
+            if (flag) {
+                //NSLog(@"log添加展示成功的逻辑");
+            }
+            else{
+                //NSLog(@"log添加展示失败的逻辑");
+            }
+        }];
+    }
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -101,6 +119,7 @@
 - (void)sideMenuViewControllerDidCloseMenu:(TWTSideMenuViewController *)sender {
 	NSLog(@"didCloseMenu");
 }
+
 
 
 

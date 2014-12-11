@@ -23,7 +23,6 @@
 #import "TWTSideMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
-#import "WPLib/AppConnect.h"
 
 static NSTimeInterval const kDefaultAnimationDelayDuration = 0.2;
 static NSTimeInterval const kDefaultAnimationDuration = 0.4;

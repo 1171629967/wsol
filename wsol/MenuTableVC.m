@@ -13,6 +13,7 @@
 #import "LoadtxtVC.h"
 #import "WuxuVC.h"
 #import "MeizhouhuodongVC.h"
+#import "PianzimingdanVC.h"
 
 @interface MenuTableVC ()
 
@@ -205,6 +206,9 @@
         }
         else if([currentMenuString isEqualToString:@"每周活动"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[MeizhouhuodongVC alloc] init]];
+        }
+        else if([currentMenuString isEqualToString:@"骗子名单"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[PianzimingdanVC alloc] init]];
         }
         
         [self.sideMenuViewController setMainViewController:controller animated:YES closeMenu:YES];

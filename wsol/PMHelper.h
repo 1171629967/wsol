@@ -28,6 +28,8 @@
 */
 - (NSDictionary *)responseJsonData;
 
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString ;
+
 @end
 
 #pragma mark NSString

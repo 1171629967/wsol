@@ -10,7 +10,6 @@
 #import "WeaponTVC.h"
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
-#import "WPLib/AppConnect.h"
 
 @interface WeaponVC ()
 
@@ -79,8 +78,9 @@
     self.suggesWeaponDataR1T = [[NSMutableArray alloc] init];
     self.suggesWeaponDataR1W = [[NSMutableArray alloc] init];
     
-    [AppConnect displayAd:self showX:0 showY:-50];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -287,6 +287,8 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"金牌武器上升值页面"];
 }
+
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {

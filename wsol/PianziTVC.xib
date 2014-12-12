@@ -14,10 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zp5-uD-7aw">
-                        <rect key="frame" x="10" y="10" width="80" height="80"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f7M-oO-Qa4">
                         <rect key="frame" x="105" y="20" width="195" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,7 +58,6 @@
                 <outlet property="beizhu" destination="ID7-f3-hL3" id="QTN-A1-dxw"/>
                 <outlet property="beizhuText" destination="MmH-LT-SbZ" id="Sjt-AR-ZuH"/>
                 <outlet property="name" destination="f7M-oO-Qa4" id="H13-7m-Ezj"/>
-                <outlet property="pic" destination="zp5-uD-7aw" id="ML0-JW-tEc"/>
                 <outlet property="zhengju" destination="BEJ-EP-ani" id="VmS-Tb-oJK"/>
                 <outlet property="zhengjuText" destination="wBY-tT-g7N" id="Go0-hO-nem"/>
             </connections>

@@ -13,6 +13,8 @@
 #import "Pianzi.h"
 #import "Utils.h"
 #import "PianziTVC.h"
+#import "WLXAppDelegate.h"
+
 
 
 @interface PianzimingdanVC ()
@@ -222,12 +224,14 @@
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
     // Return YES to cause the search result table view to be reloaded.
     [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar                                                      selectedScopeButtonIndex]]];
+    currentTableViewType = 1;
     return YES;
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption{
     // Return YES to cause the search result table view to be reloaded.
     [self filterContentForSearchText:[self.searchDisplayController.searchBar text]  scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    currentTableViewType = 1;
     return YES;
 }
 
@@ -242,11 +246,15 @@
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
 {
     [searchBar resignFirstResponder];
+    currentTableViewType = 0;
 }
 
 
 /** 谓词匹配搜索内容 */
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    [self.suggesPianziNames removeAllObjects];
+    [self.suggesPianzis removeAllObjects];
+    
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@",                                     searchText];
     NSArray *array = [self.pianziNames filteredArrayUsingPredicate:resultPredicate];
     [self.suggesPianziNames addObjectsFromArray:array];
@@ -325,6 +333,7 @@
 {
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"骗子名单页面"];
+    
 }
 
 
@@ -347,16 +356,26 @@
 
 
 -(void)actionTap:(UITapGestureRecognizer *)sender{
-    CGPoint location = [sender locationInView:self.tableView];
-    NSIndexPath *indexPath  = [self.tableView indexPathForRowAtPoint:location];
-    UITableViewCell *cell = (UITableViewCell *)[self.tableView  cellForRowAtIndexPath:indexPath];
+    UITableView *currentTableView;
+    if (currentTableViewType == 0) {
+        currentTableView = self.tableView;
+    }
+    else if (currentTableViewType == 1)
+    {
+        currentTableView = searchDisplayController.searchResultsTableView;
+    }
+    
+    CGPoint location = [sender locationInView:currentTableView];
+    NSIndexPath *indexPath  = [currentTableView indexPathForRowAtPoint:location];
+    UITableViewCell *cell = (UITableViewCell *)[currentTableView  cellForRowAtIndexPath:indexPath];
     UIImageView *imageView=(UIImageView *)[cell.contentView viewWithTag:9999];
+    
     
     if (imageView.image == nil) {
         return;
     }
     
-    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-self.tableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
+    frame_first=CGRectMake(cell.frame.origin.x+imageView.frame.origin.x, cell.frame.origin.y+imageView.frame.origin.y-currentTableView.contentOffset.y, imageView.frame.size.width, imageView.frame.size.height);
     
 
     sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];

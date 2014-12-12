@@ -11,7 +11,7 @@
 @interface PianziTVC : UITableViewCell
 
 
-@property (strong, nonatomic) IBOutlet UIImageView *pic;
+
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *zhengjuText;
 @property (strong,nonatomic) IBOutlet UITextView *zhengju;

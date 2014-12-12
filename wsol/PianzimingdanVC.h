@@ -17,6 +17,7 @@
     UISearchDisplayController *searchDisplayController;
     UIActivityIndicatorView *activityIndicator;
      EGOImageView* imageView;
+    int currentTableViewType;
 }
 @property (strong, nonatomic) NSMutableArray *pianzis;
 @property (strong, nonatomic) NSMutableArray *suggesPianzis;

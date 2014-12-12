@@ -19,6 +19,9 @@
 @property (nonatomic, strong) MenuTableVC *menuTableVC;
 @property (nonatomic, strong) WeaponVC *weaponVC;
 
+@property BOOL isOpenAD;
+
+
 
 
 @end

@@ -10,6 +10,7 @@
 #import "WeaponTVC.h"
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
+#import "WLXAppDelegate.h"
 
 @interface WeaponVC ()
 
@@ -285,7 +286,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [MobClick beginLogPageView:@"金牌武器上升值页面"];
+    [MobClick beginLogPageView:@"金牌武器上升值页面"];  
 }
 
 

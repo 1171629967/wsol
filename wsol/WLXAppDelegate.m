@@ -13,6 +13,7 @@
 
 
 
+
 @implementation WLXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,6 +26,7 @@
     [YouMiNewSpot initYouMiDeveloperParams:@"f33506c35f98564f" YM_SecretId:@"817f789c8e214ae5"];
     //使用前先初始化一下插屏
     [YouMiNewSpot initYouMiDeveLoperSpot:kSPOTSpotTypePortrait];//填上你对应的横竖屏模式
+
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
@@ -40,15 +42,19 @@
     self.window.rootViewController = self.sideMenuViewController;
     
     
-    
+    [self performSelector:@selector(loadYoumiAD) withObject:nil afterDelay:2.0f];
     
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor grayColor]];
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
     
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -59,9 +65,25 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    [self performSelector:@selector(loadYoumiAD) withObject:nil afterDelay:1.0f];
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+-(void) loadYoumiAD
+{
+    NSString *value = [YouMiNewSpot onlineYouMiValueForKey:@"isOpenAD"];
+    if ([value isEqualToString:@"YES"]) {
+        [YouMiNewSpot showYouMiSpotAction:^(BOOL flag){
+            if (flag) {
+                NSLog(@"log添加展示成功的逻辑");
+            }
+            else{
+                NSLog(@"log添加展示失败的逻辑");
+            }
+        }];
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -71,18 +93,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    //有米广告
-    NSString *value = [YouMiNewSpot onlineYouMiValueForKey:@"isOpenAD"];
-    if ([value isEqualToString:@"YES"]) {
-        [YouMiNewSpot showYouMiSpotAction:^(BOOL flag){
-            if (flag) {
-                //NSLog(@"log添加展示成功的逻辑");
-            }
-            else{
-                //NSLog(@"log添加展示失败的逻辑");
-            }
-        }];
-    }
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

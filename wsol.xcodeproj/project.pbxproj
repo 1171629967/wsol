@@ -38,7 +38,6 @@
 		093201171A39A4B100A323BA /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 093201101A39A4B100A323BA /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		093201181A39A4B100A323BA /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 093201121A39A4B100A323BA /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		093201191A39A4B100A323BA /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 093201151A39A4B100A323BA /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		09365D931A30664200A3E8E8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D921A30664200A3E8E8 /* AdSupport.framework */; };
 		09365D951A30664E00A3E8E8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D941A30664E00A3E8E8 /* QuartzCore.framework */; };
 		09365D971A30665A00A3E8E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D961A30665A00A3E8E8 /* Security.framework */; };
 		09365D991A30666800A3E8E8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D981A30666800A3E8E8 /* CoreTelephony.framework */; };
@@ -87,7 +86,7 @@
 		09A42E6A19F3E271007D2707 /* WuxuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A42E6819F3E271007D2707 /* WuxuVC.m */; };
 		09A42E6B19F3E271007D2707 /* WuxuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6919F3E271007D2707 /* WuxuVC.xib */; };
 		09A42E6E19F3E3E0007D2707 /* wuxu1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */; };
-		09E9D1F11A388B770023A68B /* youmispot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F01A388B770023A68B /* youmispot.a */; };
+		09BA71EC1A3BAF400024BF3F /* youmispot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BA71EB1A3BAF400024BF3F /* youmispot.a */; };
 		09E9D1F31A388BE90023A68B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F21A388BE90023A68B /* StoreKit.framework */; };
 		09E9D1F51A388BF40023A68B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F41A388BF40023A68B /* ImageIO.framework */; };
 		09E9D1F71A388C0B0023A68B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */; };
@@ -247,10 +246,11 @@
 		09A42E6819F3E271007D2707 /* WuxuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WuxuVC.m; sourceTree = "<group>"; };
 		09A42E6919F3E271007D2707 /* WuxuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WuxuVC.xib; sourceTree = "<group>"; };
 		09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wuxu1.jpg; sourceTree = "<group>"; };
-		09E9D1ED1A388B770023A68B /* ConfigHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHeader.h; sourceTree = "<group>"; };
-		09E9D1EE1A388B770023A68B /* symbols_spotconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbols_spotconfuse.h; sourceTree = "<group>"; };
-		09E9D1EF1A388B770023A68B /* YouMiNewSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiNewSpot.h; sourceTree = "<group>"; };
-		09E9D1F01A388B770023A68B /* youmispot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = youmispot.a; sourceTree = "<group>"; };
+		09BA71E81A3BAF400024BF3F /* ConfigHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHeader.h; sourceTree = "<group>"; };
+		09BA71E91A3BAF400024BF3F /* symbols_spotconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbols_spotconfuse.h; sourceTree = "<group>"; };
+		09BA71EA1A3BAF400024BF3F /* YouMiNewSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiNewSpot.h; sourceTree = "<group>"; };
+		09BA71EB1A3BAF400024BF3F /* youmispot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = youmispot.a; sourceTree = "<group>"; };
+		09E575B31A3AFD6E00791395 /* WPLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WPLib.framework; sourceTree = "<group>"; };
 		09E9D1F21A388BE90023A68B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		09E9D1F41A388BF40023A68B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -278,6 +278,7 @@
 				09E9D1F71A388C0B0023A68B /* libsqlite3.dylib in Frameworks */,
 				09E9D1F51A388BF40023A68B /* ImageIO.framework in Frameworks */,
 				09E9D1F31A388BE90023A68B /* StoreKit.framework in Frameworks */,
+				09BA71EC1A3BAF400024BF3F /* youmispot.a in Frameworks */,
 				0982041B1A318B8F000655F9 /* libz.1.2.5.dylib in Frameworks */,
 				098204191A318B6D000655F9 /* MobileCoreServices.framework in Frameworks */,
 				098204171A318B51000655F9 /* CFNetwork.framework in Frameworks */,
@@ -285,11 +286,9 @@
 				09365D991A30666800A3E8E8 /* CoreTelephony.framework in Frameworks */,
 				09365D971A30665A00A3E8E8 /* Security.framework in Frameworks */,
 				09365D951A30664E00A3E8E8 /* QuartzCore.framework in Frameworks */,
-				09365D931A30664200A3E8E8 /* AdSupport.framework in Frameworks */,
 				09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */,
 				09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */,
 				09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */,
-				09E9D1F11A388B770023A68B /* youmispot.a in Frameworks */,
 				09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */,
 				09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */,
 			);
@@ -516,9 +515,9 @@
 		098204291A319DD9000655F9 /* 第三方支持库 */ = {
 			isa = PBXGroup;
 			children = (
+				09BA71E61A3BAF400024BF3F /* spotlib */,
 				093201061A39A34F00A323BA /* EGOImageLoading */,
 				093200AB1A3958AE00A323BA /* TouchJson */,
-				09E9D1EB1A388B770023A68B /* spotlib */,
 				09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */,
 				098203F11A318A8A000655F9 /* ASIHttpLib */,
 				09FA19C219BC74CF00DF60D5 /* TWTSideMenuViewController */,
@@ -562,6 +561,7 @@
 		09A3C37419B1CEF800E46114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09E575B31A3AFD6E00791395 /* WPLib.framework */,
 				09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */,
 				09E9D1F41A388BF40023A68B /* ImageIO.framework */,
 				09E9D1F21A388BE90023A68B /* StoreKit.framework */,
@@ -679,21 +679,21 @@
 			name = "图片";
 			sourceTree = "<group>";
 		};
-		09E9D1EB1A388B770023A68B /* spotlib */ = {
+		09BA71E61A3BAF400024BF3F /* spotlib */ = {
 			isa = PBXGroup;
 			children = (
-				09E9D1EC1A388B770023A68B /* include */,
-				09E9D1F01A388B770023A68B /* youmispot.a */,
+				09BA71E71A3BAF400024BF3F /* include */,
+				09BA71EB1A3BAF400024BF3F /* youmispot.a */,
 			);
 			path = spotlib;
 			sourceTree = "<group>";
 		};
-		09E9D1EC1A388B770023A68B /* include */ = {
+		09BA71E71A3BAF400024BF3F /* include */ = {
 			isa = PBXGroup;
 			children = (
-				09E9D1ED1A388B770023A68B /* ConfigHeader.h */,
-				09E9D1EE1A388B770023A68B /* symbols_spotconfuse.h */,
-				09E9D1EF1A388B770023A68B /* YouMiNewSpot.h */,
+				09BA71E81A3BAF400024BF3F /* ConfigHeader.h */,
+				09BA71E91A3BAF400024BF3F /* symbols_spotconfuse.h */,
+				09BA71EA1A3BAF400024BF3F /* YouMiNewSpot.h */,
 			);
 			path = include;
 			sourceTree = "<group>";

@@ -36,8 +36,9 @@
 {
     NSError *error;
     NSDictionary *rootDic = [[CJSONDeserializer deserializer] deserialize:[json dataUsingEncoding:NSUTF8StringEncoding] error:&error];
-    int page = (int)[rootDic objectForKey:@"totalPianziPages"];
-    return page;
+    NSNumber *page = (NSNumber *)[rootDic objectForKey:@"totalPianziPage"];
+    int p = [page intValue];
+    return p;
 }
 
 + (BOOL) isBlankString:(NSString *)string {

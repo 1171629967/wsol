@@ -14,6 +14,8 @@
 #import "Utils.h"
 #import "PianziTVC.h"
 #import "WLXAppDelegate.h"
+#import <BmobSDK/Bmob.h>
+
 
 
 
@@ -81,7 +83,7 @@
     self.suggesPianzis = [[NSMutableArray alloc] init];
     self.pianziNames = [[NSMutableArray alloc] init];
     self.suggesPianziNames = [[NSMutableArray alloc] init];
-    [self doHttp:0];
+    [self doHttp];
 
 }
 
@@ -274,45 +276,51 @@
 
 
 
-- (void)doHttp:(int) page{
+- (void)doHttp{
     activityIndicator.hidden = NO;
     [activityIndicator startAnimating];
-    NSString *str = [NSString stringWithFormat:@"%@?key=%@&info=%@%d",TULING_API,TULING_KEY,TULING_QUESTION2,page];
-    NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     
-    [request setCompletionBlock:^{
-        if (page == 0) {
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Pianzi"];
+    bquery.limit = 1000;
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (error) {
+            [activityIndicator stopAnimating];
+            activityIndicator.hidden = YES;
+        }
+        else {
+            [activityIndicator stopAnimating];
+            activityIndicator.hidden = YES;
             [self.pianzis removeAllObjects];
             [self.suggesPianzis removeAllObjects];
             [self.pianziNames removeAllObjects];
             [self.suggesPianziNames removeAllObjects];
-        }
-        
-        [activityIndicator stopAnimating];
-        activityIndicator.hidden = YES;
-        NSString *text = [request responseJsonDataWithKey:@"text"];
-        NSString *str = [text stringByReplacingOccurrencesOfString:@"\$" withString:@"\""];
-        NSLog(@"加载成功------》%d------%@",page,str);
-        
-        NSMutableArray *array = [Utils JsonToPianzis:str AndPianziNames:self.pianziNames];
-        [self.pianzis addObjectsFromArray:array];
-        
-        if (page == 0) {
-            int totalPianziPage = [Utils totalPianziPages:str];
-            for (int i = 1; i < totalPianziPage; i++) {
-                [self doHttp:i];
+            
+            
+            for (BmobObject *obj in array) {
+                NSString *name = [obj objectForKey:@"name"];
+                NSString *jietu = [obj objectForKey:@"jietu"];
+                NSString *zhengjuurl = [obj objectForKey:@"zhengjuurl"];
+                NSString *beizhu = [obj objectForKey:@"beizhu"];
+                
+                [self.pianziNames addObject:name];
+                Pianzi *pianzi = [[Pianzi alloc] initWithName:name Jietu:jietu Zhengjuurl:zhengjuurl Beizhu:beizhu];
+                [self.pianzis addObject:pianzi];
             }
+            //刷新表格控件
+            [self.tableView reloadData];
+            
+            
         }
-        [self.tableView reloadData];
+        
     }];
-    [request setFailedBlock:^{
-        [activityIndicator stopAnimating];
-        activityIndicator.hidden = YES;
-        NSError *error = [request error];
-        NSLog(@"加载失败------》%d",page);
-    }];
-    [request startAsynchronous];
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -321,7 +329,7 @@
 
 - (void)refreshButtonPressed
 {
-    [self doHttp:0];
+    [self doHttp];
 }
 
 - (void)openButtonPressed

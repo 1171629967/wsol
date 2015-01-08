@@ -10,7 +10,7 @@
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
 #import "PMHelper.h"
-
+#import <BmobSDK/Bmob.h>
 
 @interface MeizhouhuodongVC ()
 
@@ -53,7 +53,7 @@
     [self.view addSubview:activityIndicator];
     
     [self doHttp];
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,31 +73,34 @@
 - (void)doHttp{
     activityIndicator.hidden = NO;
     [activityIndicator startAnimating];
-    NSString *str = [NSString stringWithFormat:@"%@?key=%@&info=%@",TULING_API,TULING_KEY,TULING_QUESTION1];
-    NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-    [request setDelegate:self];
-    [request startAsynchronous];
+    
+    
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Information"];
+    [bquery whereKey:@"type" equalTo:@"activity_everyweek_ios"];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (error) {
+            [activityIndicator stopAnimating];
+            activityIndicator.hidden = YES;
+            textView.text = @"加载数据失败，请重试";
+        }
+        else {
+            [activityIndicator stopAnimating];
+            activityIndicator.hidden = YES;
+            BmobObject *obj = [array objectAtIndex:0];
+            NSString *des = [obj objectForKey:@"des"];
+            NSString *str = [des stringByReplacingOccurrencesOfString:@"$" withString:@"\n"];
+            textView.text = str;
+        }
+            
+    }];
+    
+    
+   
 }
 
-- (void)requestFinished:(ASIHTTPRequest *)request
-{
-    [activityIndicator stopAnimating];
-    activityIndicator.hidden = YES;
-    // 当以文本形式读取返回内容时用这个方法
-    //NSString *responseString = [request responseString];
-    NSString *text = [request responseJsonDataWithKey:@"text"];
-    NSString *str = [text stringByReplacingOccurrencesOfString:@"\$" withString:@"\n"];
-    textView.text = str;
-}
 
-- (void)requestFailed:(ASIHTTPRequest *)request
-{
-    [activityIndicator stopAnimating];
-    activityIndicator.hidden = YES;
-    textView.text = @"加载数据失败，请重试";
-    NSError *error = [request error];    
-}
+
+
 
 - (void)openButtonPressed
 {

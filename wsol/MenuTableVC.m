@@ -14,6 +14,9 @@
 #import "WuxuVC.h"
 #import "MeizhouhuodongVC.h"
 #import "PianzimingdanVC.h"
+#import "PMHelper.h"
+#import <BmobSDK/Bmob.h>
+
 
 @interface MenuTableVC ()
 
@@ -46,8 +49,61 @@
     typesArray = [NSArray arrayWithContentsOfURL:typeURL];
     menusArray = [NSArray arrayWithContentsOfURL:menuURL];
     
-       
+    
+    
+    [self loadPaomadeng];
 }
+
+
+
+/** 跑马灯公告 */
+- (void)loadPaomadeng
+{
+    
+    
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Information"];
+    [bquery whereKey:@"type" equalTo:@"gonggao_ios"];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (error) {
+            
+        }
+        else {
+            BmobObject *obj = [array objectAtIndex:0];
+            NSString *des = [obj objectForKey:@"des"];
+            if (![des isEqualToString:@""]) {
+                scrollingTicker = [[DMScrollingTicker alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT-16, SCREEN_WIDTH, 16)];
+                scrollingTicker.backgroundColor = [UIColor whiteColor];
+                [self.sideMenuViewController.view addSubview:scrollingTicker];
+                
+                
+                NSMutableArray *l = [[NSMutableArray alloc] init];
+                LPScrollingTickerLabelItem *label = [[LPScrollingTickerLabelItem alloc] initWithTitle:des description:@""];
+                [label layoutSubviews];
+                [l addObject:label];
+                
+                
+                [scrollingTicker beginAnimationWithViews:l
+                                               direction:LPScrollingDirection_FromRight
+                                                   speed:8
+                                                   loops:99999
+                                            completition:^(NSUInteger loopsDone, BOOL isFinished) {
+                                                
+                                            }];
+            }
+            
+            
+            
+        }
+        
+    }];
+    
+   
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -174,7 +230,7 @@
         currentMenuString = menuString;
         UINavigationController *controller;
         
-        if ([currentMenuString isEqualToString:@"金牌武器上升值"]) {
+        if ([currentMenuString isEqualToString:@"金牌上升和威力系数"]) {
           controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];            
         }
         else if([currentMenuString isEqualToString:@"任务报酬一览"]){
@@ -210,6 +266,7 @@
         else if([currentMenuString isEqualToString:@"骗子名单"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[PianzimingdanVC alloc] init]];
         }
+        
         
         [self.sideMenuViewController setMainViewController:controller animated:YES closeMenu:YES];
         

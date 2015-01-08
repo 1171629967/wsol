@@ -48,6 +48,8 @@
        NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 //    self.webview.delegate = self;
     [self.webview loadHTMLString:htmlString baseURL:[NSURL URLWithString:filePath]];
+    
+    
 }
 
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
 
-@interface MeizhouhuodongVC : UIViewController<ASIHTTPRequestDelegate>
+@interface MeizhouhuodongVC : UIViewController
 {
     UITextView *textView;
     UIActivityIndicatorView *activityIndicator;

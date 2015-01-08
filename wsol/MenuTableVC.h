@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DMScrollingTicker.h"
+#import "ASIHTTPRequest.h"
 
 @interface MenuTableVC : UITableViewController
 {
     NSString *currentMenuString;
     NSArray *typesArray;
     NSArray *menusArray;
+    DMScrollingTicker *scrollingTicker;
 }
 
 

@@ -42,6 +42,7 @@
 		09365D971A30665A00A3E8E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D961A30665A00A3E8E8 /* Security.framework */; };
 		09365D991A30666800A3E8E8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D981A30666800A3E8E8 /* CoreTelephony.framework */; };
 		09365D9B1A30667400A3E8E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D9A1A30667400A3E8E8 /* SystemConfiguration.framework */; };
+		094807671A42275200FD519D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 094807661A42275200FD519D /* DMScrollingTicker.m */; };
 		0957109719BD3F4D0044B76B /* fujiang.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0957109619BD3F4D0044B76B /* fujiang.txt */; };
 		0957109D19BD418F0044B76B /* renwubaochou.html in Resources */ = {isa = PBXBuildFile; fileRef = 0957109C19BD418F0044B76B /* renwubaochou.html */; };
 		095710A119BD493F0044B76B /* renwudengji.html in Resources */ = {isa = PBXBuildFile; fileRef = 095710A019BD493F0044B76B /* renwudengji.html */; };
@@ -86,8 +87,13 @@
 		09A42E6A19F3E271007D2707 /* WuxuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A42E6819F3E271007D2707 /* WuxuVC.m */; };
 		09A42E6B19F3E271007D2707 /* WuxuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6919F3E271007D2707 /* WuxuVC.xib */; };
 		09A42E6E19F3E3E0007D2707 /* wuxu1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */; };
-		09BA71EC1A3BAF400024BF3F /* youmispot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BA71EB1A3BAF400024BF3F /* youmispot.a */; };
-		09E9D1F31A388BE90023A68B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F21A388BE90023A68B /* StoreKit.framework */; };
+		09CDC2011A5E2A4D0066D5B9 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDC2001A5E2A4D0066D5B9 /* BmobSDK.framework */; };
+		09CDC2031A5E2A9F0066D5B9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDC2021A5E2A9F0066D5B9 /* CoreLocation.framework */; };
+		09CDC2051A5E2AD70066D5B9 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDC2041A5E2AD60066D5B9 /* libicucore.dylib */; };
+		09CDC2071A5E2B040066D5B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDC2061A5E2B040066D5B9 /* AVFoundation.framework */; };
+		09CDC2091A5E2B190066D5B9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CDC2081A5E2B190066D5B9 /* MediaPlayer.framework */; };
+		09CDC2111A5E3D7A0066D5B9 /* WeilixishuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDC2101A5E3D7A0066D5B9 /* WeilixishuVC.m */; };
+		09E9D1F31A388BE90023A68B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F21A388BE90023A68B /* StoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		09E9D1F51A388BF40023A68B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F41A388BF40023A68B /* ImageIO.framework */; };
 		09E9D1F71A388C0B0023A68B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */; };
 		09E9D1FA1A38966A0023A68B /* PianzimingdanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9D1F91A38966A0023A68B /* PianzimingdanVC.m */; };
@@ -179,6 +185,8 @@
 		09365D961A30665A00A3E8E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		09365D981A30666800A3E8E8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		09365D9A1A30667400A3E8E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		094807651A42275200FD519D /* DMScrollingTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollingTicker.h; sourceTree = "<group>"; };
+		094807661A42275200FD519D /* DMScrollingTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollingTicker.m; sourceTree = "<group>"; };
 		0957109619BD3F4D0044B76B /* fujiang.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fujiang.txt; sourceTree = "<group>"; };
 		0957109C19BD418F0044B76B /* renwubaochou.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwubaochou.html; sourceTree = "<group>"; };
 		095710A019BD493F0044B76B /* renwudengji.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwudengji.html; sourceTree = "<group>"; };
@@ -246,11 +254,13 @@
 		09A42E6819F3E271007D2707 /* WuxuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WuxuVC.m; sourceTree = "<group>"; };
 		09A42E6919F3E271007D2707 /* WuxuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WuxuVC.xib; sourceTree = "<group>"; };
 		09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wuxu1.jpg; sourceTree = "<group>"; };
-		09BA71E81A3BAF400024BF3F /* ConfigHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigHeader.h; sourceTree = "<group>"; };
-		09BA71E91A3BAF400024BF3F /* symbols_spotconfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symbols_spotconfuse.h; sourceTree = "<group>"; };
-		09BA71EA1A3BAF400024BF3F /* YouMiNewSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiNewSpot.h; sourceTree = "<group>"; };
-		09BA71EB1A3BAF400024BF3F /* youmispot.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = youmispot.a; sourceTree = "<group>"; };
-		09E575B31A3AFD6E00791395 /* WPLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WPLib.framework; sourceTree = "<group>"; };
+		09CDC2001A5E2A4D0066D5B9 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		09CDC2021A5E2A9F0066D5B9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		09CDC2041A5E2AD60066D5B9 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		09CDC2061A5E2B040066D5B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		09CDC2081A5E2B190066D5B9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		09CDC20F1A5E3D7A0066D5B9 /* WeilixishuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeilixishuVC.h; sourceTree = "<group>"; };
+		09CDC2101A5E3D7A0066D5B9 /* WeilixishuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeilixishuVC.m; sourceTree = "<group>"; };
 		09E9D1F21A388BE90023A68B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		09E9D1F41A388BF40023A68B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -275,10 +285,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CDC2091A5E2B190066D5B9 /* MediaPlayer.framework in Frameworks */,
+				09CDC2071A5E2B040066D5B9 /* AVFoundation.framework in Frameworks */,
+				09CDC2051A5E2AD70066D5B9 /* libicucore.dylib in Frameworks */,
+				09CDC2031A5E2A9F0066D5B9 /* CoreLocation.framework in Frameworks */,
 				09E9D1F71A388C0B0023A68B /* libsqlite3.dylib in Frameworks */,
 				09E9D1F51A388BF40023A68B /* ImageIO.framework in Frameworks */,
 				09E9D1F31A388BE90023A68B /* StoreKit.framework in Frameworks */,
-				09BA71EC1A3BAF400024BF3F /* youmispot.a in Frameworks */,
 				0982041B1A318B8F000655F9 /* libz.1.2.5.dylib in Frameworks */,
 				098204191A318B6D000655F9 /* MobileCoreServices.framework in Frameworks */,
 				098204171A318B51000655F9 /* CFNetwork.framework in Frameworks */,
@@ -288,6 +301,7 @@
 				09365D951A30664E00A3E8E8 /* QuartzCore.framework in Frameworks */,
 				09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */,
 				09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */,
+				09CDC2011A5E2A4D0066D5B9 /* BmobSDK.framework in Frameworks */,
 				09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */,
 				09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */,
 				09FAD83F19B379B700A30E35 /* libMobClickLibrary.a in Frameworks */,
@@ -450,6 +464,15 @@
 			path = EGOImageView;
 			sourceTree = "<group>";
 		};
+		094807641A42272700FD519D /* Scrolling Ticker Class */ = {
+			isa = PBXGroup;
+			children = (
+				094807651A42275200FD519D /* DMScrollingTicker.h */,
+				094807661A42275200FD519D /* DMScrollingTicker.m */,
+			);
+			name = "Scrolling Ticker Class";
+			sourceTree = "<group>";
+		};
 		0957109519BD3F2C0044B76B /* txt */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,7 +538,8 @@
 		098204291A319DD9000655F9 /* 第三方支持库 */ = {
 			isa = PBXGroup;
 			children = (
-				09BA71E61A3BAF400024BF3F /* spotlib */,
+				09CDC2001A5E2A4D0066D5B9 /* BmobSDK.framework */,
+				094807641A42272700FD519D /* Scrolling Ticker Class */,
 				093201061A39A34F00A323BA /* EGOImageLoading */,
 				093200AB1A3958AE00A323BA /* TouchJson */,
 				09FAD83B19B379B700A30E35 /* UMAnalytics_Sdk_3.1.2 */,
@@ -561,7 +585,10 @@
 		09A3C37419B1CEF800E46114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09E575B31A3AFD6E00791395 /* WPLib.framework */,
+				09CDC2081A5E2B190066D5B9 /* MediaPlayer.framework */,
+				09CDC2061A5E2B040066D5B9 /* AVFoundation.framework */,
+				09CDC2041A5E2AD60066D5B9 /* libicucore.dylib */,
+				09CDC2021A5E2A9F0066D5B9 /* CoreLocation.framework */,
 				09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */,
 				09E9D1F41A388BF40023A68B /* ImageIO.framework */,
 				09E9D1F21A388BE90023A68B /* StoreKit.framework */,
@@ -612,6 +639,8 @@
 				093200F41A39701500A323BA /* PianziTVC.h */,
 				093200F51A39701500A323BA /* PianziTVC.m */,
 				093200F61A39701500A323BA /* PianziTVC.xib */,
+				09CDC20F1A5E3D7A0066D5B9 /* WeilixishuVC.h */,
+				09CDC2101A5E3D7A0066D5B9 /* WeilixishuVC.m */,
 				09A3C38719B1CEF800E46114 /* Images.xcassets */,
 				098204271A319A33000655F9 /* tableview_background.png */,
 				09A3C37C19B1CEF800E46114 /* Supporting Files */,
@@ -677,25 +706,6 @@
 				09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */,
 			);
 			name = "图片";
-			sourceTree = "<group>";
-		};
-		09BA71E61A3BAF400024BF3F /* spotlib */ = {
-			isa = PBXGroup;
-			children = (
-				09BA71E71A3BAF400024BF3F /* include */,
-				09BA71EB1A3BAF400024BF3F /* youmispot.a */,
-			);
-			path = spotlib;
-			sourceTree = "<group>";
-		};
-		09BA71E71A3BAF400024BF3F /* include */ = {
-			isa = PBXGroup;
-			children = (
-				09BA71E81A3BAF400024BF3F /* ConfigHeader.h */,
-				09BA71E91A3BAF400024BF3F /* symbols_spotconfuse.h */,
-				09BA71EA1A3BAF400024BF3F /* YouMiNewSpot.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		09FA19C219BC74CF00DF60D5 /* TWTSideMenuViewController */ = {
@@ -774,6 +784,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = wlx;
 				TargetAttributes = {
+					09A3C37119B1CEF800E46114 = {
+						DevelopmentTeam = D246HBH8U8;
+					};
 					09A3C38C19B1CEF800E46114 = {
 						TestTargetID = 09A3C37119B1CEF800E46114;
 					};
@@ -841,6 +854,7 @@
 			files = (
 				093200E11A3958AE00A323BA /* CJSONSerialization.m in Sources */,
 				093201091A39A36700A323BA /* EGOCache.m in Sources */,
+				094807671A42275200FD519D /* DMScrollingTicker.m in Sources */,
 				09E9D1FA1A38966A0023A68B /* PianzimingdanVC.m in Sources */,
 				093200F71A39701500A323BA /* PianziTVC.m in Sources */,
 				093200E31A3958AE00A323BA /* CDataScanner_Extensions.m in Sources */,
@@ -878,6 +892,7 @@
 				098204151A318A8A000655F9 /* PKReachability.m in Sources */,
 				093200F31A3958AE00A323BA /* SBJsonWriter.m in Sources */,
 				093200F11A3958AE00A323BA /* SBJsonTokeniser.m in Sources */,
+				09CDC2111A5E3D7A0066D5B9 /* WeilixishuVC.m in Sources */,
 				09FA19CE19BC7FB000DF60D5 /* LoadhtmlVC.m in Sources */,
 				093200E21A3958AE00A323BA /* CJSONSerializedData.m in Sources */,
 				098204101A318A8A000655F9 /* ASIFormDataRequest.m in Sources */,
@@ -1018,8 +1033,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.2",
 					"$(PROJECT_DIR)/spotlib",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "我的无双攻略";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1041,8 +1058,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/UMAnalytics_Sdk_3.1.2",
 					"$(PROJECT_DIR)/spotlib",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "我的无双攻略";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

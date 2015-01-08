@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeilixishuVC.h"
 
 @interface WeaponVC : UITableViewController <UISearchBarDelegate,UISearchDisplayDelegate>
 {
     int weaponsTypeCount;
     UISearchBar *searchBar;
     UISearchDisplayController *searchDisplayController;
+    WeilixishuVC *wlxsVC;
+    
 }
+
+
 
 @property (strong, nonatomic) NSArray *weaponNamesR1;
 @property (strong, nonatomic) NSArray *weaponDataR1G;

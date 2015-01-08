@@ -12,6 +12,7 @@
 #import "TWTSideMenuViewController.h"
 #import "WLXAppDelegate.h"
 
+
 @interface WeaponVC ()
 
 @end
@@ -99,7 +100,21 @@
 //点击列表单元格
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+    wlxsVC = [[WeilixishuVC alloc] init];
+    
+    if(tableView == searchDisplayController.searchResultsTableView)
+    {
+        wlxsVC.weaponName = [self.suggesWeaponNamesR1 objectAtIndex:[indexPath row]];
+    }
+    else
+    {
+        wlxsVC.weaponName = [self.weaponNamesR1 objectAtIndex:[indexPath row]];
+    }
+    
+    [self.navigationController pushViewController:wlxsVC animated:YES];
+    
+    
+    
 }
 
 //返回列表需要展示多少个单元格

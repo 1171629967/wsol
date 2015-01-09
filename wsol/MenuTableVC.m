@@ -15,7 +15,10 @@
 #import "MeizhouhuodongVC.h"
 #import "PianzimingdanVC.h"
 #import "PMHelper.h"
+#import "YijianVC.h"
 #import <BmobSDK/Bmob.h>
+#import "ShowYijianVC.h"
+#import "NeizhengdengjiVC.h"
 
 
 @interface MenuTableVC ()
@@ -84,7 +87,7 @@
                 
                 [scrollingTicker beginAnimationWithViews:l
                                                direction:LPScrollingDirection_FromRight
-                                                   speed:8
+                                                   speed:40
                                                    loops:99999
                                             completition:^(NSUInteger loopsDone, BOOL isFinished) {
                                                 
@@ -242,10 +245,7 @@
 
         
         else if([currentMenuString isEqualToString:@"内政等级表"]){
-            LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
-            htmlVC.htmlName = @"renwudengji";
-            htmlVC.titleName = @"内政等级表";
-            controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
+            controller = [[UINavigationController alloc] initWithRootViewController:[[NeizhengdengjiVC alloc] init]];
         }
         else if([currentMenuString isEqualToString:@"副将技能和属性"]){
             LoadtxtVC *txtVC = [[LoadtxtVC alloc] init];
@@ -265,6 +265,12 @@
         }
         else if([currentMenuString isEqualToString:@"骗子名单"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[PianzimingdanVC alloc] init]];
+        }
+        else if([currentMenuString isEqualToString:@"意见和建议"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[YijianVC alloc] init]];
+        }
+        else if([currentMenuString isEqualToString:@"玩家意见一览"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[ShowYijianVC alloc] init]];
         }
         
         

@@ -64,6 +64,14 @@
 		0982042D1A319E49000655F9 /* PMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982042C1A319E49000655F9 /* PMHelper.m */; };
 		098204381A31BCC7000655F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098204361A31BCC7000655F9 /* Default-568h@2x.png */; };
 		098204391A31BCC7000655F9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098204371A31BCC7000655F9 /* Default@2x.png */; };
+		099AF7B91A5F6A3700C0B5B3 /* YijianVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7B81A5F6A3700C0B5B3 /* YijianVC.m */; };
+		099AF7BF1A5FA44400C0B5B3 /* ShowYijianVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7BE1A5FA44400C0B5B3 /* ShowYijianVC.m */; };
+		099AF7C21A5FA9B800C0B5B3 /* Yijian.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7C11A5FA9B800C0B5B3 /* Yijian.m */; };
+		099AF7C61A5FAE5500C0B5B3 /* ShowYijianTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7C41A5FAE5500C0B5B3 /* ShowYijianTVC.m */; };
+		099AF7C71A5FAE5500C0B5B3 /* ShowYijianTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099AF7C51A5FAE5500C0B5B3 /* ShowYijianTVC.xib */; };
+		099CFF571A5FD3900022F1F3 /* NeizhengdengjiTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CFF551A5FD3900022F1F3 /* NeizhengdengjiTVC.m */; };
+		099CFF581A5FD3900022F1F3 /* NeizhengdengjiTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099CFF561A5FD3900022F1F3 /* NeizhengdengjiTVC.xib */; };
+		099CFF601A5FD65C0022F1F3 /* NeizhengdengjiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099CFF5F1A5FD65C0022F1F3 /* NeizhengdengjiVC.m */; };
 		09A19A5519BEAB7D000900BA /* MenuTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A19A5319BEAB7D000900BA /* MenuTableVC.m */; };
 		09A19A5619BEAB7D000900BA /* MenuTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A19A5419BEAB7D000900BA /* MenuTableVC.xib */; };
 		09A19A5819BEAD22000900BA /* menuPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A19A5719BEAD22000900BA /* menuPlist.plist */; };
@@ -223,6 +231,20 @@
 		0982042C1A319E49000655F9 /* PMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMHelper.m; sourceTree = "<group>"; };
 		098204361A31BCC7000655F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		098204371A31BCC7000655F9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		099AF7B71A5F6A3700C0B5B3 /* YijianVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianVC.h; sourceTree = "<group>"; };
+		099AF7B81A5F6A3700C0B5B3 /* YijianVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianVC.m; sourceTree = "<group>"; };
+		099AF7BD1A5FA44400C0B5B3 /* ShowYijianVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowYijianVC.h; sourceTree = "<group>"; };
+		099AF7BE1A5FA44400C0B5B3 /* ShowYijianVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowYijianVC.m; sourceTree = "<group>"; };
+		099AF7C01A5FA9B800C0B5B3 /* Yijian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yijian.h; sourceTree = "<group>"; };
+		099AF7C11A5FA9B800C0B5B3 /* Yijian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yijian.m; sourceTree = "<group>"; };
+		099AF7C31A5FAE5500C0B5B3 /* ShowYijianTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowYijianTVC.h; sourceTree = "<group>"; };
+		099AF7C41A5FAE5500C0B5B3 /* ShowYijianTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowYijianTVC.m; sourceTree = "<group>"; };
+		099AF7C51A5FAE5500C0B5B3 /* ShowYijianTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowYijianTVC.xib; sourceTree = "<group>"; };
+		099CFF541A5FD3900022F1F3 /* NeizhengdengjiTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeizhengdengjiTVC.h; sourceTree = "<group>"; };
+		099CFF551A5FD3900022F1F3 /* NeizhengdengjiTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeizhengdengjiTVC.m; sourceTree = "<group>"; };
+		099CFF561A5FD3900022F1F3 /* NeizhengdengjiTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeizhengdengjiTVC.xib; sourceTree = "<group>"; };
+		099CFF5E1A5FD65C0022F1F3 /* NeizhengdengjiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeizhengdengjiVC.h; sourceTree = "<group>"; };
+		099CFF5F1A5FD65C0022F1F3 /* NeizhengdengjiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeizhengdengjiVC.m; sourceTree = "<group>"; };
 		09A19A5219BEAB7D000900BA /* MenuTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableVC.h; sourceTree = "<group>"; };
 		09A19A5319BEAB7D000900BA /* MenuTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableVC.m; sourceTree = "<group>"; };
 		09A19A5419BEAB7D000900BA /* MenuTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTableVC.xib; sourceTree = "<group>"; };
@@ -326,6 +348,8 @@
 			children = (
 				093200A51A394FDC00A323BA /* Pianzi.h */,
 				093200A61A394FDC00A323BA /* Pianzi.m */,
+				099AF7C01A5FA9B800C0B5B3 /* Yijian.h */,
+				099AF7C11A5FA9B800C0B5B3 /* Yijian.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -641,9 +665,21 @@
 				093200F61A39701500A323BA /* PianziTVC.xib */,
 				09CDC20F1A5E3D7A0066D5B9 /* WeilixishuVC.h */,
 				09CDC2101A5E3D7A0066D5B9 /* WeilixishuVC.m */,
+				099AF7B71A5F6A3700C0B5B3 /* YijianVC.h */,
+				099AF7B81A5F6A3700C0B5B3 /* YijianVC.m */,
+				099AF7BD1A5FA44400C0B5B3 /* ShowYijianVC.h */,
+				099AF7BE1A5FA44400C0B5B3 /* ShowYijianVC.m */,
+				099AF7C31A5FAE5500C0B5B3 /* ShowYijianTVC.h */,
+				099AF7C41A5FAE5500C0B5B3 /* ShowYijianTVC.m */,
+				099AF7C51A5FAE5500C0B5B3 /* ShowYijianTVC.xib */,
 				09A3C38719B1CEF800E46114 /* Images.xcassets */,
 				098204271A319A33000655F9 /* tableview_background.png */,
 				09A3C37C19B1CEF800E46114 /* Supporting Files */,
+				099CFF541A5FD3900022F1F3 /* NeizhengdengjiTVC.h */,
+				099CFF551A5FD3900022F1F3 /* NeizhengdengjiTVC.m */,
+				099CFF561A5FD3900022F1F3 /* NeizhengdengjiTVC.xib */,
+				099CFF5E1A5FD65C0022F1F3 /* NeizhengdengjiVC.h */,
+				099CFF5F1A5FD65C0022F1F3 /* NeizhengdengjiVC.m */,
 			);
 			path = wsol;
 			sourceTree = "<group>";
@@ -827,10 +863,12 @@
 				09A3C38819B1CEF800E46114 /* Images.xcassets in Resources */,
 				095710A119BD493F0044B76B /* renwudengji.html in Resources */,
 				09A19A5819BEAD22000900BA /* menuPlist.plist in Resources */,
+				099AF7C71A5FAE5500C0B5B3 /* ShowYijianTVC.xib in Resources */,
 				098204391A31BCC7000655F9 /* Default@2x.png in Resources */,
 				09FA19CF19BC7FB000DF60D5 /* LoadhtmlVC.xib in Resources */,
 				093200F81A39701500A323BA /* PianziTVC.xib in Resources */,
 				0957109D19BD418F0044B76B /* renwubaochou.html in Resources */,
+				099CFF581A5FD3900022F1F3 /* NeizhengdengjiTVC.xib in Resources */,
 				098204281A319A33000655F9 /* tableview_background.png in Resources */,
 				09A19A5619BEAB7D000900BA /* MenuTableVC.xib in Resources */,
 				09A42E6E19F3E3E0007D2707 /* wuxu1.jpg in Resources */,
@@ -863,6 +901,8 @@
 				093200EC1A3958AE00A323BA /* SBJsonStreamParserAdapter.m in Sources */,
 				09A3C38619B1CEF800E46114 /* WLXAppDelegate.m in Sources */,
 				098204111A318A8A000655F9 /* ASIHTTPRequest.m in Sources */,
+				099AF7BF1A5FA44400C0B5B3 /* ShowYijianVC.m in Sources */,
+				099CFF601A5FD65C0022F1F3 /* NeizhengdengjiVC.m in Sources */,
 				098204131A318A8A000655F9 /* ASINetworkQueue.m in Sources */,
 				093200E51A3958AE00A323BA /* CJSONDeserializer.m in Sources */,
 				093200A71A394FDC00A323BA /* Pianzi.m in Sources */,
@@ -872,6 +912,7 @@
 				093200E41A3958AE00A323BA /* NSDictionary_JSONExtensions.m in Sources */,
 				093200E71A3958AE00A323BA /* CJSONSerializer.m in Sources */,
 				093200F21A3958AE00A323BA /* SBJsonUTF8Stream.m in Sources */,
+				099AF7C61A5FAE5500C0B5B3 /* ShowYijianTVC.m in Sources */,
 				093200ED1A3958AE00A323BA /* SBJsonStreamParserState.m in Sources */,
 				09FA19D619BC94F200DF60D5 /* LoadtxtVC.m in Sources */,
 				093200EA1A3958AE00A323BA /* SBJsonStreamParser.m in Sources */,
@@ -888,6 +929,8 @@
 				09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */,
 				093201191A39A4B100A323BA /* EGOImageView.m in Sources */,
 				093201171A39A4B100A323BA /* EGOImageLoadConnection.m in Sources */,
+				099CFF571A5FD3900022F1F3 /* NeizhengdengjiTVC.m in Sources */,
+				099AF7B91A5F6A3700C0B5B3 /* YijianVC.m in Sources */,
 				0982040D1A318A8A000655F9 /* ASIDataCompressor.m in Sources */,
 				098204151A318A8A000655F9 /* PKReachability.m in Sources */,
 				093200F31A3958AE00A323BA /* SBJsonWriter.m in Sources */,
@@ -897,6 +940,7 @@
 				093200E21A3958AE00A323BA /* CJSONSerializedData.m in Sources */,
 				098204101A318A8A000655F9 /* ASIFormDataRequest.m in Sources */,
 				09A19A5519BEAB7D000900BA /* MenuTableVC.m in Sources */,
+				099AF7C21A5FA9B800C0B5B3 /* Yijian.m in Sources */,
 				093200E91A3958AE00A323BA /* SBJsonParser.m in Sources */,
 				09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */,
 				09A3C38219B1CEF800E46114 /* main.m in Sources */,
@@ -1036,7 +1080,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "我的无双攻略";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1061,7 +1105,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "我的无双攻略";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -35,7 +35,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.text = @"武器威力系数";
     label.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView = label;

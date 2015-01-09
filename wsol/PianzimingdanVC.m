@@ -282,6 +282,7 @@
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Pianzi"];
     bquery.limit = 1000;
+    [bquery orderByAscending:@"pianziId"];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (error) {
             [activityIndicator stopAnimating];
@@ -313,13 +314,7 @@
         }
         
     }];
-    
-    
-    
-    
-    
-    
-    
+  
     
 }
 

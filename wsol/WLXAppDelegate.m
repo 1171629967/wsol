@@ -64,7 +64,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    [self performSelector:@selector(loadYoumiAD) withObject:nil afterDelay:1.0f];
+    
     
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -80,7 +80,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    
+    //发出通知，开启跑马灯
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadPaomadeng" object:nil];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

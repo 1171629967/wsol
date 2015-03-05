@@ -123,7 +123,9 @@
     
     cell.backgroundColor = [UIColor clearColor];
     
-    cell.lb1.text = [NSString stringWithFormat:@"%d",[indexPath row]];
+    int i = [indexPath row];
+    int level = i+1;
+    cell.lb1.text = [NSString stringWithFormat:@"%d",level];
     //总内政值
     cell.lb4.text = [neizhengDataArray objectAtIndex:[indexPath row]];
     //升下级所需

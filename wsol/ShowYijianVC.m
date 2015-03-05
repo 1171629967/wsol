@@ -65,6 +65,7 @@
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Yijian"];
     bquery.limit = 1000;
+    [bquery orderByDescending:@"createdAt"];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (error) {
             [activityIndicator stopAnimating];

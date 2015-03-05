@@ -89,6 +89,7 @@
     UILabel *lb_zhenmodata;
 
     
+    int margin;
 }
 
 @property (copy, nonatomic) NSString *weaponName;

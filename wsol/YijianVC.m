@@ -224,6 +224,10 @@
         [yijian setObject:tf_qq.text forKey:@"qq"];
     }
     [yijian setObject:tf_yijian.text forKey:@"content"];
+    //设置系统版本号
+    float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    NSString *systemVersionStr = [NSString stringWithFormat:@"IOS  %f",systemVersion];
+    [yijian setObject:systemVersionStr forKey:@"fromOS"];
     [yijian saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         if (error) {
             UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"提交失败，请重试!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];

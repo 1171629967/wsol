@@ -58,6 +58,8 @@
     [self.view addSubview:activityIndicator];
     
     
+    //对控件边距赋值
+    margin = 10;
     
     [self doHttp];
 }
@@ -147,7 +149,7 @@
 {
 
     UIFont *font = [UIFont systemFontOfSize: 12.0];
-    CGSize size = CGSizeMake(SCREEN_WIDTH/count,2000);
+    CGSize size = CGSizeMake(label.frame.size.width,2000);
     CGSize labelsize = [string sizeWithFont:font constrainedToSize:size lineBreakMode:UILineBreakModeWordWrap];
     return labelsize.height;
 }
@@ -216,37 +218,37 @@
             v_line1.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line1];
             //--------------------------------N1-N6--------------------------------
-            lb_N1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, SCREEN_WIDTH/6, 20)];
+            lb_N1 = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N1.textColor = [UIColor orangeColor];
             lb_N1.text = @"N1";
             lb_N1.font = [UIFont systemFontOfSize: 12.0];
             lb_N1.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_N1];
-            lb_N2 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6, 15, SCREEN_WIDTH/6, 20)];
+            lb_N2 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N2.textColor = [UIColor orangeColor];
             lb_N2.text = @"N2";
             lb_N2.font = [UIFont systemFontOfSize: 12.0];
             lb_N2.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_N2];
-            lb_N3 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2, 15, SCREEN_WIDTH/6, 20)];
+            lb_N3 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N3.textColor = [UIColor orangeColor];
             lb_N3.text = @"N3";
             lb_N3.font = [UIFont systemFontOfSize: 12.0];
             lb_N3.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_N3];
-            lb_N4 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3, 15, SCREEN_WIDTH/6, 20)];
+            lb_N4 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N4.textColor = [UIColor orangeColor];
             lb_N4.text = @"N4";
             lb_N4.font = [UIFont systemFontOfSize: 12.0];
             lb_N4.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_N4];
-            lb_N5 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4, 15, SCREEN_WIDTH/6, 20)];
+            lb_N5 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N5.textColor = [UIColor orangeColor];
             lb_N5.text = @"N5";
             lb_N5.font = [UIFont systemFontOfSize: 12.0];
             lb_N5.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_N5];
-            lb_N6 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5, 15, SCREEN_WIDTH/6, 20)];
+            lb_N6 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5+margin, 15, SCREEN_WIDTH/6-margin, 20)];
             lb_N6.textColor = [UIColor orangeColor];
             lb_N6.text = @"N6";
             lb_N6.font = [UIFont systemFontOfSize: 12.0];
@@ -254,37 +256,37 @@
             [allXIshuView addSubview:lb_N6];
             //--------------------------------N1-N6--------------------------------
             //--------------------------------N1-N6数值--------------------------------
-            lb_N1data = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH/6, 20)];
+            lb_N1data = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N1data.font = [UIFont systemFontOfSize: 12.0];
             lb_N1data.textAlignment = NSTextAlignmentCenter;
             [lb_N1data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_N1data.numberOfLines = 0;
             [allXIshuView addSubview:lb_N1data];
-            lb_N2data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6, 40, SCREEN_WIDTH/6, 20)];
+            lb_N2data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N2data.font = [UIFont systemFontOfSize: 12.0];
             lb_N2data.textAlignment = NSTextAlignmentCenter;
             [lb_N2data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_N2data.numberOfLines = 0;
             [allXIshuView addSubview:lb_N2data];
-            lb_N3data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2, 40, SCREEN_WIDTH/6, 20)];
+            lb_N3data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N3data.font = [UIFont systemFontOfSize: 12.0];
             lb_N3data.textAlignment = NSTextAlignmentCenter;
             [lb_N3data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_N3data.numberOfLines = 0;
             [allXIshuView addSubview:lb_N3data];
-            lb_N4data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3, 40, SCREEN_WIDTH/6, 20)];
+            lb_N4data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N4data.font = [UIFont systemFontOfSize: 12.0];
             lb_N4data.textAlignment = NSTextAlignmentCenter;
             [lb_N4data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_N4data.numberOfLines = 0;
             [allXIshuView addSubview:lb_N4data];
-            lb_N5data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4, 40, SCREEN_WIDTH/6, 20)];
+            lb_N5data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N5data.font = [UIFont systemFontOfSize: 12.0];
             lb_N5data.textAlignment = NSTextAlignmentCenter;
             [lb_N5data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_N5data.numberOfLines = 0;
             [allXIshuView addSubview:lb_N5data];
-            lb_N6data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5, 40, SCREEN_WIDTH/6, 20)];
+            lb_N6data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5+margin, 40, SCREEN_WIDTH/6-margin, 20)];
             lb_N6data.font = [UIFont systemFontOfSize: 12.0];
             lb_N6data.textAlignment = NSTextAlignmentCenter;
             [lb_N6data setLineBreakMode:NSLineBreakByWordWrapping];
@@ -316,25 +318,25 @@
             v_line2.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line2];
             //--------------------------------E6-E9--------------------------------
-            lb_E6 = [[UILabel alloc] initWithFrame:CGRectMake(0, v_line2.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_E6 = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, v_line2.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E6.textColor = [UIColor orangeColor];
             lb_E6.text = @"E6";
             lb_E6.font = [UIFont systemFontOfSize: 12.0];
             lb_E6.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_E6];
-            lb_E7 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, v_line2.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_E7 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, v_line2.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E7.textColor = [UIColor orangeColor];
             lb_E7.text = @"E7";
             lb_E7.font = [UIFont systemFontOfSize: 12.0];
             lb_E7.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_E7];
-            lb_E8 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, v_line2.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_E8 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, v_line2.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E8.textColor = [UIColor orangeColor];
             lb_E8.text = @"E8";
             lb_E8.font = [UIFont systemFontOfSize: 12.0];
             lb_E8.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_E8];
-            lb_E9 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3, v_line2.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_E9 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3+margin, v_line2.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E9.textColor = [UIColor orangeColor];
             lb_E9.text = @"E9";
             lb_E9.font = [UIFont systemFontOfSize: 12.0];
@@ -342,25 +344,25 @@
             [allXIshuView addSubview:lb_E9];
             //--------------------------------E6-E9--------------------------------
             //--------------------------------E6-E9数值--------------------------------
-            lb_E6data = [[UILabel alloc] initWithFrame:CGRectMake(0, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_E6data = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E6data.font = [UIFont systemFontOfSize: 12.0];
             lb_E6data.textAlignment = NSTextAlignmentCenter;
             [lb_E6data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_E6data.numberOfLines = 0;
             [allXIshuView addSubview:lb_E6data];
-            lb_E7data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_E7data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E7data.font = [UIFont systemFontOfSize: 12.0];
             lb_E7data.textAlignment = NSTextAlignmentCenter;
             [lb_E7data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_E7data.numberOfLines = 0;
             [allXIshuView addSubview:lb_E7data];
-            lb_E8data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_E8data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E8data.font = [UIFont systemFontOfSize: 12.0];
             lb_E8data.textAlignment = NSTextAlignmentCenter;
             [lb_E8data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_E8data.numberOfLines = 0;
             [allXIshuView addSubview:lb_E8data];
-            lb_E9data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_E9data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3+margin, lb_E6.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_E9data.font = [UIFont systemFontOfSize: 12.0];
             lb_E9data.textAlignment = NSTextAlignmentCenter;
             [lb_E9data setLineBreakMode:NSLineBreakByWordWrapping];
@@ -386,25 +388,25 @@
             v_line3.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line3];
             //--------------------------------C2-C5--------------------------------
-            lb_C2 = [[UILabel alloc] initWithFrame:CGRectMake(0, v_line3.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_C2 = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, v_line3.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C2.textColor = [UIColor orangeColor];
             lb_C2.text = @"C2";
             lb_C2.font = [UIFont systemFontOfSize: 12.0];
             lb_C2.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_C2];
-            lb_C3 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, v_line3.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_C3 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, v_line3.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C3.textColor = [UIColor orangeColor];
             lb_C3.text = @"C3";
             lb_C3.font = [UIFont systemFontOfSize: 12.0];
             lb_C3.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_C3];
-            lb_C4 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, v_line3.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_C4 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, v_line3.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C4.textColor = [UIColor orangeColor];
             lb_C4.text = @"C4";
             lb_C4.font = [UIFont systemFontOfSize: 12.0];
             lb_C4.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_C4];
-            lb_C5 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3, v_line3.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_C5 = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3+margin, v_line3.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C5.textColor = [UIColor orangeColor];
             lb_C5.text = @"C5";
             lb_C5.font = [UIFont systemFontOfSize: 12.0];
@@ -412,25 +414,25 @@
             [allXIshuView addSubview:lb_C5];
             //--------------------------------C2-C5--------------------------------
             //--------------------------------C2-C5数值--------------------------------
-            lb_C2data = [[UILabel alloc] initWithFrame:CGRectMake(0, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_C2data = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C2data.font = [UIFont systemFontOfSize: 12.0];
             lb_C2data.textAlignment = NSTextAlignmentCenter;
             [lb_C2data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_C2data.numberOfLines = 0;
             [allXIshuView addSubview:lb_C2data];
-            lb_C3data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_C3data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C3data.font = [UIFont systemFontOfSize: 12.0];
             lb_C3data.textAlignment = NSTextAlignmentCenter;
             [lb_C3data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_C3data.numberOfLines = 0;
             [allXIshuView addSubview:lb_C3data];
-            lb_C4data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_C4data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C4data.font = [UIFont systemFontOfSize: 12.0];
             lb_C4data.textAlignment = NSTextAlignmentCenter;
             [lb_C4data setLineBreakMode:NSLineBreakByWordWrapping];
             lb_C4data.numberOfLines = 0;
             [allXIshuView addSubview:lb_C4data];
-            lb_C5data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_C5data = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*3+margin, lb_C2.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_C5data.font = [UIFont systemFontOfSize: 12.0];
             lb_C5data.textAlignment = NSTextAlignmentCenter;
             [lb_C5data setLineBreakMode:NSLineBreakByWordWrapping];
@@ -456,19 +458,19 @@
             v_line4.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line4];
             //--------------------------------D,JA,JC--------------------------------
-            lb_D = [[UILabel alloc] initWithFrame:CGRectMake(0, v_line4.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_D = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, v_line4.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_D.textColor = [UIColor orangeColor];
             lb_D.text = @"D";
             lb_D.font = [UIFont systemFontOfSize: 12.0];
             lb_D.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_D];
-            lb_JA = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, v_line4.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_JA = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, v_line4.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_JA.textColor = [UIColor orangeColor];
             lb_JA.text = @"JA";
             lb_JA.font = [UIFont systemFontOfSize: 12.0];
             lb_JA.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_JA];
-            lb_JC = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, v_line4.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_JC = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, v_line4.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_JC.textColor = [UIColor orangeColor];
             lb_JC.text = @"JC";
             lb_JC.font = [UIFont systemFontOfSize: 12.0];
@@ -476,19 +478,19 @@
             [allXIshuView addSubview:lb_JC];
             //--------------------------------D,JA,JC--------------------------------
             //--------------------------------D,JA,JC数值--------------------------------
-            lb_Ddata = [[UILabel alloc] initWithFrame:CGRectMake(0, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_Ddata = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_Ddata.font = [UIFont systemFontOfSize: 12.0];
             [lb_Ddata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_Ddata.numberOfLines = 0;
             lb_Ddata.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_Ddata];
-            lb_JAdata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_JAdata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_JAdata.font = [UIFont systemFontOfSize: 12.0];
             [lb_JAdata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_JAdata.numberOfLines = 0;
             lb_JAdata.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_JAdata];
-            lb_JCdata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4, 20)];
+            lb_JCdata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, lb_D.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 20)];
             lb_JCdata.font = [UIFont systemFontOfSize: 12.0];
             [lb_JCdata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_JCdata.numberOfLines = 0;
@@ -511,37 +513,37 @@
             v_line5.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line5];
             //--------------------------------刻印--------------------------------
-            lb_tu = [[UILabel alloc] initWithFrame:CGRectMake(0, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_tu = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_tu.textColor = [UIColor orangeColor];
             lb_tu.text = @"突";
             lb_tu.font = [UIFont systemFontOfSize: 12.0];
             lb_tu.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_tu];
-            lb_dun = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_dun = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_dun.textColor = [UIColor orangeColor];
             lb_dun.text = @"盾";
             lb_dun.font = [UIFont systemFontOfSize: 12.0];
             lb_dun.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_dun];
-            lb_sui = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_sui = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_sui.textColor = [UIColor orangeColor];
             lb_sui.text = @"碎";
             lb_sui.font = [UIFont systemFontOfSize: 12.0];
             lb_sui.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_sui];
-            lb_zhen = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_zhen = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_zhen.textColor = [UIColor orangeColor];
             lb_zhen.text = @"阵";
             lb_zhen.font = [UIFont systemFontOfSize: 12.0];
             lb_zhen.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_zhen];
-            lb_wei = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_wei = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_wei.textColor = [UIColor orangeColor];
             lb_wei.text = @"卫";
             lb_wei.font = [UIFont systemFontOfSize: 12.0];
             lb_wei.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_wei];
-            lb_ba = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5, v_line5.frame.origin.y+5, SCREEN_WIDTH/6, 20)];
+            lb_ba = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5+margin, v_line5.frame.origin.y+5, SCREEN_WIDTH/6-margin, 20)];
             lb_ba.textColor = [UIColor orangeColor];
             lb_ba.text = @"霸";
             lb_ba.font = [UIFont systemFontOfSize: 12.0];
@@ -549,37 +551,37 @@
             [allXIshuView addSubview:lb_ba];
             //--------------------------------刻印--------------------------------
             //--------------------------------刻印数值--------------------------------
-            lb_tudata = [[UILabel alloc] initWithFrame:CGRectMake(0, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 40)];
+            lb_tudata = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_tudata.font = [UIFont systemFontOfSize: 12.0];
             lb_tudata.textAlignment = NSTextAlignmentCenter;
             [lb_tudata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_tudata.numberOfLines = 0;
             [allXIshuView addSubview:lb_tudata];
-            lb_dundata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 40)];
+            lb_dundata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_dundata.font = [UIFont systemFontOfSize: 12.0];
             lb_dundata.textAlignment = NSTextAlignmentCenter;
             [lb_dundata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_dundata.numberOfLines = 0;
             [allXIshuView addSubview:lb_dundata];
-            lb_suidata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 40)];
+            lb_suidata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*2+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_suidata.font = [UIFont systemFontOfSize: 12.0];
             lb_suidata.textAlignment = NSTextAlignmentCenter;
             [lb_suidata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_suidata.numberOfLines = 0;
             [allXIshuView addSubview:lb_suidata];
-            lb_zhendata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 40)];
+            lb_zhendata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*3+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_zhendata.font = [UIFont systemFontOfSize: 12.0];
             lb_zhendata.textAlignment = NSTextAlignmentCenter;
             [lb_zhendata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_zhendata.numberOfLines = 0;
             [allXIshuView addSubview:lb_zhendata];
-            lb_weidata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 60)];
+            lb_weidata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*4+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_weidata.font = [UIFont systemFontOfSize: 12.0];
             lb_weidata.textAlignment = NSTextAlignmentCenter;
             [lb_weidata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_weidata.numberOfLines = 0;
             [allXIshuView addSubview:lb_weidata];
-            lb_badata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6, 40)];
+            lb_badata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/6*5+margin, lb_tu.frame.origin.y+20+5, SCREEN_WIDTH/6-margin, 40)];
             lb_badata.font = [UIFont systemFontOfSize: 12.0];
             lb_badata.textAlignment = NSTextAlignmentCenter;
             [lb_badata setLineBreakMode:NSLineBreakByWordWrapping];
@@ -611,19 +613,19 @@
             v_line6.backgroundColor = [UIColor grayColor];
             [allXIshuView addSubview:v_line6];
             //--------------------------------无双--------------------------------
-            lb_puwuAndZhenwu = [[UILabel alloc] initWithFrame:CGRectMake(0, v_line6.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_puwuAndZhenwu = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, v_line6.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_puwuAndZhenwu.textColor = [UIColor orangeColor];
             lb_puwuAndZhenwu.text = @"无双/真无";
             lb_puwuAndZhenwu.font = [UIFont systemFontOfSize: 12.0];
             lb_puwuAndZhenwu.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_puwuAndZhenwu];
-            lb_pumo = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, v_line6.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_pumo = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, v_line6.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_pumo.textColor = [UIColor orangeColor];
             lb_pumo.text = @"普末";
             lb_pumo.font = [UIFont systemFontOfSize: 12.0];
             lb_pumo.textAlignment = NSTextAlignmentCenter;
             [allXIshuView addSubview:lb_pumo];
-            lb_zhenmo = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, v_line6.frame.origin.y+5, SCREEN_WIDTH/4, 20)];
+            lb_zhenmo = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, v_line6.frame.origin.y+5, SCREEN_WIDTH/4-margin, 20)];
             lb_zhenmo.textColor = [UIColor orangeColor];
             lb_zhenmo.text = @"真末";
             lb_zhenmo.font = [UIFont systemFontOfSize: 12.0];
@@ -631,19 +633,19 @@
             [allXIshuView addSubview:lb_zhenmo];
             //--------------------------------无双--------------------------------
             //--------------------------------无双数值--------------------------------
-            lb_puwuAndZhenwudata = [[UILabel alloc] initWithFrame:CGRectMake(0, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4, 40)];
+            lb_puwuAndZhenwudata = [[UILabel alloc] initWithFrame:CGRectMake(0+margin, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 40)];
             lb_puwuAndZhenwudata.font = [UIFont systemFontOfSize: 12.0];
             lb_puwuAndZhenwudata.textAlignment = NSTextAlignmentCenter;
             [lb_puwuAndZhenwudata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_puwuAndZhenwudata.numberOfLines = 0;
             [allXIshuView addSubview:lb_puwuAndZhenwudata];
-            lb_pumodata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4, 40)];
+            lb_pumodata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4+margin, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 40)];
             lb_pumodata.font = [UIFont systemFontOfSize: 12.0];
             lb_pumodata.textAlignment = NSTextAlignmentCenter;
             [lb_pumodata setLineBreakMode:NSLineBreakByWordWrapping];
             lb_pumodata.numberOfLines = 0;
             [allXIshuView addSubview:lb_pumodata];
-            lb_zhenmodata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4, 40)];
+            lb_zhenmodata = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4*2+margin, lb_puwuAndZhenwu.frame.origin.y+20+5, SCREEN_WIDTH/4-margin, 40)];
             lb_zhenmodata.font = [UIFont systemFontOfSize: 12.0];
             lb_zhenmodata.textAlignment = NSTextAlignmentCenter;
             [lb_zhenmodata setLineBreakMode:NSLineBreakByWordWrapping];

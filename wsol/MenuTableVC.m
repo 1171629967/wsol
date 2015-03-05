@@ -9,8 +9,8 @@
 #import "MenuTableVC.h"
 #import "TWTSideMenuViewController.h"
 #import "WeaponVC.h"
-#import "LoadhtmlVC.h"
 #import "LoadtxtVC.h"
+#import "LoadhtmlVC.h"
 #import "WuxuVC.h"
 #import "MeizhouhuodongVC.h"
 #import "PianzimingdanVC.h"
@@ -19,6 +19,8 @@
 #import <BmobSDK/Bmob.h>
 #import "ShowYijianVC.h"
 #import "NeizhengdengjiVC.h"
+#import "MusicListVCTableViewController.h"
+#import "TransationVC.h"
 
 
 @interface MenuTableVC ()
@@ -52,7 +54,7 @@
     typesArray = [NSArray arrayWithContentsOfURL:typeURL];
     menusArray = [NSArray arrayWithContentsOfURL:menuURL];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPaomadeng) name:@"loadPaomadeng" object:nil];
     
     [self loadPaomadeng];
 }
@@ -100,7 +102,7 @@
         
     }];
     
-   
+    
 }
 
 
@@ -175,42 +177,42 @@
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 
 #pragma mark - Table view delegate
@@ -234,7 +236,7 @@
         UINavigationController *controller;
         
         if ([currentMenuString isEqualToString:@"金牌上升和威力系数"]) {
-          controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];            
+            controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];
         }
         else if([currentMenuString isEqualToString:@"任务报酬一览"]){
             LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
@@ -242,7 +244,7 @@
             htmlVC.titleName = @"任务报酬一览";
             controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
         }
-
+        
         
         else if([currentMenuString isEqualToString:@"内政等级表"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[NeizhengdengjiVC alloc] init]];
@@ -271,6 +273,12 @@
         }
         else if([currentMenuString isEqualToString:@"玩家意见一览"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[ShowYijianVC alloc] init]];
+        }
+        else if([currentMenuString isEqualToString:@"游戏BMG音乐"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVCTableViewController alloc] init]];
+        }
+        else if([currentMenuString isEqualToString:@"吧主担保交易"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }
         
         

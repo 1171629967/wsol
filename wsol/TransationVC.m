@@ -95,11 +95,9 @@
             
             for (BmobObject *obj in array) {
                 NSString *title = [obj objectForKey:@"title"];
-                 NSString *buy = [obj objectForKey:@"buy"];
-                 NSString *sell = [obj objectForKey:@"sell"];
                  NSString *url = [obj objectForKey:@"url"];
                 
-                Transation *transation = [[Transation alloc] initWithTitle:title Buy:buy Sell:sell Url:url];
+                Transation *transation = [[Transation alloc] initWithTitle:title Url:url];
                 [transations addObject:transation];
             }
             //刷新表格控件
@@ -214,7 +212,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-        return 110;
+        return 60;
     
 //    Transation *transation = [transations objectAtIndex:[indexPath row]];
     
@@ -244,8 +242,6 @@
         
         
         cell.lb_title.text = transation.title;
-        cell.lb_buy.text = [NSString stringWithFormat:@"买家： %@",transation.buy];
-        cell.lb_sell.text = [NSString stringWithFormat:@"卖家： %@",transation.sell];
         cell.tv_url.text = transation.url;
         cell.tv_url.dataDetectorTypes = UIDataDetectorTypeLink;
         

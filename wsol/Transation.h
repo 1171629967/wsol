@@ -11,8 +11,6 @@
 @interface Transation : NSObject
 
 @property (copy, nonatomic) NSString *title;
-@property (copy, nonatomic) NSString *buy;
-@property (copy, nonatomic) NSString *sell;
 @property (copy, nonatomic) NSString *url;
 
 
@@ -20,8 +18,6 @@
 
 
 - (id)initWithTitle:(NSString *)nTitle
-             Buy:(NSString *)nBuy
-        Sell:(NSString *)nSell
             Url:(NSString *)nUrl;
 
 @end

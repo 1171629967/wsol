@@ -1,12 +1,12 @@
 //
-//  MusicListVCTableViewController.m
+//  MusicListVC.m
 //  wsol
 //
-//  Created by 王 李鑫 on 15/2/9.
+//  Created by 王 李鑫 on 15/5/11.
 //  Copyright (c) 2015年 wlx. All rights reserved.
 //
 
-#import "MusicListVCTableViewController.h"
+#import "MusicListVC.h"
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
 #import <BmobSDK/Bmob.h>
@@ -14,42 +14,29 @@
 #import "MusicTVC.h"
 #import "AudioStreamer.h"
 
-
-@interface MusicListVCTableViewController ()
+@interface MusicListVC ()
 {
     AudioStreamer *streamer;
 }
 
 @end
 
-@implementation MusicListVCTableViewController
+@implementation MusicListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
-    
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"游戏BGM音乐";
+    self.navigationProtal = self;
     
     
-    
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"游戏BMG音乐";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
-    
-    
-    
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    tableview.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:tableview];
     
     
     activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -66,8 +53,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)doHttp{
     activityIndicator.hidden = NO;
@@ -93,11 +78,11 @@
                 BmobFile *musicFile = [obj objectForKey:@"musicFile"];
                 
                 
-                 Music *music = [[Music alloc] initWithMusicFile:musicFile AndMusicName:musicName AndMusicId:musicId];
+                Music *music = [[Music alloc] initWithMusicFile:musicFile AndMusicName:musicName AndMusicId:musicId];
                 [musics addObject:music];
             }
             //刷新表格控件
-            [self.tableView reloadData];
+            [tableview reloadData];
             
             
         }
@@ -157,15 +142,9 @@
     return cell;
 }
 
-- (void)refreshButtonPressed
-{
-    [self doHttp];
-}
 
-- (void)openButtonPressed
-{
-    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
-}
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -226,6 +205,15 @@
 }
 
 
+-(void)leftAction
+{
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
+
+-(void)rightAction
+{
+    [self doHttp];
+}
 
 
 @end

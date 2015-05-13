@@ -34,20 +34,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"骗子名单";
+    self.navigationProtal = self;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    tableview.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:tableview];
+    
+
     
     //初始化搜索控件
     searchBar = [[UISearchBar alloc] init];
     searchBar.delegate = self;
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [searchBar sizeToFit];
-    self.tableView.tableHeaderView = searchBar;
+    tableview.tableHeaderView = searchBar;
     
     
     
@@ -56,21 +62,9 @@
     searchDisplayController.delegate = self;
     [searchDisplayController setSearchResultsDataSource:self];
     [searchDisplayController setSearchResultsDelegate:self];
+    searchDisplayController.searchResultsTableView.backgroundColor = [UIColor clearColor];
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.text = @"骗子名单";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
-    
-    
-    
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
-    searchDisplayController.searchResultsTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+
     
     activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);//只能设置中心，不能设置大小
@@ -245,10 +239,12 @@
     
 }
 
+//搜索框cancel的时候回调
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
 {
     [searchBar resignFirstResponder];
     currentTableViewType = 0;
+    tableview.hidden = NO;
 }
 
 
@@ -270,6 +266,7 @@
         Pianzi *pianzi = [self.pianzis objectAtIndex:index];
         [self.suggesPianzis addObject:pianzi];
     }
+    tableview.hidden = YES;
 }
 
 
@@ -308,7 +305,7 @@
                 [self.pianzis addObject:pianzi];
             }
             //刷新表格控件
-            [self.tableView reloadData];
+            [tableview reloadData];
             
             
         }
@@ -320,17 +317,17 @@
 
 
 
+-(void)leftAction
+{
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 
-
-- (void)refreshButtonPressed
+-(void)rightAction
 {
     [self doHttp];
 }
 
-- (void)openButtonPressed
-{
-    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
-}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -361,7 +358,7 @@
 -(void)actionTap:(UITapGestureRecognizer *)sender{
     UITableView *currentTableView;
     if (currentTableViewType == 0) {
-        currentTableView = self.tableView;
+        currentTableView = tableview;
     }
     else if (currentTableViewType == 1)
     {

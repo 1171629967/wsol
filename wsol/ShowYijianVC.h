@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ShowYijianVC : UITableViewController
+@interface ShowYijianVC : BaseViewController<NavigationProtal,UITableViewDataSource,UITableViewDelegate>
 {
     UIActivityIndicatorView *activityIndicator;
     
     NSMutableArray *yijians;
     UILabel *lb_content;
+    UITableView *tableview;
 }
 
 @end

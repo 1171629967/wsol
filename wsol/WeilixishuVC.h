@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface WeilixishuVC : UIViewController
+@interface WeilixishuVC : BaseViewController<NavigationProtal>
 {
     //是否已经显示了系数说明
     BOOL isShowedExplain;

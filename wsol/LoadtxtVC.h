@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface LoadtxtVC : UIViewController
+@interface LoadtxtVC : BaseViewController<NavigationProtal>
 @property (strong, nonatomic) IBOutlet UITextView *textview;
 @property (copy, nonatomic) NSString *txtName;
 @property (copy, nonatomic) NSString *titleName;

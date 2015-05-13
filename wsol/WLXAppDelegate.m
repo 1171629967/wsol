@@ -9,6 +9,7 @@
 #import "WLXAppDelegate.h"
 
 #import "MobClick.h"
+#import "Utils.h"
 #import <BmobSDK/Bmob.h>
 
 
@@ -30,8 +31,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     self.menuTableVC = [[MenuTableVC alloc] init];
-    self.weaponVC = [[WeaponVC alloc] init];
-    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuTableVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.weaponVC]];
+    self.jinpaiWeaponVC = [[JinpaiWeaponVC alloc] init];
+    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuTableVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.jinpaiWeaponVC]];
     
     
     //self.sideMenuViewController.shadowColor = [UIColor blackColor];
@@ -40,11 +41,10 @@
     self.sideMenuViewController.delegate = self;
     self.window.rootViewController = self.sideMenuViewController;
     
+   
+   
     
-    
-    
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor grayColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]];
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
     

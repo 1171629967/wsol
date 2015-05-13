@@ -9,15 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
 #import "EGOImageView.h"
+#import "BaseViewController.h"
 
 
-@interface PianzimingdanVC : UITableViewController <UISearchBarDelegate,UISearchDisplayDelegate,UIScrollViewDelegate>
+@interface PianzimingdanVC : BaseViewController <UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDelegate,UITableViewDataSource,NavigationProtal>
 {
     UISearchBar *searchBar;
     UISearchDisplayController *searchDisplayController;
     UIActivityIndicatorView *activityIndicator;
-     EGOImageView* imageView;
+    EGOImageView* imageView;
     int currentTableViewType;
+    UITableView *tableview;
 }
 @property (strong, nonatomic) NSMutableArray *pianzis;
 @property (strong, nonatomic) NSMutableArray *suggesPianzis;

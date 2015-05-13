@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TWTSideMenuViewController.h"
 #import "MenuTableVC.h"
-#import "WeaponVC.h"
+#import "JinpaiWeaponVC.h"
 
 
 @interface WLXAppDelegate : UIResponder <UIApplicationDelegate,TWTSideMenuViewControllerDelegate>
@@ -17,7 +17,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) TWTSideMenuViewController *sideMenuViewController;
 @property (nonatomic, strong) MenuTableVC *menuTableVC;
-@property (nonatomic, strong) WeaponVC *weaponVC;
+@property (nonatomic, strong) JinpaiWeaponVC *jinpaiWeaponVC;
 
 @property BOOL isOpenAD;
 

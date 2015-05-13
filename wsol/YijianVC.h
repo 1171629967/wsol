@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface YijianVC : UIViewController<UITextViewDelegate>
+@interface YijianVC : BaseViewController<UITextViewDelegate,NavigationProtal>
 {
     UIActivityIndicatorView *activityIndicator;
     

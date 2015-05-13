@@ -24,30 +24,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"吧主担保交易";
+    self.navigationProtal = self;
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.text = @"吧主担保交易";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
+    
+    
+   
     
 
     
     
     
     tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+    tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:tableView];
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -256,12 +249,14 @@
 
 
 
-- (void)openButtonPressed
+
+
+-(void)leftAction
 {
     [self.sideMenuViewController openMenuAnimated:YES completion:nil];
 }
 
-- (void)refreshButtonPressed
+-(void)rightAction
 {
     [self doHttp];
 }

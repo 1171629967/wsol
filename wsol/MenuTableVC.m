@@ -8,7 +8,7 @@
 
 #import "MenuTableVC.h"
 #import "TWTSideMenuViewController.h"
-#import "WeaponVC.h"
+#import "JinpaiWeaponVC.h"
 #import "LoadtxtVC.h"
 #import "LoadhtmlVC.h"
 #import "WuxuVC.h"
@@ -19,7 +19,7 @@
 #import <BmobSDK/Bmob.h>
 #import "ShowYijianVC.h"
 #import "NeizhengdengjiVC.h"
-#import "MusicListVCTableViewController.h"
+#import "MusicListVC.h"
 #import "TransationVC.h"
 
 
@@ -227,8 +227,14 @@
     NSArray *array = [menusArray objectAtIndex:section];
     NSString *menuString = [array objectAtIndex:row];
     
-    if ([currentMenuString isEqualToString:menuString]) {
-        [self.sideMenuViewController closeMenuAnimated:YES completion:nil];
+    if ([currentMenuString isEqualToString:menuString] ){
+        if ([currentMenuString isEqualToString:@"更换主题"]) {
+            //发出通知，更换APP主题
+            [[NSNotificationCenter defaultCenter] postNotificationName:Notification_CHANGE_APP_THEME object:nil];
+        }
+        else {
+             [self.sideMenuViewController closeMenuAnimated:YES completion:nil];
+        }
     }
     else
     {
@@ -236,14 +242,14 @@
         UINavigationController *controller;
         
         if ([currentMenuString isEqualToString:@"金牌上升和威力系数"]) {
-            controller = [[UINavigationController alloc] initWithRootViewController:[[WeaponVC alloc] init]];
+            controller = [[UINavigationController alloc] initWithRootViewController:[[JinpaiWeaponVC alloc] init]];
         }
-        else if([currentMenuString isEqualToString:@"任务报酬一览"]){
-            LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
-            htmlVC.htmlName = @"renwubaochou";
-            htmlVC.titleName = @"任务报酬一览";
-            controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
-        }
+//        else if([currentMenuString isEqualToString:@"任务报酬一览"]){
+//            LoadhtmlVC *htmlVC = [[LoadhtmlVC alloc] init];
+//            htmlVC.htmlName = @"renwubaochou";
+//            htmlVC.titleName = @"任务报酬一览";
+//            controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
+//        }
         
         
         else if([currentMenuString isEqualToString:@"内政等级表"]){
@@ -274,15 +280,22 @@
         else if([currentMenuString isEqualToString:@"玩家意见一览"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[ShowYijianVC alloc] init]];
         }
-        else if([currentMenuString isEqualToString:@"游戏BMG音乐"]){
-            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVCTableViewController alloc] init]];
+        else if([currentMenuString isEqualToString:@"游戏BGM音乐"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVC alloc] init]];
         }
         else if([currentMenuString isEqualToString:@"吧主担保交易"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }
+        else if([currentMenuString isEqualToString:@"更换主题"]){
+            //发出通知，更换APP主题
+            [[NSNotificationCenter defaultCenter] postNotificationName:Notification_CHANGE_APP_THEME object:nil];
+        }
         
         
-        [self.sideMenuViewController setMainViewController:controller animated:YES closeMenu:YES];
+        if (![currentMenuString isEqualToString:@"更换主题"]) {
+            [self.sideMenuViewController setMainViewController:controller animated:YES closeMenu:YES];
+        }
+        
         
     }
     

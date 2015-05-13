@@ -27,21 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.textview.backgroundColor = [UIColor grayColor];
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    //[[super rightItem] setTitle:@""];
+    [super label].text = self.titleName;
+    self.navigationProtal = self;
     
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
+    self.textview.backgroundColor = [UIColor clearColor];
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.text = self.titleName;
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
     
     
     //    获取txt文件路径
@@ -52,9 +45,13 @@
 }
 
 
-- (void)openButtonPressed
+-(void)leftAction
 {
     [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
+
+-(void)rightAction
+{
 }
 
 - (void)didReceiveMemoryWarning

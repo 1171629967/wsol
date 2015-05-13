@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MLEmojiLabel.h"
+#import "BaseViewController.h"
 
-@interface TransationVC : UIViewController<UITableViewDataSource,UITableViewDelegate,MLEmojiLabelDelegate>
+@interface TransationVC : BaseViewController<NavigationProtal,UITableViewDataSource,UITableViewDelegate,MLEmojiLabelDelegate>
 {
     MLEmojiLabel *emojiLabel;
     UIActivityIndicatorView *activityIndicator;

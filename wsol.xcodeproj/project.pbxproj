@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		091DBCCA1A88599000E56CFC /* MusicListVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091DBCC81A88599000E56CFC /* MusicListVCTableViewController.m */; };
-		091DBCCB1A88599000E56CFC /* MusicListVCTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091DBCC91A88599000E56CFC /* MusicListVCTableViewController.xib */; };
 		091DBCCF1A885F2100E56CFC /* LoadtxtVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091DBCCD1A885F2100E56CFC /* LoadtxtVC.m */; };
 		091DBCD01A885F2100E56CFC /* LoadtxtVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091DBCCE1A885F2100E56CFC /* LoadtxtVC.xib */; };
 		091DBCD41A887F9A00E56CFC /* LoadhtmlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091DBCD21A887F9A00E56CFC /* LoadhtmlVC.m */; };
@@ -48,6 +46,10 @@
 		09365D971A30665A00A3E8E8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D961A30665A00A3E8E8 /* Security.framework */; };
 		09365D991A30666800A3E8E8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D981A30666800A3E8E8 /* CoreTelephony.framework */; };
 		09365D9B1A30667400A3E8E8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09365D9A1A30667400A3E8E8 /* SystemConfiguration.framework */; };
+		0936D05E1B01D89400BB65AA /* JinpaiWeaponTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D05C1B01D89400BB65AA /* JinpaiWeaponTVC.m */; };
+		0936D05F1B01D89400BB65AA /* JinpaiWeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0936D05D1B01D89400BB65AA /* JinpaiWeaponTVC.xib */; };
+		0936D0631B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */; };
+		0936D0661B01F36200BB65AA /* JinpaiWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0651B01F36200BB65AA /* JinpaiWeapon.m */; };
 		094807671A42275200FD519D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 094807661A42275200FD519D /* DMScrollingTicker.m */; };
 		094921E01A89B0A9003BF3BF /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921DF1A89B0A9003BF3BF /* Music.m */; };
 		094921E41A89D698003BF3BF /* MusicTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921E21A89D698003BF3BF /* MusicTVC.m */; };
@@ -186,6 +188,9 @@
 		0982042D1A319E49000655F9 /* PMHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0982042C1A319E49000655F9 /* PMHelper.m */; };
 		098204381A31BCC7000655F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098204361A31BCC7000655F9 /* Default-568h@2x.png */; };
 		098204391A31BCC7000655F9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 098204371A31BCC7000655F9 /* Default@2x.png */; };
+		0987EA421AFB753D004627E4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0987EA411AFB753D004627E4 /* BaseViewController.m */; };
+		098AAAE71B00BF8600358099 /* MusicListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAE61B00BF8600358099 /* MusicListVC.m */; };
+		098AAAEA1B00BF8600358099 /* JinpaiWeaponVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AAAE91B00BF8600358099 /* JinpaiWeaponVC.m */; };
 		099AF7B91A5F6A3700C0B5B3 /* YijianVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7B81A5F6A3700C0B5B3 /* YijianVC.m */; };
 		099AF7BF1A5FA44400C0B5B3 /* ShowYijianVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7BE1A5FA44400C0B5B3 /* ShowYijianVC.m */; };
 		099AF7C21A5FA9B800C0B5B3 /* Yijian.m in Sources */ = {isa = PBXBuildFile; fileRef = 099AF7C11A5FA9B800C0B5B3 /* Yijian.m */; };
@@ -210,10 +215,6 @@
 		09A3C39119B1CEF800E46114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37919B1CEF800E46114 /* UIKit.framework */; };
 		09A3C39919B1CEF800E46114 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C39719B1CEF800E46114 /* InfoPlist.strings */; };
 		09A3C39B19B1CEF800E46114 /* wsolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C39A19B1CEF800E46114 /* wsolTests.m */; };
-		09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A519B1CF3900E46114 /* WeaponVC.m */; };
-		09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A619B1CF3900E46114 /* WeaponVC.xib */; };
-		09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A3C3A819B1CF3900E46114 /* WeaponTVC.m */; };
-		09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */; };
 		09A42E6A19F3E271007D2707 /* WuxuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A42E6819F3E271007D2707 /* WuxuVC.m */; };
 		09A42E6B19F3E271007D2707 /* WuxuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6919F3E271007D2707 /* WuxuVC.xib */; };
 		09A42E6E19F3E3E0007D2707 /* wuxu1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */; };
@@ -246,9 +247,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		091DBCC71A88599000E56CFC /* MusicListVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListVCTableViewController.h; sourceTree = "<group>"; };
-		091DBCC81A88599000E56CFC /* MusicListVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListVCTableViewController.m; sourceTree = "<group>"; };
-		091DBCC91A88599000E56CFC /* MusicListVCTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicListVCTableViewController.xib; sourceTree = "<group>"; };
 		091DBCCC1A885F2100E56CFC /* LoadtxtVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadtxtVC.h; sourceTree = "<group>"; };
 		091DBCCD1A885F2100E56CFC /* LoadtxtVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadtxtVC.m; sourceTree = "<group>"; };
 		091DBCCE1A885F2100E56CFC /* LoadtxtVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadtxtVC.xib; sourceTree = "<group>"; };
@@ -323,6 +321,13 @@
 		09365D961A30665A00A3E8E8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		09365D981A30666800A3E8E8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		09365D9A1A30667400A3E8E8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0936D05B1B01D89400BB65AA /* JinpaiWeaponTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinpaiWeaponTVC.h; sourceTree = "<group>"; };
+		0936D05C1B01D89400BB65AA /* JinpaiWeaponTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinpaiWeaponTVC.m; sourceTree = "<group>"; };
+		0936D05D1B01D89400BB65AA /* JinpaiWeaponTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JinpaiWeaponTVC.xib; sourceTree = "<group>"; };
+		0936D0611B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		0936D0641B01F36200BB65AA /* JinpaiWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinpaiWeapon.h; sourceTree = "<group>"; };
+		0936D0651B01F36200BB65AA /* JinpaiWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinpaiWeapon.m; sourceTree = "<group>"; };
 		094807651A42275200FD519D /* DMScrollingTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollingTicker.h; sourceTree = "<group>"; };
 		094807661A42275200FD519D /* DMScrollingTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollingTicker.m; sourceTree = "<group>"; };
 		094921DE1A89B0A9003BF3BF /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
@@ -483,6 +488,12 @@
 		0982042C1A319E49000655F9 /* PMHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMHelper.m; sourceTree = "<group>"; };
 		098204361A31BCC7000655F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		098204371A31BCC7000655F9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0987EA401AFB753D004627E4 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0987EA411AFB753D004627E4 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		098AAAE51B00BF8600358099 /* MusicListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListVC.h; sourceTree = "<group>"; };
+		098AAAE61B00BF8600358099 /* MusicListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListVC.m; sourceTree = "<group>"; };
+		098AAAE81B00BF8600358099 /* JinpaiWeaponVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinpaiWeaponVC.h; sourceTree = "<group>"; };
+		098AAAE91B00BF8600358099 /* JinpaiWeaponVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinpaiWeaponVC.m; sourceTree = "<group>"; };
 		099AF7B71A5F6A3700C0B5B3 /* YijianVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YijianVC.h; sourceTree = "<group>"; };
 		099AF7B81A5F6A3700C0B5B3 /* YijianVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YijianVC.m; sourceTree = "<group>"; };
 		099AF7BD1A5FA44400C0B5B3 /* ShowYijianVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowYijianVC.h; sourceTree = "<group>"; };
@@ -518,12 +529,6 @@
 		09A3C39619B1CEF800E46114 /* wsolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "wsolTests-Info.plist"; sourceTree = "<group>"; };
 		09A3C39819B1CEF800E46114 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09A3C39A19B1CEF800E46114 /* wsolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wsolTests.m; sourceTree = "<group>"; };
-		09A3C3A419B1CF3900E46114 /* WeaponVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponVC.h; sourceTree = "<group>"; };
-		09A3C3A519B1CF3900E46114 /* WeaponVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponVC.m; sourceTree = "<group>"; };
-		09A3C3A619B1CF3900E46114 /* WeaponVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponVC.xib; sourceTree = "<group>"; };
-		09A3C3A719B1CF3900E46114 /* WeaponTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeaponTVC.h; sourceTree = "<group>"; };
-		09A3C3A819B1CF3900E46114 /* WeaponTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeaponTVC.m; sourceTree = "<group>"; };
-		09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeaponTVC.xib; sourceTree = "<group>"; };
 		09A42E6719F3E271007D2707 /* WuxuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WuxuVC.h; sourceTree = "<group>"; };
 		09A42E6819F3E271007D2707 /* WuxuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WuxuVC.m; sourceTree = "<group>"; };
 		09A42E6919F3E271007D2707 /* WuxuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WuxuVC.xib; sourceTree = "<group>"; };
@@ -597,12 +602,11 @@
 		091DBCC61A88593F00E56CFC /* 音乐列表 */ = {
 			isa = PBXGroup;
 			children = (
-				091DBCC71A88599000E56CFC /* MusicListVCTableViewController.h */,
-				091DBCC81A88599000E56CFC /* MusicListVCTableViewController.m */,
-				091DBCC91A88599000E56CFC /* MusicListVCTableViewController.xib */,
 				094921E11A89D698003BF3BF /* MusicTVC.h */,
 				094921E21A89D698003BF3BF /* MusicTVC.m */,
 				094921E31A89D698003BF3BF /* MusicTVC.xib */,
+				098AAAE51B00BF8600358099 /* MusicListVC.h */,
+				098AAAE61B00BF8600358099 /* MusicListVC.m */,
 			);
 			name = "音乐列表";
 			sourceTree = "<group>";
@@ -618,6 +622,8 @@
 				094921DF1A89B0A9003BF3BF /* Music.m */,
 				09C8FB041AA8298D00A02E82 /* Transation.h */,
 				09C8FB051AA8298D00A02E82 /* Transation.m */,
+				0936D0641B01F36200BB65AA /* JinpaiWeapon.h */,
+				0936D0651B01F36200BB65AA /* JinpaiWeapon.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -754,6 +760,15 @@
 				093201151A39A4B100A323BA /* EGOImageView.m */,
 			);
 			path = EGOImageView;
+			sourceTree = "<group>";
+		};
+		0936D0601B01F14100BB65AA /* FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				0936D0611B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.h */,
+				0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */,
+			);
+			name = FDTemplateLayoutCell;
 			sourceTree = "<group>";
 		};
 		094807641A42272700FD519D /* Scrolling Ticker Class */ = {
@@ -987,6 +1002,7 @@
 		098204291A319DD9000655F9 /* 第三方支持库 */ = {
 			isa = PBXGroup;
 			children = (
+				0936D0601B01F14100BB65AA /* FDTemplateLayoutCell */,
 				0965895A1AA9E3BD00F28EB6 /* MLEmoji */,
 				094921E61A89DB84003BF3BF /* 播放流媒体音乐 */,
 				09CDC2001A5E2A4D0066D5B9 /* BmobSDK.framework */,
@@ -1039,12 +1055,11 @@
 		099CDAD31A884FAF0087A72A /* 金牌武器上升 */ = {
 			isa = PBXGroup;
 			children = (
-				09A3C3A419B1CF3900E46114 /* WeaponVC.h */,
-				09A3C3A519B1CF3900E46114 /* WeaponVC.m */,
-				09A3C3A619B1CF3900E46114 /* WeaponVC.xib */,
-				09A3C3A719B1CF3900E46114 /* WeaponTVC.h */,
-				09A3C3A819B1CF3900E46114 /* WeaponTVC.m */,
-				09A3C3A919B1CF3900E46114 /* WeaponTVC.xib */,
+				098AAAE81B00BF8600358099 /* JinpaiWeaponVC.h */,
+				098AAAE91B00BF8600358099 /* JinpaiWeaponVC.m */,
+				0936D05B1B01D89400BB65AA /* JinpaiWeaponTVC.h */,
+				0936D05C1B01D89400BB65AA /* JinpaiWeaponTVC.m */,
+				0936D05D1B01D89400BB65AA /* JinpaiWeaponTVC.xib */,
 			);
 			name = "金牌武器上升";
 			sourceTree = "<group>";
@@ -1161,6 +1176,8 @@
 				09A42E6519F3E19B007D2707 /* 任务 */,
 				09A3C38419B1CEF800E46114 /* WLXAppDelegate.h */,
 				09A3C38519B1CEF800E46114 /* WLXAppDelegate.m */,
+				0987EA401AFB753D004627E4 /* BaseViewController.h */,
+				0987EA411AFB753D004627E4 /* BaseViewController.m */,
 				09A19A5219BEAB7D000900BA /* MenuTableVC.h */,
 				09A19A5319BEAB7D000900BA /* MenuTableVC.m */,
 				09A19A5419BEAB7D000900BA /* MenuTableVC.xib */,
@@ -1344,7 +1361,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				091DBCCB1A88599000E56CFC /* MusicListVCTableViewController.xib in Resources */,
 				09658A301AA9E3BD00F28EB6 /* Expression_94@2x.png in Resources */,
 				096589DC1AA9E3BD00F28EB6 /* Expression_18@2x.png in Resources */,
 				096589D41AA9E3BD00F28EB6 /* Expression_10@2x.png in Resources */,
@@ -1379,11 +1395,10 @@
 				096589F01AA9E3BD00F28EB6 /* Expression_36@2x.png in Resources */,
 				096589F61AA9E3BD00F28EB6 /* Expression_41@2x.png in Resources */,
 				09658A2D1AA9E3BD00F28EB6 /* Expression_91@2x.png in Resources */,
-				09A3C3AD19B1CF3900E46114 /* WeaponTVC.xib in Resources */,
 				096589DD1AA9E3BD00F28EB6 /* Expression_19@2x.png in Resources */,
 				096589D01AA9E3BD00F28EB6 /* Expression_102@2x.png in Resources */,
-				09A3C3AB19B1CF3900E46114 /* WeaponVC.xib in Resources */,
 				096589EE1AA9E3BD00F28EB6 /* Expression_34@2x.png in Resources */,
+				0936D05F1B01D89400BB65AA /* JinpaiWeaponTVC.xib in Resources */,
 				09658A161AA9E3BD00F28EB6 /* Expression_70@2x.png in Resources */,
 				09658A1B1AA9E3BD00F28EB6 /* Expression_75@2x.png in Resources */,
 				09658A171AA9E3BD00F28EB6 /* Expression_71@2x.png in Resources */,
@@ -1495,13 +1510,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				091DBCCA1A88599000E56CFC /* MusicListVCTableViewController.m in Sources */,
 				093200E11A3958AE00A323BA /* CJSONSerialization.m in Sources */,
 				093201091A39A36700A323BA /* EGOCache.m in Sources */,
 				094807671A42275200FD519D /* DMScrollingTicker.m in Sources */,
 				09E9D1FA1A38966A0023A68B /* PianzimingdanVC.m in Sources */,
 				09C8FB021AA822A500A02E82 /* TransationTVC.m in Sources */,
 				094921E91A89DBAB003BF3BF /* AudioStreamer.m in Sources */,
+				0936D0661B01F36200BB65AA /* JinpaiWeapon.m in Sources */,
 				093200F71A39701500A323BA /* PianziTVC.m in Sources */,
 				093200E31A3958AE00A323BA /* CDataScanner_Extensions.m in Sources */,
 				093200DF1A3958AE00A323BA /* CFilteringJSONSerializer.m in Sources */,
@@ -1512,11 +1527,13 @@
 				099AF7BF1A5FA44400C0B5B3 /* ShowYijianVC.m in Sources */,
 				094921E01A89B0A9003BF3BF /* Music.m in Sources */,
 				099CFF601A5FD65C0022F1F3 /* NeizhengdengjiVC.m in Sources */,
+				0936D05E1B01D89400BB65AA /* JinpaiWeaponTVC.m in Sources */,
 				098204131A318A8A000655F9 /* ASINetworkQueue.m in Sources */,
 				093200E51A3958AE00A323BA /* CJSONDeserializer.m in Sources */,
 				093200A71A394FDC00A323BA /* Pianzi.m in Sources */,
 				098204121A318A8A000655F9 /* ASIInputStream.m in Sources */,
 				093201181A39A4B100A323BA /* EGOImageLoader.m in Sources */,
+				0987EA421AFB753D004627E4 /* BaseViewController.m in Sources */,
 				0982040E1A318A8A000655F9 /* ASIDataDecompressor.m in Sources */,
 				093200E41A3958AE00A323BA /* NSDictionary_JSONExtensions.m in Sources */,
 				093200E71A3958AE00A323BA /* CJSONSerializer.m in Sources */,
@@ -1538,8 +1555,8 @@
 				094921ED1A89EE81003BF3BF /* TransationVC.m in Sources */,
 				093200EE1A3958AE00A323BA /* SBJsonStreamWriter.m in Sources */,
 				093200EB1A3958AE00A323BA /* SBJsonStreamParserAccumulator.m in Sources */,
+				0936D0631B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				0982040F1A318A8A000655F9 /* ASIDownloadCache.m in Sources */,
-				09A3C3AC19B1CF3900E46114 /* WeaponTVC.m in Sources */,
 				093201191A39A4B100A323BA /* EGOImageView.m in Sources */,
 				093201171A39A4B100A323BA /* EGOImageLoadConnection.m in Sources */,
 				099CFF571A5FD3900022F1F3 /* NeizhengdengjiTVC.m in Sources */,
@@ -1551,11 +1568,12 @@
 				09CDC2111A5E3D7A0066D5B9 /* WeilixishuVC.m in Sources */,
 				093200E21A3958AE00A323BA /* CJSONSerializedData.m in Sources */,
 				098204101A318A8A000655F9 /* ASIFormDataRequest.m in Sources */,
+				098AAAE71B00BF8600358099 /* MusicListVC.m in Sources */,
 				09658A3C1AA9E3BD00F28EB6 /* TTTAttributedLabel.m in Sources */,
 				09A19A5519BEAB7D000900BA /* MenuTableVC.m in Sources */,
 				099AF7C21A5FA9B800C0B5B3 /* Yijian.m in Sources */,
 				093200E91A3958AE00A323BA /* SBJsonParser.m in Sources */,
-				09A3C3AA19B1CF3900E46114 /* WeaponVC.m in Sources */,
+				098AAAEA1B00BF8600358099 /* JinpaiWeaponVC.m in Sources */,
 				091DBCD41A887F9A00E56CFC /* LoadhtmlVC.m in Sources */,
 				09A3C38219B1CEF800E46114 /* main.m in Sources */,
 				093200E01A3958AE00A323BA /* CJSONDeserializer_BlocksExtensions.m in Sources */,

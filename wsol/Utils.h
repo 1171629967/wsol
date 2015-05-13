@@ -16,4 +16,6 @@
 
 //判断字符串是否为空
 + (BOOL) isBlankString:(NSString *)string;
+
+
 @end

@@ -19,25 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
+
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"提交"];
+    [super label].text = @"意见和建议";
+    self.navigationProtal = self;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"提交" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.text = @"意见和建议";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
     
-    self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
+    
     self.view.userInteractionEnabled = YES;
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [self.view addSubview:scrollView];
@@ -195,10 +186,19 @@
     
 }
 
-- (void)openButtonPressed
+
+
+-(void)leftAction
 {
-    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+   [self.sideMenuViewController openMenuAnimated:YES completion:nil];
 }
+
+-(void)rightAction
+{
+    [self doHttp];
+}
+
+
 
 
 -(void)doHttp
@@ -243,10 +243,7 @@
    
 }
 
-- (void)refreshButtonPressed
-{
-    [self doHttp];
-}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {

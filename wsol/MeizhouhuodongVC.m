@@ -11,6 +11,7 @@
 #import "TWTSideMenuViewController.h"
 #import "PMHelper.h"
 #import <BmobSDK/Bmob.h>
+#import "Utils.h"
 
 @interface MeizhouhuodongVC ()
 
@@ -21,28 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"每周活动";
+    self.navigationProtal = self;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+   
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = UITextAlignmentCenter;
-    label.text = @"每周活动";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
     
-    [self.view setBackgroundColor:[UIColor grayColor]];
     textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     [textView setEditable:NO];
-    textView.backgroundColor = [UIColor grayColor];
+    textView.backgroundColor = [UIColor clearColor];
     textView.textColor = [UIColor whiteColor];
     textView.font = [UIFont fontWithName:@"Arial" size:20];
     [self.view addSubview:textView];
@@ -100,17 +91,17 @@
 
 
 
-
-
-- (void)openButtonPressed
+-(void)leftAction
 {
     [self.sideMenuViewController openMenuAnimated:YES completion:nil];
 }
 
-- (void)refreshButtonPressed
+-(void)rightAction
 {
     [self doHttp];
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {

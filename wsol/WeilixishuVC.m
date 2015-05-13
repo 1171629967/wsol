@@ -18,39 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置导航栏
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"威力系数";
+    self.navigationProtal = self;
+    
     isShowedExplain = NO;
-    
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
+
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+   
     
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"武器威力系数";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
     
-    self.view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
     self.view.userInteractionEnabled = YES;
     [self initViews];
     
     
-//    textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-//    [textView setEditable:NO];
-//    textView.backgroundColor = [UIColor grayColor];
-//    textView.textColor = [UIColor whiteColor];
-//    textView.font = [UIFont fontWithName:@"Arial" size:20];
-//    [self.view addSubview:textView];
+
     
     activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);//只能设置中心，不能设置大小
@@ -738,7 +725,14 @@
     
 }
 
-- (void)refreshButtonPressed
+
+
+-(void)leftAction
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)rightAction
 {
     [self doHttp];
 }

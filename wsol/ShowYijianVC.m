@@ -21,29 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *openItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(openButtonPressed)];
-    openItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = openItem;
     
-    UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(refreshButtonPressed)];
-    refreshItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = refreshItem;
+    //设置导航栏
+    [[super leftItem] setTitle:@"菜单"];
+    [[super rightItem] setTitle:@"刷新"];
+    [super label].text = @"玩家意见一览";
+    self.navigationProtal = self;
     
-    
-    
-    //改变navigationBar标题
-    CGRect rect = CGRectMake(0, 0, 200, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"玩家意见一览";
-    label.adjustsFontSizeToFitWidth=YES;
-    self.navigationItem.titleView = label;
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    tableview.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:tableview];
     
     
     
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tableview_background.png"]];
     
     
     activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -87,7 +79,7 @@
                 [yijians addObject:yijian];
             }
             //刷新表格控件
-            [self.tableView reloadData];
+            [tableview reloadData];
             
             
         }
@@ -172,14 +164,16 @@
     return cell;
 }
 
-- (void)refreshButtonPressed
-{
-    [self doHttp];
-}
 
-- (void)openButtonPressed
+
+-(void)leftAction
 {
     [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
+
+-(void)rightAction
+{
+    [self doHttp];
 }
 
 - (void)viewWillAppear:(BOOL)animated

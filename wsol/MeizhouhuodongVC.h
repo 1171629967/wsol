@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
+#import "BaseViewController.h"
 
-@interface MeizhouhuodongVC : UIViewController
+@interface MeizhouhuodongVC : BaseViewController<NavigationProtal>
 {
     UITextView *textView;
     UIActivityIndicatorView *activityIndicator;

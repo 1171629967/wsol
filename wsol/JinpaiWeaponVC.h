@@ -21,12 +21,18 @@
     
     NSMutableArray *weapons;
     NSMutableArray *suggestWeapons;
+    
+    UIToolbar *mycustomToolBar;
+    
+    int currentMode;
 }
 
 
 
-@property (strong, nonatomic) NSMutableArray *weaponNamesR1;
-@property (strong, nonatomic) NSArray *suggesWeaponNamesR1;
+//@property (strong, nonatomic) NSMutableArray *weaponNamesR1;
+//@property (strong, nonatomic) NSArray *suggesWeaponNamesR1;
+//@property (strong, nonatomic) NSMutableArray *weaponNamesR1_pinyin;
+//@property (strong, nonatomic) NSArray *suggesWeaponNamesR1_pinyin;
 
 
 @property (copy, nonatomic) JinpaiWeaponTVC *prototypeCell;

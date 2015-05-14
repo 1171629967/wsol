@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <BmobSDK/Bmob.h>
 
-@interface JinpaiWeapon : NSObject
+@interface JinpaiWeapon : NSObject <NSCoding>
 
 @property (copy, nonatomic) NSString *pinyin;
 @property (copy, nonatomic) NSString *name;

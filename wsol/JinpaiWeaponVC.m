@@ -25,11 +25,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    currentMode = (int)[userDefaults integerForKey:UserDefaultsKey_jinpaiWeaponMode];
+    
+   
+    
     //设置导航栏
     [[super leftItem] setTitle:@"菜单"];
-    [[super rightItem] setTitle:@"刷新"];
+    //[[super rightItem] setTitle:@"刷新"];
     [super label].text = @"金牌武器上升值";
     self.navigationProtal = self;
+    
+    
+    
+    //给nagigationBar的右边添加两个按钮
+    NSMutableArray *mycustomButtons = [[NSMutableArray alloc] init];
+    UIBarButtonItem *myButton1 = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"刷新"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(doHttp)];
+    myButton1.width = 30;
+    [myButton1 setTintColor:[UIColor whiteColor]];
+    [mycustomButtons addObject: myButton1];
+    UIBarButtonItem *myButton2 = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"变化"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(changeMode)];
+    myButton2.width = 30;
+    [myButton2 setTintColor:[UIColor whiteColor]];
+    [mycustomButtons addObject: myButton2];
+    
+    mycustomToolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(220.0f, 0.0f,80.0f, 44.0f)];
+    mycustomToolBar.barStyle = UIBarStyleDefault;  
+    [mycustomToolBar setItems:mycustomButtons animated:YES];  
+    [mycustomToolBar sizeToFit];
+    mycustomToolBar.backgroundColor = [UIColor clearColor];
+    for (UIView *view in [mycustomToolBar subviews]) {
+        if ([view isKindOfClass:[UIImageView class]]) {
+            [view removeFromSuperview];
+        }
+    }
+    [self.navigationController.navigationBar addSubview:mycustomToolBar];
+    
+    
     
     
     
@@ -38,6 +79,8 @@
     tableview.dataSource = self;
     tableview.backgroundColor = [UIColor clearColor];
     [self.view addSubview:tableview];
+   
+    
     
     //初始化搜索控件
     searchBar = [[UISearchBar alloc] init];
@@ -45,7 +88,8 @@
     [searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     [searchBar sizeToFit];
     tableview.tableHeaderView = searchBar;
-    
+    tableview.tableHeaderView.backgroundColor = [UIColor clearColor];
+   
     
     
     //初始化searchDisplayController
@@ -54,6 +98,10 @@
     [searchDisplayController setSearchResultsDataSource:self];
     [searchDisplayController setSearchResultsDelegate:self];
     searchDisplayController.searchResultsTableView.backgroundColor = [UIColor clearColor];
+    searchDisplayController.searchBar.backgroundColor = [UIColor clearColor];
+    
+    
+    
     
     
     
@@ -65,22 +113,44 @@
     
     weapons = [[NSMutableArray alloc] init];
     suggestWeapons = [[NSMutableArray alloc] init];
-    self.weaponNamesR1 = [[NSMutableArray alloc] init];
-    
-    
-    
-    
     
     
     [self doHttp];
+ 
     
-
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (mycustomToolBar) {
+         mycustomToolBar.hidden = NO;
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(void) refreshView:(UIRefreshControl *)refresh
+{
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"更新数据中..."];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMM d, h:mm a"];
+    NSString *lastUpdated = [NSString stringWithFormat:@"上次更新日期 %@",
+                             [formatter stringFromDate:[NSDate date]]];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdated];
+    [self doHttp];
+}
+
+
+
+
+
+
 
 -(void)leftAction
 {
@@ -89,7 +159,22 @@
 
 -(void)rightAction
 {
-    [self doHttp];
+    //[self doHttp];
+}
+
+//新旧两种模式的变化
+-(void)changeMode
+{
+    if (currentMode == 0) {
+        currentMode = 1;
+    }
+    else
+    {
+        currentMode = 0;
+    }
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:currentMode forKey:UserDefaultsKey_jinpaiWeaponMode];
+    [tableview reloadData];
 }
 
 
@@ -103,15 +188,16 @@
     
     if(tableView == searchDisplayController.searchResultsTableView)
     {
-        wlxsVC.weaponName = [self.suggesWeaponNamesR1 objectAtIndex:[indexPath row]];
+        wlxsVC.weaponName = [[suggestWeapons objectAtIndex:[indexPath row]] name];
     }
     else
     {
-        wlxsVC.weaponName = [self.weaponNamesR1 objectAtIndex:[indexPath row]];
+        wlxsVC.weaponName = [[weapons objectAtIndex:[indexPath row]] name];
     }
     
     [self.navigationController pushViewController:wlxsVC animated:YES];
     
+    mycustomToolBar.hidden = YES;
     //取消单元格被选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -156,16 +242,14 @@
     cell.backgroundColor = [UIColor clearColor];
     if(tableView == searchDisplayController.searchResultsTableView)
     {
-        [cell setEntity:suggestWeapons[indexPath.row]];
+        [cell setEntity:suggestWeapons[indexPath.row] ByMode:currentMode];
     }
     else
     {
-        [cell setEntity:weapons[indexPath.row]];
+        [cell setEntity:weapons[indexPath.row] ByMode:currentMode];
     }
     return cell;
 }
-
-
 
 
 
@@ -209,15 +293,19 @@
 
 /** 谓词匹配搜索内容 */
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@",searchText];
-    self.suggesWeaponNamesR1 = [self.weaponNamesR1 filteredArrayUsingPredicate:resultPredicate];
-    NSInteger count = [self.suggesWeaponNamesR1 count];
+    
+
+    
     [suggestWeapons removeAllObjects];
-    for (int i = 0; i<count; i++) {
-        NSString *name = [self.suggesWeaponNamesR1 objectAtIndex:i];
-        NSInteger index = [self.weaponNamesR1 indexOfObject:name];
-        [suggestWeapons addObject:[weapons objectAtIndex:index]];
+    for (JinpaiWeapon *jinpaiWeapon in weapons) {
+        NSRange foundObj=[[jinpaiWeapon name] rangeOfString:[searchText lowercaseString] options:NSCaseInsensitiveSearch];
+        NSRange foundObj_pinyin=[[jinpaiWeapon pinyin] rangeOfString:[searchText lowercaseString] options:NSCaseInsensitiveSearch];
+        if (foundObj.length>0 || foundObj_pinyin.length >0) {
+            [suggestWeapons addObject:jinpaiWeapon];
+        }
     }
+    
+    
     
     tableview.hidden = YES;
 }
@@ -242,6 +330,7 @@
     activityIndicator.hidden = NO;
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"WeaponJinpai"];
     bquery.limit = 1000;
+    [bquery orderByAscending:@"weaponId"];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (error) {
             [activityIndicator stopAnimating];
@@ -251,18 +340,16 @@
             [activityIndicator stopAnimating];
             activityIndicator.hidden = YES;
             [weapons removeAllObjects];
-            [self.weaponNamesR1 removeAllObjects];
-            
-            
+     
             for (BmobObject *obj in array) {
                 JinpaiWeapon *weapon = [[JinpaiWeapon alloc] initWithBmobObject:obj];
                 [weapons addObject:weapon];
-                [self.weaponNamesR1 addObject:weapon.name];
+                
             }
+            
+            
             //刷新表格控件
-            [tableview reloadData];
-            
-            
+            [tableview reloadData];     
         }
         
     }];

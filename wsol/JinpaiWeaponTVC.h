@@ -26,6 +26,6 @@
 
 @property (nonatomic) int cellHeight;
 
-- (void)setEntity:(JinpaiWeapon *)entity;
+- (void)setEntity:(JinpaiWeapon *)entity ByMode:(int)mode;
 
 @end

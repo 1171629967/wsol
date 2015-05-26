@@ -11,7 +11,7 @@
 
 @interface ShowYijianVC : BaseViewController<NavigationProtal,UITableViewDataSource,UITableViewDelegate>
 {
-    UIActivityIndicatorView *activityIndicator;
+    
     
     NSMutableArray *yijians;
     UILabel *lb_content;

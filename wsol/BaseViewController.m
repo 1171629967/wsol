@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent=NO; 
     
     if (!self.hasNavBack) {
         //设置navigationBar左边按钮
@@ -49,6 +50,13 @@
     [self setCurrentAppTheme:self.view];
     
     
+    activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);//只能设置中心，不能设置大小
+    activityIndicator.hidden = YES;
+    [self.view addSubview:activityIndicator];
+    
+    HUD = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:HUD];  
     
     //注册更换APP主题的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeAppTheme) name:Notification_CHANGE_APP_THEME object:nil];
@@ -88,15 +96,7 @@
 
 - (void)changeAppTheme :(UIView *) view
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
-    if (currentTheme == 2) {
-        currentTheme = 0;
-    }
-    else {
-        currentTheme ++;
-    }
-    [userDefaults setInteger:currentTheme forKey:UserDefaultsKey_CurrentAppTheme];
+    
     
     [self setCurrentAppTheme:view];
     

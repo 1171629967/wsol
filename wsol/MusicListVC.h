@@ -11,7 +11,7 @@
 
 @interface MusicListVC : BaseViewController<UITableViewDataSource,UITableViewDelegate,NavigationProtal>
 {
-    UIActivityIndicatorView *activityIndicator;
+
     NSMutableArray *musics;
     UILabel *lb_content;
     UITableView *tableview;

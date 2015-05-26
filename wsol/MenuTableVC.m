@@ -229,6 +229,15 @@
     
     if ([currentMenuString isEqualToString:menuString] ){
         if ([currentMenuString isEqualToString:@"更换主题"]) {
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
+            if (currentTheme == 2) {
+                currentTheme = 0;
+            }
+            else {
+                currentTheme ++;
+            }
+            [userDefaults setInteger:currentTheme forKey:UserDefaultsKey_CurrentAppTheme];
             //发出通知，更换APP主题
             [[NSNotificationCenter defaultCenter] postNotificationName:Notification_CHANGE_APP_THEME object:nil];
         }
@@ -287,6 +296,15 @@
             controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }
         else if([currentMenuString isEqualToString:@"更换主题"]){
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
+            if (currentTheme == 2) {
+                currentTheme = 0;
+            }
+            else {
+                currentTheme ++;
+            }
+            [userDefaults setInteger:currentTheme forKey:UserDefaultsKey_CurrentAppTheme];
             //发出通知，更换APP主题
             [[NSNotificationCenter defaultCenter] postNotificationName:Notification_CHANGE_APP_THEME object:nil];
         }

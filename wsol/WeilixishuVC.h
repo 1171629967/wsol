@@ -13,8 +13,7 @@
 {
     //是否已经显示了系数说明
     BOOL isShowedExplain;
-    
-    UIActivityIndicatorView *activityIndicator;
+
     
     UIScrollView *scrollView;
     UILabel *lb_weaponName;

@@ -38,10 +38,7 @@
     
     
     
-    activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);//只能设置中心，不能设置大小
-    activityIndicator.hidden = YES;
-    [self.view addSubview:activityIndicator];
+   
     
     yijians = [[NSMutableArray alloc] init];
     

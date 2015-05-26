@@ -11,7 +11,7 @@
 
 @interface YijianVC : BaseViewController<UITextViewDelegate,NavigationProtal>
 {
-    UIActivityIndicatorView *activityIndicator;
+  
     
     UILabel *lb_des;
     UILabel *lb_tiebaName;

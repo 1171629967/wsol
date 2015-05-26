@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+
+
 @protocol NavigationProtal <NSObject>
 -(void)leftAction;
 -(void)rightAction;
@@ -15,6 +18,8 @@
 @interface BaseViewController : UIViewController
 {
     CAGradientLayer *newShadow;
+    MBProgressHUD *HUD;
+    UIActivityIndicatorView *activityIndicator;
 }
 
 @property (strong, nonatomic) UILabel *label;

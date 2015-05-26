@@ -16,7 +16,6 @@
 {
     UISearchBar *searchBar;
     UISearchDisplayController *searchDisplayController;
-    UIActivityIndicatorView *activityIndicator;
     EGOImageView* imageView;
     int currentTableViewType;
     UITableView *tableview;

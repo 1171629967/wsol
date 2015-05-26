@@ -26,6 +26,9 @@
     
     isShowedExplain = NO;
 
+    
+    
+    //左上角返回按钮白色
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.translucent = NO;
@@ -39,10 +42,7 @@
     
 
     
-    activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
-    activityIndicator.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);//只能设置中心，不能设置大小
-    activityIndicator.hidden = YES;
-    [self.view addSubview:activityIndicator];
+   
     
     
     //对控件边距赋值

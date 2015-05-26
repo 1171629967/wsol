@@ -11,6 +11,9 @@
 #import "MobClick.h"
 #import "Utils.h"
 #import <BmobSDK/Bmob.h>
+#import "LoginVC.h"
+#import "User.h"
+#import "CompletePersonInfoVC.h"
 
 
 
@@ -35,13 +38,30 @@
     self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuTableVC mainViewController:[[UINavigationController alloc] initWithRootViewController:self.jinpaiWeaponVC]];
     
     
-    //self.sideMenuViewController.shadowColor = [UIColor blackColor];
-    //self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+//    self.sideMenuViewController.shadowColor = [UIColor blackColor];
+//    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
     self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
     self.sideMenuViewController.delegate = self;
-    self.window.rootViewController = self.sideMenuViewController;
+    //self.window.rootViewController = self.sideMenuViewController;
     
    
+    
+    //根据当前是否有登录用户进行处理
+    User *user = (User *)[User getCurrentObject];
+    if (user) {
+        if ([Utils isBlankString:[user objectForKey:@"nickName"]]) {
+            CompletePersonInfoVC *completeVC = [[CompletePersonInfoVC alloc] init];
+            completeVC.type = 0;
+            self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:completeVC];
+        }
+        else {
+            self.window.rootViewController = self.sideMenuViewController;
+        }
+    }else{
+        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginVC alloc] init]];
+    }
+    
+    
    
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]];

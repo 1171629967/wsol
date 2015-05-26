@@ -13,7 +13,7 @@
 @interface TransationVC : BaseViewController<NavigationProtal,UITableViewDataSource,UITableViewDelegate,MLEmojiLabelDelegate>
 {
     MLEmojiLabel *emojiLabel;
-    UIActivityIndicatorView *activityIndicator;
+  
     UITableView *tableView;
     NSMutableArray *transations;
     float headerHeight;

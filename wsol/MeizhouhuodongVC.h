@@ -13,7 +13,6 @@
 @interface MeizhouhuodongVC : BaseViewController<NavigationProtal>
 {
     UITextView *textView;
-    UIActivityIndicatorView *activityIndicator;
 }
 
 @end

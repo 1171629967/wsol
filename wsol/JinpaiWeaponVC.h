@@ -17,7 +17,7 @@
     UISearchDisplayController *searchDisplayController;
     WeilixishuVC *wlxsVC;
     UITableView *tableview;
-    UIActivityIndicatorView *activityIndicator;
+   
     
     NSMutableArray *weapons;
     NSMutableArray *suggestWeapons;

@@ -10,14 +10,21 @@
 #import "TWTSideMenuViewController.h"
 #import "MenuTableVC.h"
 #import "JinpaiWeaponVC.h"
+#import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
 
 
 @interface WLXAppDelegate : UIResponder <UIApplicationDelegate,TWTSideMenuViewControllerDelegate>
-
+{
+    BMKMapManager* _mapManager;    
+}
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) TWTSideMenuViewController *sideMenuViewController;
 @property (nonatomic, strong) MenuTableVC *menuTableVC;
 @property (nonatomic, strong) JinpaiWeaponVC *jinpaiWeaponVC;
+
+- (void)exitApplication;
+
+
 
 @property BOOL isOpenAD;
 

@@ -56,5 +56,34 @@
 
 
 
+////限制一定宽度得到高度
++ (float)getTextHeight:(NSString *)text linebreakMode:(NSLineBreakMode)linebreakMode font:(UIFont *)font width:(float)width{
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                              font, NSFontAttributeName,
+                                              nil];
+        CGSize size2 = [text boundingRectWithSize:CGSizeMake(width, 30000) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributesDictionary context:nil].size;
+        return size2.height;
+    }
+    
+    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(width, 3000) lineBreakMode:linebreakMode];
+    return  size.height;
+}
+
++ (float)getWidth:(NSString *)text font:(UIFont *)font{
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0) {
+        return [text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil]].width;
+        
+        //        NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+        //        CGSize sizeUp7 = [text boundingRectWithSize:CGSizeMake(1000, 25) options:NSStringDrawingUsesFontLeading attributes:attributesDictionary context:nil].size;
+        //        return sizeUp7.width;
+    }
+    
+    CGSize size = [text sizeWithFont:font constrainedToSize:CGSizeMake(1000, 25) lineBreakMode:1];
+    return  size.width;
+}
+
 
 @end

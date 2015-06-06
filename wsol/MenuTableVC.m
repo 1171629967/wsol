@@ -16,12 +16,13 @@
 #import "PianzimingdanVC.h"
 #import "PMHelper.h"
 #import "YijianVC.h"
-#import <BmobSDK/Bmob.h>
 #import "ShowYijianVC.h"
 #import "NeizhengdengjiVC.h"
 #import "MusicListVC.h"
 #import "TransationVC.h"
-
+#import "User.h"
+#import "PlayerNearbyVC.h"
+#import "CompletePersonInfoVC.h"
 
 @interface MenuTableVC ()
 
@@ -57,6 +58,79 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPaomadeng) name:@"loadPaomadeng" object:nil];
     
     [self loadPaomadeng];
+    
+    //设置定位精确度，默认：kCLLocationAccuracyBest
+    [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    //指定最小距离更新(米)，默认：kCLDistanceFilterNone
+    [BMKLocationService setLocationDistanceFilter:100.f];
+    
+    //初始化检索对象
+    _searcher =[[BMKGeoCodeSearch alloc]init];
+    _searcher.delegate = self;
+    
+    //初始化BMKLocationService
+    _locService = [[BMKLocationService alloc]init];
+    _locService.delegate = self;
+    //启动LocationService
+    [_locService startUserLocationService];
+    
+}
+
+
+
+
+
+//实现相关delegate 处理位置信息更新
+//处理方向变更信息
+- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
+{
+    //NSLog(@"heading is %@",userLocation.heading);
+}
+//处理位置坐标更新
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+    
+    point = [[BmobGeoPoint alloc] initWithLongitude:userLocation.location.coordinate.longitude WithLatitude:userLocation.location.coordinate.latitude];
+    
+    
+    
+    //发起反向地理编码检索
+    CLLocationCoordinate2D pt = (CLLocationCoordinate2D){userLocation.location.coordinate.latitude, userLocation.location.coordinate.longitude};
+    BMKReverseGeoCodeOption *reverseGeoCodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
+    reverseGeoCodeSearchOption.reverseGeoPoint = pt;
+    BOOL flag = [_searcher reverseGeoCode:reverseGeoCodeSearchOption];
+    if(flag)
+    {
+      NSLog(@"反geo检索发送成功");
+    }
+    else
+    {
+      NSLog(@"反geo检索发送失败");
+    }
+    
+
+}
+
+
+
+
+
+//接收反向地理编码结果
+-(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:
+(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error{
+  if (error == BMK_SEARCH_NO_ERROR) {
+      NSString *address = result.address;
+          User *bUser = (User *)[User getCurrentUser];
+          [bUser setObject:point forKey:@"lastGeoPoint"];
+          [bUser setObject:address forKey:@"lastAddress"];
+          [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+              
+          }];
+  }
+  else {
+      NSLog(@"抱歉，未找到结果");
+  }
 }
 
 
@@ -106,6 +180,15 @@
 }
 
 
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    _locService.delegate = self;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    _locService.delegate = nil;
+}
 
 
 
@@ -231,7 +314,7 @@
         if ([currentMenuString isEqualToString:@"更换主题"]) {
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
-            if (currentTheme == 2) {
+            if (currentTheme == 6) {
                 currentTheme = 0;
             }
             else {
@@ -260,7 +343,11 @@
 //            controller = [[UINavigationController alloc] initWithRootViewController:htmlVC];
 //        }
         
-        
+        else if([currentMenuString isEqualToString:@"个人信息"]){
+            CompletePersonInfoVC *cptVC = [[CompletePersonInfoVC alloc] init];
+            cptVC.type = 1;
+            controller = [[UINavigationController alloc] initWithRootViewController:cptVC];
+        }
         else if([currentMenuString isEqualToString:@"内政等级表"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[NeizhengdengjiVC alloc] init]];
         }
@@ -295,10 +382,13 @@
         else if([currentMenuString isEqualToString:@"吧主担保交易"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }
+        else if([currentMenuString isEqualToString:@"附近的玩家"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[PlayerNearbyVC alloc] init]];
+        }
         else if([currentMenuString isEqualToString:@"更换主题"]){
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
-            if (currentTheme == 2) {
+            if (currentTheme == 6) {
                 currentTheme = 0;
             }
             else {

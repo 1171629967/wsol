@@ -92,7 +92,7 @@
                 }
                 else {
                     //进入主页
-                    appDelegate.window.rootViewController = self.sideMenuViewController;
+                    appDelegate.window.rootViewController = appDelegate.sideMenuViewController;
                 }
             }];
         }

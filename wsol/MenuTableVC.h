@@ -9,13 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "DMScrollingTicker.h"
 #import "ASIHTTPRequest.h"
+#import <BaiduMapAPI/BMapKit.h>
+#import <BmobSDK/Bmob.h>
 
-@interface MenuTableVC : UITableViewController
+
+@interface MenuTableVC : UITableViewController<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate>
 {
     NSString *currentMenuString;
     NSArray *typesArray;
     NSArray *menusArray;
     DMScrollingTicker *scrollingTicker;
+    BMKLocationService* _locService;
+    BMKGeoCodeSearch *_searcher;
+    
+    BmobGeoPoint *point;
 }
 
 

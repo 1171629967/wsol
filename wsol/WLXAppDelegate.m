@@ -30,6 +30,14 @@
     //设置bmob的key
     [Bmob registerWithAppKey:@"8763a00a263ee5064e8a55be05f72f3a"];
     
+    // 要使用百度地图，请先启动BaiduMapManager
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"F2Tbe9Zo1d20qRQyepeL35Gf"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
@@ -64,9 +72,9 @@
     
    
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-
+    
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -140,6 +148,42 @@
 }
 
 
+
+//-------------------------------- 退出程序 -----------------------------------------//
+
+- (void)exitApplication {
+    
+    [UIView beginAnimations:@"exitApplication" context:nil];
+    
+    [UIView setAnimationDuration:0.5];
+    
+    [UIView setAnimationDelegate:self];
+    
+    // [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:self.view.window cache:NO];
+    
+    [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:self.window cache:NO];
+    
+    [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
+    
+    //self.view.window.bounds = CGRectMake(0, 0, 0, 0);
+    
+    self.window.bounds = CGRectMake(0, 0, 0, 0);
+    
+    [UIView commitAnimations];
+    
+}
+
+
+
+- (void)animationFinished:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+    
+    if ([animationID compare:@"exitApplication"] == 0) {
+        
+        exit(0);
+        
+    }
+    
+}
 
 
 

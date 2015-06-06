@@ -132,7 +132,7 @@
             if ([o isKindOfClass:[PianziTVC class]]) {
                 cell = (PianziTVC *)o;
                 
-                imageView = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:@"120.png"]];
+                imageView = [[EGOImageView alloc] initWithPlaceholderImage:[UIImage imageNamed:@"avator_default.png"]];
                 imageView.frame = CGRectMake(10.0f, 10.0f, 80.0f, 80.0f);
                 [cell.contentView addSubview:imageView];
                 

@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "User.h"
+#import "EGOImageView.h"
 
 @interface CompletePersonInfoVC : BaseViewController<NavigationProtal>
 {
@@ -26,8 +28,10 @@
 /** 0:来自注册   1：当前登录用户主页   2:别的用户主页 */
 @property (nonatomic) int type;
 @property (copy, nonatomic) NSString *personNick;
+@property (nonatomic) User *user;
 
 
+- (void)setFlickrPhoto:(NSString*)flickrPhoto AndImageView:(EGOImageView *)imageView;
 
 
 

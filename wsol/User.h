@@ -21,13 +21,16 @@
 @property (copy, nonatomic) NSString *tiebaName;
 @property (copy, nonatomic) NSString *nickName;
 @property (copy, nonatomic) NSString *gameName;
-@property (copy, nonatomic) BmobGeoPoint *lastGeoPoint;
+@property (nonatomic) BmobGeoPoint *lastGeoPoint;
 @property (copy, nonatomic) NSString *lastAddress;
 @property (copy, nonatomic) NSString *registOS;
 
+@property float addressHeight;
+
+
 
 - (id)initWithfaceName:(NSString *)nFaceName AndFaceUrl:(NSString *)nFaceUrl
-AndQq:(NSString *)nQq AndCity:(NSString *)nCity AndTiebaName:(NSString *)nTiebaName
-           AndGameName:(NSString *)nGameName AndLastGeoPoint:(BmobGeoPoint *)nLastGeoPoint AndLastAddress:(NSString *)nLastAddress AndRegistOS:(NSString *)nRegistOS;
+                 AndQq:(NSString *)nQq AndCity:(NSString *)nCity  AndNickName:(NSString *)nNickName AndTiebaName:(NSString *)nTiebaName
+           AndGameName:(NSString *)nGameName AndLastGeoPoint:(BmobGeoPoint *)nLastGeoPoint AndLastAddress:(NSString *)nLastAddress AndRegistOS:(NSString *)nRegistOS AndAddressHeight:(float) nAddressHeight;
 
 @end

@@ -56,7 +56,9 @@
     [self.view addSubview:activityIndicator];
     
     HUD = [[MBProgressHUD alloc] initWithView:self.view];
-    [self.view addSubview:HUD];  
+    [self.view addSubview:HUD];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     //注册更换APP主题的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeAppTheme) name:Notification_CHANGE_APP_THEME object:nil];
@@ -119,16 +121,16 @@
             view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg2.png"]];
             break;
         case 3:
-            
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg3.png"]];
             break;
         case 4:
-            
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg4.png"]];
             break;
         case 5:
-            
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg5.png"]];
             break;
         case 6:
-            
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg6.png"]];
             break;
         case 7:
             

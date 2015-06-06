@@ -11,8 +11,8 @@
 @implementation User
 
 - (id)initWithfaceName:(NSString *)nFaceName AndFaceUrl:(NSString *)nFaceUrl
-                 AndQq:(NSString *)nQq AndCity:(NSString *)nCity AndTiebaName:(NSString *)nTiebaName
-           AndGameName:(NSString *)nGameName AndLastGeoPoint:(BmobGeoPoint *)nLastGeoPoint AndLastAddress:(NSString *)nLastAddress AndRegistOS:(NSString *)nRegistOS
+                 AndQq:(NSString *)nQq AndCity:(NSString *)nCity  AndNickName:(NSString *)nNickName AndTiebaName:(NSString *)nTiebaName
+           AndGameName:(NSString *)nGameName AndLastGeoPoint:(BmobGeoPoint *)nLastGeoPoint AndLastAddress:(NSString *)nLastAddress AndRegistOS:(NSString *)nRegistOS AndAddressHeight:(float) nAddressHeight
 {
     self = [super init];
     if (self) {
@@ -20,11 +20,13 @@
         self.faceUrl = nFaceUrl;
         self.qq = nQq;
         self.city = nCity;
+        self.nickName = nNickName;
         self.tiebaName = nTiebaName;
         self.gameName = nGameName;
         self.lastGeoPoint = nLastGeoPoint;
         self.lastAddress = nLastAddress;
         self.registOS = nRegistOS;
+        self.addressHeight = nAddressHeight;
     }
     return self;
 }

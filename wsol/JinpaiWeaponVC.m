@@ -214,7 +214,8 @@
 //返回单元格高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [weapons[indexPath.row] cellHeight];
+    //return [weapons[indexPath.row] cellHeight];
+    return 220;
 }
 
 //单元格内容
@@ -324,17 +325,19 @@
 - (void)doHttp
 {
     activityIndicator.hidden = NO;
+    [activityIndicator startAnimating];
+    
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"WeaponJinpai"];
     bquery.limit = 1000;
     [bquery orderByAscending:@"weaponId"];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        [activityIndicator stopAnimating];
+        activityIndicator.hidden = YES;
         if (error) {
-            [activityIndicator stopAnimating];
-            activityIndicator.hidden = YES;
+            
         }
         else {
-            [activityIndicator stopAnimating];
-            activityIndicator.hidden = YES;
+           
             [weapons removeAllObjects];
      
             for (BmobObject *obj in array) {

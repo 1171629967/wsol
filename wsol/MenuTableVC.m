@@ -376,9 +376,9 @@
         else if([currentMenuString isEqualToString:@"玩家意见一览"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[ShowYijianVC alloc] init]];
         }
-        else if([currentMenuString isEqualToString:@"游戏BGM音乐"]){
-            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVC alloc] init]];
-        }
+//        else if([currentMenuString isEqualToString:@"游戏BGM音乐"]){
+//            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVC alloc] init]];
+//        }
         else if([currentMenuString isEqualToString:@"吧主担保交易"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }

@@ -10,6 +10,7 @@
 #import "MobClick.h"
 #import "TWTSideMenuViewController.h"
 #import <BmobSDK/Bmob.h>
+#import "User.h"
 
 @interface YijianVC ()
 
@@ -219,6 +220,10 @@
     if (tf_qq.text.length > 0) {
         [yijian setObject:tf_qq.text forKey:@"qq"];
     }
+    //添加用户名
+    User *user = (User *)[User getCurrentObject];
+    [yijian setObject:[user objectForKey:@"username"] forKey:@"username"];
+    //添加用户意见
     [yijian setObject:tf_yijian.text forKey:@"content"];
     //设置系统版本号
     float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];

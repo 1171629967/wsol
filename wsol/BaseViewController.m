@@ -112,28 +112,28 @@
     
     switch (currentTheme) {
         case 0:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg0.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 1:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg1.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 2:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg2.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 3:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg3.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 4:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg4.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 5:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg5.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 6:
-            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg6.png"]];
+            view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"appbg7.png"]];
             break;
         case 7:
-            
+        
             break;
         case 8:
             

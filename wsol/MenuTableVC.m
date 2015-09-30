@@ -23,6 +23,7 @@
 #import "User.h"
 #import "PlayerNearbyVC.h"
 #import "CompletePersonInfoVC.h"
+#import "RenwuListVC.h"
 
 @interface MenuTableVC ()
 
@@ -58,6 +59,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPaomadeng) name:@"loadPaomadeng" object:nil];
     
     [self loadPaomadeng];
+    [self checkVersion];
     
     //设置定位精确度，默认：kCLLocationAccuracyBest
     [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
@@ -132,6 +134,47 @@
       NSLog(@"抱歉，未找到结果");
   }
 }
+
+
+
+
+
+
+
+/** 新版本检查 */
+- (void)checkVersion
+{
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"AppVersion"];
+    [bquery whereKey:@"osType" equalTo:@"ios"];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (error) {
+            
+        }
+        else {
+            BmobObject *obj = [array objectAtIndex:0];
+            int lastVersionCode = [(NSNumber *)[obj objectForKey:@"lastVersionCode"] intValue];
+           int build = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] intValue];
+            
+            if (lastVersionCode > build) {
+                NSString *lastVersionDes = [obj objectForKey:@"lastVersionDes"];
+                NSString *str = [lastVersionDes stringByReplacingOccurrencesOfString:@"$" withString:@"\n"];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"有新版本可以更新" message:str delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                // optional - add more buttons:
+                //[alert addButtonWithTitle:@"Yes"];
+                [alert show];
+            }
+            
+            
+        }
+        
+    }];
+    
+    
+}
+
+
+
+
 
 
 
@@ -347,6 +390,9 @@
             CompletePersonInfoVC *cptVC = [[CompletePersonInfoVC alloc] init];
             cptVC.type = 1;
             controller = [[UINavigationController alloc] initWithRootViewController:cptVC];
+        }
+        else if([currentMenuString isEqualToString:@"任务列表"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[RenwuListVC alloc] init]];
         }
         else if([currentMenuString isEqualToString:@"内政等级表"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[NeizhengdengjiVC alloc] init]];

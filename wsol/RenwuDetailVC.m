@@ -279,7 +279,80 @@
                 make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
                 make.top.mas_equalTo(lb_renwuGetDaoju.mas_bottom).with.offset(20);
             }];
-
+            
+            //商业数值
+            lb_shangyePoint = [UILabel new];
+            [scrollView addSubview:lb_shangyePoint];
+            lb_shangyePoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_shangyePoint.text = shangyePoint;
+            lb_shangyePoint.textAlignment = NSTextAlignmentCenter;
+            lb_shangyePoint.textColor = [UIColor whiteColor];
+            [lb_shangyePoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_shangye);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_shangye.mas_bottom).with.offset(10);
+            }];
+            //流通数值
+            lb_liutongPoint = [UILabel new];
+            [scrollView addSubview:lb_liutongPoint];
+            lb_liutongPoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_liutongPoint.text = liutongPoint;
+            lb_liutongPoint.textAlignment = NSTextAlignmentCenter;
+            lb_liutongPoint.textColor = [UIColor whiteColor];
+            [lb_liutongPoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_liutong);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_liutong.mas_bottom).with.offset(10);
+            }];
+            //技术数值
+            lb_jishuPoint = [UILabel new];
+            [scrollView addSubview:lb_jishuPoint];
+            lb_jishuPoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_jishuPoint.text = jishuPoint;
+            lb_jishuPoint.textAlignment = NSTextAlignmentCenter;
+            lb_jishuPoint.textColor = [UIColor whiteColor];
+            [lb_jishuPoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_jishu);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_jishu.mas_bottom).with.offset(10);
+            }];
+            //军事数值
+            lb_junshiPoint = [UILabel new];
+            [scrollView addSubview:lb_junshiPoint];
+            lb_junshiPoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_junshiPoint.text = junshiPoint;
+            lb_junshiPoint.textAlignment = NSTextAlignmentCenter;
+            lb_junshiPoint.textColor = [UIColor whiteColor];
+            [lb_junshiPoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_junshi);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_junshi.mas_bottom).with.offset(10);
+            }];
+            //治安数值
+            lb_zhianPoint = [UILabel new];
+            [scrollView addSubview:lb_zhianPoint];
+            lb_zhianPoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_zhianPoint.text = zhianPoint;
+            lb_zhianPoint.textAlignment = NSTextAlignmentCenter;
+            lb_zhianPoint.textColor = [UIColor whiteColor];
+            [lb_zhianPoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_zhian);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_zhian.mas_bottom).with.offset(10);
+            }];
+            //军费数值
+            lb_junfeiPoint = [UILabel new];
+            [scrollView addSubview:lb_junfeiPoint];
+            lb_junfeiPoint.font = [UIFont systemFontOfSize: 14.0];
+            lb_junfeiPoint.text = junfeiPoint;
+            lb_junfeiPoint.textAlignment = NSTextAlignmentCenter;
+            lb_junfeiPoint.textColor = [UIColor whiteColor];
+            [lb_junfeiPoint mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.equalTo(lb_junfei);
+                make.width.mas_equalTo(@((SCREEN_WIDTH-40)/6));
+                make.top.mas_equalTo(lb_junfei.mas_bottom).with.offset(10);
+            }];
+            
             /** ------------动态布局控件 end----------- */
             
             

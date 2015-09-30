@@ -27,6 +27,13 @@
     UILabel *lb_junshi;
     UILabel *lb_zhian;
     UILabel *lb_junfei;
+    
+    UILabel *lb_shangyePoint;
+    UILabel *lb_liutongPoint;
+    UILabel *lb_jishuPoint;
+    UILabel *lb_junshiPoint;
+    UILabel *lb_zhianPoint;
+    UILabel *lb_junfeiPoint;
 
 }
 //@property (weak, nonatomic) IBOutlet UILabel *lb_renwuName;

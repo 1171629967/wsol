@@ -58,8 +58,10 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPaomadeng) name:@"loadPaomadeng" object:nil];
     
+    [self loadIfMusic];
     [self loadPaomadeng];
     [self checkVersion];
+    
     
     //设置定位精确度，默认：kCLLocationAccuracyBest
     [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
@@ -173,8 +175,30 @@
 }
 
 
-
-
+/** 加载是否需要显示音乐模块 */
+- (void)loadIfMusic
+{
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Information"];
+    [bquery whereKey:@"type" equalTo:@"ishave_music_ios"];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (error) {
+            
+        }
+        else {
+            BmobObject *obj = [array objectAtIndex:0];
+            NSString *des = [obj objectForKey:@"des"];
+            if ([des isEqualToString:@"yes"]) {
+                //需要加载音乐模块
+                NSBundle *bundle = [NSBundle mainBundle];
+                NSURL *typeURL = [bundle URLForResource:@"typePlist2" withExtension:@"plist"];
+                NSURL *menuURL = [bundle URLForResource:@"menuPlist2" withExtension:@"plist"];
+                typesArray = [NSArray arrayWithContentsOfURL:typeURL];
+                menusArray = [NSArray arrayWithContentsOfURL:menuURL];
+                [self.tableView reloadData];
+            }
+        }
+    }];
+}
 
 
 
@@ -422,9 +446,9 @@
         else if([currentMenuString isEqualToString:@"玩家意见一览"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[ShowYijianVC alloc] init]];
         }
-//        else if([currentMenuString isEqualToString:@"游戏BGM音乐"]){
-//            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVC alloc] init]];
-//        }
+        else if([currentMenuString isEqualToString:@"游戏BGM音乐"]){
+            controller = [[UINavigationController alloc] initWithRootViewController:[[MusicListVC alloc] init]];
+        }
         else if([currentMenuString isEqualToString:@"吧主担保交易"]){
             controller = [[UINavigationController alloc] initWithRootViewController:[[TransationVC alloc] init]];
         }

@@ -65,6 +65,8 @@
 		0936D05F1B01D89400BB65AA /* JinpaiWeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0936D05D1B01D89400BB65AA /* JinpaiWeaponTVC.xib */; };
 		0936D0631B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */; };
 		0936D0661B01F36200BB65AA /* JinpaiWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0651B01F36200BB65AA /* JinpaiWeapon.m */; };
+		0945CA691BBC2EA80087F633 /* typePlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA681BBC2EA80087F633 /* typePlist2.plist */; settings = {ASSET_TAGS = (); }; };
+		0945CA711BBC377C0087F633 /* menuPlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA701BBC377C0087F633 /* menuPlist2.plist */; settings = {ASSET_TAGS = (); }; };
 		094807671A42275200FD519D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 094807661A42275200FD519D /* DMScrollingTicker.m */; };
 		094921E01A89B0A9003BF3BF /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921DF1A89B0A9003BF3BF /* Music.m */; };
 		094921E41A89D698003BF3BF /* MusicTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921E21A89D698003BF3BF /* MusicTVC.m */; };
@@ -389,6 +391,8 @@
 		0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 		0936D0641B01F36200BB65AA /* JinpaiWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinpaiWeapon.h; sourceTree = "<group>"; };
 		0936D0651B01F36200BB65AA /* JinpaiWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinpaiWeapon.m; sourceTree = "<group>"; };
+		0945CA681BBC2EA80087F633 /* typePlist2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = typePlist2.plist; sourceTree = "<group>"; };
+		0945CA701BBC377C0087F633 /* menuPlist2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuPlist2.plist; sourceTree = "<group>"; };
 		094807651A42275200FD519D /* DMScrollingTicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScrollingTicker.h; sourceTree = "<group>"; };
 		094807661A42275200FD519D /* DMScrollingTicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScrollingTicker.m; sourceTree = "<group>"; };
 		094921DE1A89B0A9003BF3BF /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
@@ -1387,6 +1391,8 @@
 		09A3C37C19B1CEF800E46114 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0945CA701BBC377C0087F633 /* menuPlist2.plist */,
+				0945CA681BBC2EA80087F633 /* typePlist2.plist */,
 				09EF5E041B227BCD00029BBA /* Images.xcassets */,
 				098204361A31BCC7000655F9 /* Default-568h@2x.png */,
 				098204371A31BCC7000655F9 /* Default@2x.png */,
@@ -1609,6 +1615,7 @@
 				096589F71AA9E3BD00F28EB6 /* Expression_42@2x.png in Resources */,
 				09658A1F1AA9E3BD00F28EB6 /* Expression_79@2x.png in Resources */,
 				096589D51AA9E3BD00F28EB6 /* Expression_11@2x.png in Resources */,
+				0945CA691BBC2EA80087F633 /* typePlist2.plist in Resources */,
 				09658A1C1AA9E3BD00F28EB6 /* Expression_76@2x.png in Resources */,
 				09A3C38019B1CEF800E46114 /* InfoPlist.strings in Resources */,
 				096589EC1AA9E3BD00F28EB6 /* Expression_32@2x.png in Resources */,
@@ -1627,6 +1634,7 @@
 				09658A0E1AA9E3BD00F28EB6 /* Expression_63@2x.png in Resources */,
 				096589FA1AA9E3BD00F28EB6 /* Expression_45@2x.png in Resources */,
 				09658A021AA9E3BD00F28EB6 /* Expression_52@2x.png in Resources */,
+				0945CA711BBC377C0087F633 /* menuPlist2.plist in Resources */,
 				096589E01AA9E3BD00F28EB6 /* Expression_21@2x.png in Resources */,
 				09658A1D1AA9E3BD00F28EB6 /* Expression_77@2x.png in Resources */,
 				096589F51AA9E3BD00F28EB6 /* Expression_40@2x.png in Resources */,

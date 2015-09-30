@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>个人信息</string>
+	</array>
+	<array>
+		<string>金牌上升和威力系数</string>
+	</array>	
+	<array>
+		<string>任务列表</string>
+		<string>内政等级表</string>
+	</array>
+	<array>
+		<string>游戏BGM音乐</string>
+	</array>
+	<array/>	
+	<array>
+		<string>副将技能和属性</string>
+	</array>
+	<array>
+		<string>附近的玩家</string>
+		<string>吧主担保交易</string>
+		<string>玩家意见一览</string>
+		<string>意见和建议</string>
+		<string>骗子名单</string>
+		<string>每周活动</string>
+	</array>
+</array>
+</plist>

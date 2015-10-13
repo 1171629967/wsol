@@ -22,7 +22,6 @@
     [super viewDidLoad];
     
     //设置导航栏
-    [[super leftItem] setTitle:@"菜单"];
     [[super rightItem] setTitle:@"刷新"];
     [super label].text = @"任务详情";
     self.navigationProtal = self;
@@ -398,7 +397,7 @@
 
 -(void)leftAction
 {
-    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)rightAction

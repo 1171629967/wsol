@@ -12,6 +12,7 @@
 #import <BmobSDK/Bmob.h>
 #import "Yijian.h"
 #import "ShowYijianTVC.h"
+#import "YijianReplyListVC.h"
 
 @interface ShowYijianVC ()
 
@@ -69,10 +70,10 @@
             
             for (BmobObject *obj in array) {
                 NSString *content = [obj objectForKey:@"content"];
-               
+                NSString *objectId = obj.objectId;
                 
                 
-                Yijian *yijian = [[Yijian alloc] initWithContent:content];
+                Yijian *yijian = [[Yijian alloc] initWithContent:content AndObjectId:objectId];
                 [yijians addObject:yijian];
             }
             //刷新表格控件
@@ -100,7 +101,13 @@
 //点击列表单元格
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
+    YijianReplyListVC *yijianReplyVC = [[YijianReplyListVC alloc] init];
+    yijianReplyVC.hasNavBack = YES;
+    NSString *h = [[yijians objectAtIndex:[indexPath row]] objectId];
+    yijianReplyVC.replyId = h;
+    [self.navigationController pushViewController:yijianReplyVC animated:YES];
+    //取消单元格被选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

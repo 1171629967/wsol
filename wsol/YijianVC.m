@@ -192,6 +192,13 @@
 
 -(void)rightAction
 {
+    //内容空判断
+    if (tf_yijian.text.length == 0) {
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"请填写您的意见和建议" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alter show];
+        return;
+    }
+    
     [self doHttp];
 }
 
@@ -203,11 +210,7 @@
     activityIndicator.hidden = NO;
     [activityIndicator startAnimating];
     
-    if (tf_yijian.text.length == 0) {
-        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"请填写您的意见和建议" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alter show];
-        return;
-    }
+    
     
     
     BmobObject  *yijian = [BmobObject objectWithClassName:@"Yijian"];
@@ -230,12 +233,13 @@
     NSString *systemVersionStr = [NSString stringWithFormat:@"IOS  %f",systemVersion];
     [yijian setObject:systemVersionStr forKey:@"fromOS"];
     [yijian saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+    activityIndicator.hidden = YES;//关掉菊花转
         if (error) {
             UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"提交失败，请重试!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alter show];
         }
         else{
-            UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"提交成功，谢谢您的反馈!" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"提交成功，谢谢您的反馈!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alter show];
         }
     }];
@@ -244,6 +248,18 @@
    
 }
 
+
+/** 弹出框的按钮点击后响应的代理函数 */
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        tf_gameName.text = @"";
+        tf_qq.text = @"";
+        tf_tiebaName.text = @"";
+        tf_yijian.text = @"";
+    }
+}
 
 
 - (void)viewWillAppear:(BOOL)animated

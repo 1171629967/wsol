@@ -13,6 +13,7 @@
 #import "Music.h"
 #import "MusicTVC.h"
 #import "AudioStreamer.h"
+#import "Reachability.h"
 
 @interface MusicListVC ()
 {
@@ -56,6 +57,7 @@
     
     BmobQuery   *bquery = [BmobQuery queryWithClassName:@"Music"];
     bquery.limit = 1000;
+    [bquery orderByAscending:@"musicId"];
     [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (error) {
             [activityIndicator stopAnimating];
@@ -161,10 +163,29 @@
 //点击列表单元格
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Music *music = [musics objectAtIndex:[indexPath row]];
-    [self destroyStreamer];
-    [self createStreamer:music.musicFile.url];
-    [streamer start];
+    willPlayMusic = [musics objectAtIndex:[indexPath row]];
+    // 使用WiFi网络
+    if ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] != NotReachable) {
+        [self playMusic];
+        return;
+    }
+    
+    // 使用3G网络
+    if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable) {
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"当前没有连接wifi,将会消耗较多手机流量，确定需要继续听音乐吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+        [alter show];
+        return;
+    }
+    
+    
+    
+    // 没有网络连接
+    UIAlertView *alter = [[UIAlertView alloc] initWithTitle:nil message:@"当前没有连接任何网络" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alter show];
+    
+    
+    
+    
 }
 
 
@@ -209,6 +230,24 @@
 -(void)rightAction
 {
     [self doHttp];
+}
+
+
+/** 弹出框的按钮点击后响应的代理函数 */
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [self playMusic];
+    }
+}
+
+/** 执行播放音乐 */
+-(void)playMusic
+{
+    [self destroyStreamer];
+    [self createStreamer:willPlayMusic.musicFile.url];
+    [streamer start];
 }
 
 

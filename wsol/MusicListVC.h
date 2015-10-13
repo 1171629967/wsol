@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "Music.h"
 @class AudioStreamer;
 
 @interface MusicListVC : BaseViewController<UITableViewDataSource,UITableViewDelegate,NavigationProtal>
@@ -15,6 +16,8 @@
     NSMutableArray *musics;
     UILabel *lb_content;
     UITableView *tableview;
+    
+    Music *willPlayMusic;
 }
 
 @end

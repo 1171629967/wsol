@@ -71,8 +71,8 @@
     
     
    
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    //设置整体APP顶部导航栏的颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.27 green:0.27 blue:0.27 alpha:100]];
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     

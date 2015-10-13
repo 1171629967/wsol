@@ -11,12 +11,14 @@
 @interface Yijian : NSObject
 
 @property (copy, nonatomic) NSString *content;
+@property (copy, nonatomic) NSString *objectId;
+
 
 
 @property int cellHeight;
 @property int contentHeight;
 
-- (id)initWithContent:(NSString *)nContent
+- (id)initWithContent:(NSString *)nContent AndObjectId:(NSString *)nObjectId
              
         ;
 

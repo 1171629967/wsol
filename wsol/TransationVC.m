@@ -39,7 +39,7 @@
     
     
     
-    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44-20-20)];
     tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:tableView];
     tableView.dataSource = self;

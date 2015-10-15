@@ -72,7 +72,7 @@
     
     
     
-    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 84, SCREEN_WIDTH, SCREEN_HEIGHT-84)];
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 84, SCREEN_WIDTH, SCREEN_HEIGHT-84-20)];
     [self.view addSubview:tableView];
     tableView.delegate = self;
     tableView.dataSource = self;

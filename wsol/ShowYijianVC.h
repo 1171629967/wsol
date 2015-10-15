@@ -14,6 +14,7 @@
     
     
     NSMutableArray *yijians;
+    UIImageView *iv_narrow;
     UILabel *lb_content;
     UITableView *tableview;
 }

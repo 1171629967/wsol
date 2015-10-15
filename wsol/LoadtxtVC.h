@@ -10,7 +10,7 @@
 #import "BaseViewController.h"
 
 @interface LoadtxtVC : BaseViewController<NavigationProtal>
-@property (strong, nonatomic) IBOutlet UITextView *textview;
+@property (strong, nonatomic) UITextView *textview;
 @property (copy, nonatomic) NSString *txtName;
 @property (copy, nonatomic) NSString *titleName;
 @end

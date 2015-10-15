@@ -19,7 +19,7 @@
         self.content = nContent;
         self.objectId = nObjectId;
         
-        CGSize maxSize = CGSizeMake(SCREEN_WIDTH-20, 5000);
+        CGSize maxSize = CGSizeMake(SCREEN_WIDTH-50, 5000);
         CGRect maxRect = [nContent boundingRectWithSize:maxSize
                                                        options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
                                                     attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}
@@ -31,7 +31,7 @@
 //        labelSizeContent = [nContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(SCREEN_WIDTH-20, 5000)lineBreakMode:NSLineBreakByWordWrapping];
         
         
-        self.contentHeight = maxRect.size.height+1;
+        self.contentHeight = maxRect.size.height+3;
         self.cellHeight = self.contentHeight+20;
         
         

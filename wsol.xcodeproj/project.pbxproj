@@ -14,7 +14,6 @@
 		091CFD6D1B0A799A00763C1B /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091CFD6B1B0A799A00763C1B /* LoginVC.m */; };
 		091CFD6E1B0A799A00763C1B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091CFD6C1B0A799A00763C1B /* LoginVC.xib */; };
 		091DBCCF1A885F2100E56CFC /* LoadtxtVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091DBCCD1A885F2100E56CFC /* LoadtxtVC.m */; };
-		091DBCD01A885F2100E56CFC /* LoadtxtVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091DBCCE1A885F2100E56CFC /* LoadtxtVC.xib */; };
 		091DBCD41A887F9A00E56CFC /* LoadhtmlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091DBCD21A887F9A00E56CFC /* LoadhtmlVC.m */; };
 		091DBCD51A887F9A00E56CFC /* LoadhtmlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091DBCD31A887F9A00E56CFC /* LoadhtmlVC.xib */; };
 		091F3B961B141E68004C84EE /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091F3B951B141E68004C84EE /* BmobSDK.framework */; };
@@ -302,7 +301,6 @@
 		091CFD6C1B0A799A00763C1B /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		091DBCCC1A885F2100E56CFC /* LoadtxtVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadtxtVC.h; sourceTree = "<group>"; };
 		091DBCCD1A885F2100E56CFC /* LoadtxtVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadtxtVC.m; sourceTree = "<group>"; };
-		091DBCCE1A885F2100E56CFC /* LoadtxtVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadtxtVC.xib; sourceTree = "<group>"; };
 		091DBCD11A887F9A00E56CFC /* LoadhtmlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadhtmlVC.h; sourceTree = "<group>"; };
 		091DBCD21A887F9A00E56CFC /* LoadhtmlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadhtmlVC.m; sourceTree = "<group>"; };
 		091DBCD31A887F9A00E56CFC /* LoadhtmlVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadhtmlVC.xib; sourceTree = "<group>"; };
@@ -1402,7 +1400,6 @@
 				09A19A5419BEAB7D000900BA /* MenuTableVC.xib */,
 				091DBCCC1A885F2100E56CFC /* LoadtxtVC.h */,
 				091DBCCD1A885F2100E56CFC /* LoadtxtVC.m */,
-				091DBCCE1A885F2100E56CFC /* LoadtxtVC.xib */,
 				091DBCD11A887F9A00E56CFC /* LoadhtmlVC.h */,
 				091DBCD21A887F9A00E56CFC /* LoadhtmlVC.m */,
 				091DBCD31A887F9A00E56CFC /* LoadhtmlVC.xib */,
@@ -1725,7 +1722,6 @@
 				09658A181AA9E3BD00F28EB6 /* Expression_72@2x.png in Resources */,
 				09B2AA671B1C464A00042D89 /* mapapi.bundle in Resources */,
 				09658A221AA9E3BD00F28EB6 /* Expression_81@2x.png in Resources */,
-				091DBCD01A885F2100E56CFC /* LoadtxtVC.xib in Resources */,
 				09658A031AA9E3BD00F28EB6 /* Expression_53@2x.png in Resources */,
 				09658A2C1AA9E3BD00F28EB6 /* Expression_90@2x.png in Resources */,
 				096589FC1AA9E3BD00F28EB6 /* Expression_47@2x.png in Resources */,

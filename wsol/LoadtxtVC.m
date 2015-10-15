@@ -8,6 +8,7 @@
 
 #import "LoadtxtVC.h"
 #import "TWTSideMenuViewController.h"
+#import "Masonry.h"
 
 @interface LoadtxtVC ()
 
@@ -33,8 +34,21 @@
     [super label].text = self.titleName;
     self.navigationProtal = self;
     
-    self.textview.backgroundColor = [UIColor clearColor];
     
+    
+    self.textview = [UITextView new];
+    self.textview.backgroundColor = [UIColor clearColor];
+    self.textview.textColor = [UIColor whiteColor];
+    self.textview.editable = NO;
+    [self.view addSubview:self.textview];
+    [self.textview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).with.offset(10);
+        make.top.equalTo(self.view).with.offset(10);
+        make.right.equalTo(self.view).with.offset(-10);
+        make.bottom.equalTo(self.view).with.offset(-10);
+
+        
+    }];
     
     
     //    获取txt文件路径

@@ -74,7 +74,7 @@
     
     
     
-    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT -44-20-20)];
     tableview.delegate = self;
     tableview.dataSource = self;
     tableview.backgroundColor = [UIColor clearColor];
@@ -109,6 +109,20 @@
     
     weapons = [[NSMutableArray alloc] init];
     suggestWeapons = [[NSMutableArray alloc] init];
+    
+    
+    //读取金牌武器数据归档文件
+    NSString *Path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filename = [Path stringByAppendingPathComponent:@"saveDatatest"];
+    NSMutableArray *archiverWeapons = [NSKeyedUnarchiver unarchiveObjectWithFile: filename];;
+    if (archiverWeapons != nil) {
+        weapons = archiverWeapons;
+        NSLog(@"%@", weapons);
+        //刷新表格控件
+        [tableview reloadData];
+    }
+    
+    
     
     
     [self doHttp];
@@ -337,18 +351,23 @@
             
         }
         else {
-           
             [weapons removeAllObjects];
-     
             for (BmobObject *obj in array) {
                 JinpaiWeapon *weapon = [[JinpaiWeapon alloc] initWithBmobObject:obj];
                 [weapons addObject:weapon];
-                
             }
             
-            
             //刷新表格控件
-            [tableview reloadData];     
+            [tableview reloadData];
+               
+            
+            //把该金牌武器数组数据进行归档
+            NSString *Path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+            NSString *filename = [Path stringByAppendingPathComponent:@"jinpaiWeaponData"];
+            BOOL flag = [NSKeyedArchiver archiveRootObject:weapons toFile:filename];
+            if(flag) {
+                NSLog(@"归档成功！");
+            }
         }
         
     }];

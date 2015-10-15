@@ -40,7 +40,7 @@
     [super label].text = @"骗子名单";
     self.navigationProtal = self;
     
-    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44-20-20)];
     tableview.delegate = self;
     tableview.dataSource = self;
     tableview.backgroundColor = [UIColor clearColor];

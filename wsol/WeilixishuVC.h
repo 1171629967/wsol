@@ -13,13 +13,17 @@
 {
     //是否已经显示了系数说明
     BOOL isShowedExplain;
+    BOOL isHaveWeaponDes;
 
     
     UIScrollView *scrollView;
+    UIView *container;
     UILabel *lb_weaponName;
     UIButton *bt_explain;
-    UILabel *lb_explain;
+    UILabel *lb_explainContent;
     UILabel *lb_beizu;
+    UILabel *lb_weaponDes;
+
     
     UIView *allXIshuView;
     
@@ -29,6 +33,20 @@
     UIView *v_line4;
     UIView *v_line5;
     UIView *v_line6;
+    
+    
+    UIView *v_N1_N6;
+    UIView *v_E6_E9;
+    UIView *v_C2_C5;
+    UIView *v_D_JC;
+    UIView *v_tu_ba;
+    UIView *v_puwu_zhenmo;
+    UIView *v_N1data_N6data;
+    UIView *v_E6data_E9data;
+    UIView *v_C2data_C5data;
+    UIView *v_Ddata_JCdata;
+    UIView *v_tudata_badata;
+    UIView *v_puwudata_zhenmodata;
     
     UILabel *lb_N1;
     UILabel *lb_N2;

@@ -13,7 +13,7 @@
 #import "Yijian.h"
 #import "ShowYijianTVC.h"
 #import "YijianReplyListVC.h"
-
+#import "Masonry.h"
 @interface ShowYijianVC ()
 
 @end
@@ -29,7 +29,7 @@
     [super label].text = @"玩家意见一览";
     self.navigationProtal = self;
     
-    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-44-20-20)];
     tableview.delegate = self;
     tableview.dataSource = self;
     tableview.backgroundColor = [UIColor clearColor];
@@ -137,11 +137,31 @@
             if ([o isKindOfClass:[ShowYijianTVC class]]) {
                 cell = (ShowYijianTVC *)o;
                 
-                lb_content = [[UILabel alloc] init];
+                //右侧箭头
+                iv_narrow = [UIImageView new];
+                iv_narrow.image = [UIImage imageNamed:@"narrow_gray.png"];
+                iv_narrow.contentMode =  UIViewContentModeCenter;
+                [cell.contentView addSubview:iv_narrow];
+                [iv_narrow mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.centerY.mas_equalTo(cell.contentView.mas_centerY);
+                    make.size.mas_equalTo(CGSizeMake(20, 30));
+                    make.right.equalTo(cell.contentView).with.offset(-10);                    
+                }];
+                
+                //内容
+                lb_content = [UILabel new];
                 lb_content.numberOfLines = 0;
                 lb_content.textColor = [UIColor whiteColor];
                 lb_content.font = [UIFont systemFontOfSize:14];
                 [cell.contentView addSubview:lb_content];
+                [lb_content mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.left.equalTo(cell.contentView).with.offset(10);
+                    make.top.equalTo(cell.contentView).with.offset(10);
+                    make.bottom.equalTo(cell.contentView).with.offset(-10);
+                    make.right.equalTo(iv_narrow.mas_left).with.offset(-10);
+                }];
+                
+                
                 
                 break;
             }
@@ -157,9 +177,9 @@
    
     
    
-    int h =yijian.contentHeight;
+    //int h =yijian.contentHeight;
     
-    [lb_content setFrame:CGRectMake(10, 10, 300, h)];
+    //[lb_content setFrame:CGRectMake(10, 10, 300, h)];
     lb_content.text = yijian.content;
     
     

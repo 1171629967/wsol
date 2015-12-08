@@ -13,6 +13,12 @@
 - (IBAction)login:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *bt_regist;
 - (IBAction)regist:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *bt_findPassword;
+
+- (IBAction)findPassword:(id)sender;
+
+
+
 @property (weak, nonatomic) IBOutlet UIButton *bt_cancel;
 - (IBAction)cancel:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *et_userName;

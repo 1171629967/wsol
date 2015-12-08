@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		090898BC1BBAAE0F0064ED78 /* RenwuDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 090898BB1BBAAE0F0064ED78 /* RenwuDetailVC.m */; settings = {ASSET_TAGS = (); }; };
-		090C53CC1BB954670028AD1C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C53CA1BB954670028AD1C /* libMobClickLibrary.a */; settings = {ASSET_TAGS = (); }; };
+		090898BC1BBAAE0F0064ED78 /* RenwuDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 090898BB1BBAAE0F0064ED78 /* RenwuDetailVC.m */; };
+		090C53CC1BB954670028AD1C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 090C53CA1BB954670028AD1C /* libMobClickLibrary.a */; };
 		090ECF3A1B0B056B009630AC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ECF391B0B056B009630AC /* User.m */; };
 		090ECF3E1B0B112C009630AC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 090ECF3D1B0B112C009630AC /* MBProgressHUD.m */; };
 		091CFD6D1B0A799A00763C1B /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 091CFD6B1B0A799A00763C1B /* LoginVC.m */; };
@@ -64,8 +64,8 @@
 		0936D05F1B01D89400BB65AA /* JinpaiWeaponTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0936D05D1B01D89400BB65AA /* JinpaiWeaponTVC.xib */; };
 		0936D0631B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0621B01F18100BB65AA /* UITableView+FDTemplateLayoutCell.m */; };
 		0936D0661B01F36200BB65AA /* JinpaiWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0936D0651B01F36200BB65AA /* JinpaiWeapon.m */; };
-		0945CA691BBC2EA80087F633 /* typePlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA681BBC2EA80087F633 /* typePlist2.plist */; settings = {ASSET_TAGS = (); }; };
-		0945CA711BBC377C0087F633 /* menuPlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA701BBC377C0087F633 /* menuPlist2.plist */; settings = {ASSET_TAGS = (); }; };
+		0945CA691BBC2EA80087F633 /* typePlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA681BBC2EA80087F633 /* typePlist2.plist */; };
+		0945CA711BBC377C0087F633 /* menuPlist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0945CA701BBC377C0087F633 /* menuPlist2.plist */; };
 		094807671A42275200FD519D /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 094807661A42275200FD519D /* DMScrollingTicker.m */; };
 		094921E01A89B0A9003BF3BF /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921DF1A89B0A9003BF3BF /* Music.m */; };
 		094921E41A89D698003BF3BF /* MusicTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 094921E21A89D698003BF3BF /* MusicTVC.m */; };
@@ -79,6 +79,7 @@
 		0957109719BD3F4D0044B76B /* fujiang.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0957109619BD3F4D0044B76B /* fujiang.txt */; };
 		0957109D19BD418F0044B76B /* renwubaochou.html in Resources */ = {isa = PBXBuildFile; fileRef = 0957109C19BD418F0044B76B /* renwubaochou.html */; };
 		095710A119BD493F0044B76B /* renwudengji.html in Resources */ = {isa = PBXBuildFile; fileRef = 095710A019BD493F0044B76B /* renwudengji.html */; };
+		095928B81C15A36600D7707D /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 095928B71C15A36600D7707D /* FindPasswordVC.m */; };
 		096589CE1AA9E3BD00F28EB6 /* Expression_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0965895C1AA9E3BD00F28EB6 /* Expression_100@2x.png */; };
 		096589CF1AA9E3BD00F28EB6 /* Expression_101@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0965895D1AA9E3BD00F28EB6 /* Expression_101@2x.png */; };
 		096589D01AA9E3BD00F28EB6 /* Expression_102@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0965895E1AA9E3BD00F28EB6 /* Expression_102@2x.png */; };
@@ -190,7 +191,7 @@
 		09658A3A1AA9E3BD00F28EB6 /* expressionImage_custom.plist in Resources */ = {isa = PBXBuildFile; fileRef = 096589C81AA9E3BD00F28EB6 /* expressionImage_custom.plist */; };
 		09658A3B1AA9E3BD00F28EB6 /* MLEmojiLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 096589CA1AA9E3BD00F28EB6 /* MLEmojiLabel.m */; };
 		09658A3C1AA9E3BD00F28EB6 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 096589CD1AA9E3BD00F28EB6 /* TTTAttributedLabel.m */; };
-		0966AF2F1BCBA84200427A49 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0966AF2E1BCBA84200427A49 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		0966AF2F1BCBA84200427A49 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0966AF2E1BCBA84200427A49 /* Reachability.m */; };
 		0982040C1A318A8A000655F9 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 098203F31A318A8A000655F9 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0982040D1A318A8A000655F9 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 098203F61A318A8A000655F9 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0982040E1A318A8A000655F9 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 098203F81A318A8A000655F9 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -223,7 +224,7 @@
 		09A19A5619BEAB7D000900BA /* MenuTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A19A5419BEAB7D000900BA /* MenuTableVC.xib */; };
 		09A19A5819BEAD22000900BA /* menuPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A19A5719BEAD22000900BA /* menuPlist.plist */; };
 		09A19A5A19BEDAB7000900BA /* typePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09A19A5919BEDAB7000900BA /* typePlist.plist */; };
-		09A36A681BB9502200D2D102 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A36A671BB9502200D2D102 /* BaiduMapAPI.framework */; settings = {ASSET_TAGS = (); }; };
+		09A36A681BB9502200D2D102 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A36A671BB9502200D2D102 /* BaiduMapAPI.framework */; };
 		09A3C37619B1CEF800E46114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37519B1CEF800E46114 /* Foundation.framework */; };
 		09A3C37819B1CEF800E46114 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37719B1CEF800E46114 /* CoreGraphics.framework */; };
 		09A3C37A19B1CEF800E46114 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A3C37919B1CEF800E46114 /* UIKit.framework */; };
@@ -240,25 +241,25 @@
 		09A42E6E19F3E3E0007D2707 /* wuxu1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09A42E6D19F3E3E0007D2707 /* wuxu1.jpg */; };
 		09A4B3B71B0DE26000C0A20B /* CompletePersonInfoVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09A4B3B51B0DE26000C0A20B /* CompletePersonInfoVC.mm */; };
 		09A4B3B81B0DE26000C0A20B /* CompletePersonInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A4B3B61B0DE26000C0A20B /* CompletePersonInfoVC.xib */; };
-		09A623481BC8B13900A43DFC /* YijianReplyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A623471BC8B13900A43DFC /* YijianReplyListVC.m */; settings = {ASSET_TAGS = (); }; };
-		09A6234B1BC8B4BE00A43DFC /* YijianReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6234A1BC8B4BE00A43DFC /* YijianReply.m */; settings = {ASSET_TAGS = (); }; };
-		09A623521BC8BAEF00A43DFC /* YijianReplyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A623501BC8BAEF00A43DFC /* YijianReplyListCell.m */; settings = {ASSET_TAGS = (); }; };
-		09A623531BC8BAEF00A43DFC /* YijianReplyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A623511BC8BAEF00A43DFC /* YijianReplyListCell.xib */; settings = {ASSET_TAGS = (); }; };
+		09A623481BC8B13900A43DFC /* YijianReplyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A623471BC8B13900A43DFC /* YijianReplyListVC.m */; };
+		09A6234B1BC8B4BE00A43DFC /* YijianReply.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A6234A1BC8B4BE00A43DFC /* YijianReply.m */; };
+		09A623521BC8BAEF00A43DFC /* YijianReplyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A623501BC8BAEF00A43DFC /* YijianReplyListCell.m */; };
+		09A623531BC8BAEF00A43DFC /* YijianReplyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A623511BC8BAEF00A43DFC /* YijianReplyListCell.xib */; };
 		09ADC5571B0C9641001BA9B8 /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADC5551B0C9641001BA9B8 /* RegistVC.m */; };
 		09ADC5581B0C9641001BA9B8 /* RegistVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09ADC5561B0C9641001BA9B8 /* RegistVC.xib */; };
 		09B2AA651B1C456800042D89 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B2AA641B1C456800042D89 /* OpenGLES.framework */; };
 		09B2AA671B1C464A00042D89 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09B2AA661B1C464A00042D89 /* mapapi.bundle */; };
-		09BC6BD61BBBB769006FDB20 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09BC6BBC1BBBB769006FDB20 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		09BC6BD71BBBB769006FDB20 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BBE1BBBB769006FDB20 /* MASCompositeConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BD81BBBB769006FDB20 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC01BBBB769006FDB20 /* MASConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BD91BBBB769006FDB20 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC31BBBB769006FDB20 /* MASConstraintMaker.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDA1BBBB769006FDB20 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC51BBBB769006FDB20 /* MASLayoutConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDB1BBBB769006FDB20 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC91BBBB769006FDB20 /* MASViewAttribute.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDC1BBBB769006FDB20 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BCB1BBBB769006FDB20 /* MASViewConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDD1BBBB769006FDB20 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BCD1BBBB769006FDB20 /* NSArray+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDE1BBBB769006FDB20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD01BBBB769006FDB20 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BDF1BBBB769006FDB20 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD21BBBB769006FDB20 /* View+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		09BC6BE01BBBB769006FDB20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD51BBBB769006FDB20 /* ViewController+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		09BC6BD61BBBB769006FDB20 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09BC6BBC1BBBB769006FDB20 /* Info.plist */; };
+		09BC6BD71BBBB769006FDB20 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BBE1BBBB769006FDB20 /* MASCompositeConstraint.m */; };
+		09BC6BD81BBBB769006FDB20 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC01BBBB769006FDB20 /* MASConstraint.m */; };
+		09BC6BD91BBBB769006FDB20 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC31BBBB769006FDB20 /* MASConstraintMaker.m */; };
+		09BC6BDA1BBBB769006FDB20 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC51BBBB769006FDB20 /* MASLayoutConstraint.m */; };
+		09BC6BDB1BBBB769006FDB20 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BC91BBBB769006FDB20 /* MASViewAttribute.m */; };
+		09BC6BDC1BBBB769006FDB20 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BCB1BBBB769006FDB20 /* MASViewConstraint.m */; };
+		09BC6BDD1BBBB769006FDB20 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BCD1BBBB769006FDB20 /* NSArray+MASAdditions.m */; };
+		09BC6BDE1BBBB769006FDB20 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD01BBBB769006FDB20 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		09BC6BDF1BBBB769006FDB20 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD21BBBB769006FDB20 /* View+MASAdditions.m */; };
+		09BC6BE01BBBB769006FDB20 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BC6BD51BBBB769006FDB20 /* ViewController+MASAdditions.m */; };
 		09C8FB021AA822A500A02E82 /* TransationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8FB001AA822A500A02E82 /* TransationTVC.m */; };
 		09C8FB031AA822A500A02E82 /* TransationTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C8FB011AA822A500A02E82 /* TransationTVC.xib */; };
 		09C8FB061AA8298D00A02E82 /* Transation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C8FB051AA8298D00A02E82 /* Transation.m */; };
@@ -271,7 +272,7 @@
 		09E9D1F51A388BF40023A68B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F41A388BF40023A68B /* ImageIO.framework */; };
 		09E9D1F71A388C0B0023A68B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E9D1F61A388C0B0023A68B /* libsqlite3.dylib */; };
 		09E9D1FA1A38966A0023A68B /* PianzimingdanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9D1F91A38966A0023A68B /* PianzimingdanVC.m */; };
-		09EB229B1BCCE92E009EFFD1 /* YijianReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB229A1BCCE92E009EFFD1 /* YijianReplyVC.m */; settings = {ASSET_TAGS = (); }; };
+		09EB229B1BCCE92E009EFFD1 /* YijianReplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EB229A1BCCE92E009EFFD1 /* YijianReplyVC.m */; };
 		09EF5E051B227BCD00029BBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EF5E041B227BCD00029BBA /* Images.xcassets */; };
 		09FA19C519BC74CF00DF60D5 /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA19C419BC74CF00DF60D5 /* TWTSideMenuViewController.m */; };
 		09FAD84119B379B700A30E35 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAD84019B379B700A30E35 /* libz.dylib */; };
@@ -417,6 +418,8 @@
 		0957109619BD3F4D0044B76B /* fujiang.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fujiang.txt; sourceTree = "<group>"; };
 		0957109C19BD418F0044B76B /* renwubaochou.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwubaochou.html; sourceTree = "<group>"; };
 		095710A019BD493F0044B76B /* renwudengji.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = renwudengji.html; sourceTree = "<group>"; };
+		095928B61C15A36600D7707D /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
+		095928B71C15A36600D7707D /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		0965895C1AA9E3BD00F28EB6 /* Expression_100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_100@2x.png"; sourceTree = "<group>"; };
 		0965895D1AA9E3BD00F28EB6 /* Expression_101@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_101@2x.png"; sourceTree = "<group>"; };
 		0965895E1AA9E3BD00F28EB6 /* Expression_102@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_102@2x.png"; sourceTree = "<group>"; };
@@ -1001,6 +1004,15 @@
 			name = txt;
 			sourceTree = "<group>";
 		};
+		095928B51C15A30600D7707D /* 找回密码 */ = {
+			isa = PBXGroup;
+			children = (
+				095928B61C15A36600D7707D /* FindPasswordVC.h */,
+				095928B71C15A36600D7707D /* FindPasswordVC.m */,
+			);
+			name = "找回密码";
+			sourceTree = "<group>";
+		};
 		0965895A1AA9E3BD00F28EB6 /* MLEmoji */ = {
 			isa = PBXGroup;
 			children = (
@@ -1246,6 +1258,7 @@
 		099CDAD21A884F760087A72A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				095928B51C15A30600D7707D /* 找回密码 */,
 				09EB22981BCCE709009EFFD1 /* 意见回复 */,
 				09A623451BC8B0E000A43DFC /* 意见回复列表 */,
 				098498371B75A27900B2B760 /* 任务详情 */,
@@ -1820,6 +1833,7 @@
 				09BC6BDC1BBBB769006FDB20 /* MASViewConstraint.m in Sources */,
 				093200F71A39701500A323BA /* PianziTVC.m in Sources */,
 				091F3BA21B146611004C84EE /* UIImage+ResizeImage.m in Sources */,
+				095928B81C15A36600D7707D /* FindPasswordVC.m in Sources */,
 				093200E31A3958AE00A323BA /* CDataScanner_Extensions.m in Sources */,
 				093200DF1A3958AE00A323BA /* CFilteringJSONSerializer.m in Sources */,
 				093200E81A3958AE00A323BA /* NSObject+SBJson.m in Sources */,

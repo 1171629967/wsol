@@ -113,7 +113,7 @@
     
     //读取金牌武器数据归档文件
     NSString *Path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filename = [Path stringByAppendingPathComponent:@"saveDatatest"];
+    NSString *filename = [Path stringByAppendingPathComponent:@"jinpaiWeaponData"];
     NSMutableArray *archiverWeapons = [NSKeyedUnarchiver unarchiveObjectWithFile: filename];;
     if (archiverWeapons != nil) {
         weapons = archiverWeapons;

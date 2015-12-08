@@ -118,7 +118,7 @@
     
     //武器详情介绍
     lb_weaponDes = [UILabel new];
-    lb_weaponDes.textColor = [UIColor orangeColor];
+    lb_weaponDes.textColor = [UIColor whiteColor];
     [lb_weaponDes setNumberOfLines:0];
     lb_weaponDes.font = [UIFont systemFontOfSize:10];
     [lb_weaponDes setLineBreakMode:NSLineBreakByCharWrapping];
@@ -1183,7 +1183,7 @@
             
             //最后控制一下scrollview的滚动范围
             [container mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.equalTo(v_puwudata_zhenmodata.mas_bottom).offset(10);
+                make.bottom.equalTo(v_puwudata_zhenmodata.mas_bottom).offset(10 + 20);
             }];
         }
         

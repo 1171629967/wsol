@@ -9,6 +9,7 @@
 #import "LoginVC.h"
 #import <BmobSDK/Bmob.h>
 #import "RegistVC.h"
+#import "FindPasswordVC.h"
 #import "Utils.h"
 #import "WLXAppDelegate.h"
 #import "CompletePersonInfoVC.h"
@@ -31,14 +32,21 @@
     self.bt_login.layer.borderColor = [[UIColor whiteColor]CGColor];
     self.bt_regist.layer.borderWidth = 1;
     self.bt_regist.layer.borderColor = [[UIColor whiteColor]CGColor];
+    self.bt_findPassword.layer.borderWidth = 1;
+    self.bt_findPassword.layer.borderColor = [[UIColor whiteColor]CGColor];
+    
+    
+
     
     [self.et_password setSecureTextEntry:YES];
-    
+    [self.et_userName setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.et_password setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.et_password setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -124,5 +132,14 @@
 - (IBAction)cancel:(id)sender
 {
     [self.view endEditing:YES];
+}
+
+/** 找回密码 */
+- (IBAction)findPassword:(id)sender {
+    [self.view endEditing:YES];
+    FindPasswordVC *findPasswordVC = [[FindPasswordVC alloc] init];
+    findPasswordVC.hasNavBack = YES;
+    [self.navigationController pushViewController:findPasswordVC animated:YES];
+
 }
 @end

@@ -128,6 +128,15 @@
           User *bUser = (User *)[User getCurrentUser];
           [bUser setObject:point forKey:@"lastGeoPoint"];
           [bUser setObject:address forKey:@"lastAddress"];
+          //设置系统版本号
+          float systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+          NSString *systemVersionFinal = [NSString stringWithFormat:@"IOS  %f",systemVersion];
+          [bUser setObject:systemVersionFinal forKey:@"lastUseOS"];
+          //设置正在使用的版本号
+          NSString *app_version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+          NSString *app_versionFinal = [NSString stringWithFormat:@"IOS  %@",app_version];
+          [bUser setObject:app_versionFinal forKey:@"lastAppVersion"];
+      
           [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
               
           }];
@@ -381,7 +390,7 @@
         if ([currentMenuString isEqualToString:@"更换主题"]) {
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
-            if (currentTheme == 6) {
+            if (currentTheme == 7) {
                 currentTheme = 0;
             }
             else {
@@ -458,7 +467,7 @@
         else if([currentMenuString isEqualToString:@"更换主题"]){
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             int currentTheme = (int)[userDefaults integerForKey:UserDefaultsKey_CurrentAppTheme];
-            if (currentTheme == 6) {
+            if (currentTheme == 7) {
                 currentTheme = 0;
             }
             else {

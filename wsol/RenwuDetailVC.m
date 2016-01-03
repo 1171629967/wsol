@@ -11,6 +11,7 @@
 #import "TWTSideMenuViewController.h"
 #import <BmobSDK/Bmob.h>
 #import "Masonry.h"
+#import "Utils.h"
 
 @interface RenwuDetailVC ()
 
@@ -22,7 +23,6 @@
     [super viewDidLoad];
     
     //设置导航栏
-    [[super rightItem] setTitle:@"刷新"];
     [super label].text = @"任务详情";
     self.navigationProtal = self;
     
@@ -70,7 +70,13 @@
             NSString *junshiPoint = [NSString stringWithFormat:@"%@",[obj objectForKey:@"junshiPoint"]];
             NSString *zhianPoint = [NSString stringWithFormat:@"%@",[obj objectForKey:@"zhianPoint"]];
             NSString *junfeiPoint = [NSString stringWithFormat:@"%@",[obj objectForKey:@"junfeiPoint"]];
-
+            self.videoUrl = [NSString stringWithFormat:@"%@",[obj objectForKey:@"videoUrl"]];
+            if (![Utils isBlankString:[obj objectForKey:@"videoUrl"]]) {
+                [[super rightItem] setTitle:@"视频攻略"];
+            }
+            else {
+                [[super rightItem] setTitle:@""];
+            }
 
             //事先移除掉所有控件
             for (UIView *view in [self.view subviews]) {
@@ -402,7 +408,9 @@
 
 -(void)rightAction
 {
-    [self doHttp];
+    if (![Utils isBlankString:self.videoUrl]) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.videoUrl]];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated

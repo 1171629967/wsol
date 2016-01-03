@@ -51,5 +51,7 @@
 //@property (weak, nonatomic) IBOutlet UILabel *lb_junfeiPoint;
 
 @property int renwuId;
+@property (copy, nonatomic) NSString *videoUrl;
+
 
 @end

@@ -28,11 +28,11 @@
     self.bt_cancel.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     
-    self.bt_login.layer.borderWidth = 1;
+    self.bt_login.layer.borderWidth = 0.5;
     self.bt_login.layer.borderColor = [[UIColor whiteColor]CGColor];
-    self.bt_regist.layer.borderWidth = 1;
+    self.bt_regist.layer.borderWidth = 0.5;
     self.bt_regist.layer.borderColor = [[UIColor whiteColor]CGColor];
-    self.bt_findPassword.layer.borderWidth = 1;
+    self.bt_findPassword.layer.borderWidth = 0.5;
     self.bt_findPassword.layer.borderColor = [[UIColor whiteColor]CGColor];
     
     
